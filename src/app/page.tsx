@@ -1,6 +1,5 @@
 import Link from "next/link";
-
-const ISSUE_KICKER = "№ 01 — Un anno di AI applicata alle PMI";
+import { TAGLINE, TAGLINE_SUB } from "@/lib/site";
 
 const FORMATS = [
   {
@@ -48,10 +47,15 @@ export default function Home() {
               con l&apos;<span className="italic">AI</span>.
             </h1>
 
-            <p className="mt-7 max-w-[540px] text-[18px] leading-[1.55] md:text-[20px]">
-              Aiuto chi fa impresa a leggere ciò che sta cambiando — senza hype,
-              senza slide motivazionali. Case study reali, 25 anni di
-              operatività, un metodo che funziona per arredamento,
+            <p className="mt-8 max-w-[560px] font-serif text-[22px] leading-[1.35] md:text-[24px]">
+              {TAGLINE}
+              <br />
+              <span className="text-ink-muted italic">{TAGLINE_SUB}</span>
+            </p>
+
+            <p className="mt-6 max-w-[540px] text-[17px] leading-[1.6] text-ink-muted md:text-[18px]">
+              Senza hype, senza slide motivazionali. Case study reali, 25 anni
+              di operatività, un metodo che funziona per arredamento,
               assicurazioni, food e noleggio.
             </p>
 

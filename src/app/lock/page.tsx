@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Wordmark } from "@/components/site/Wordmark";
+import { TAGLINE, TAGLINE_SUB } from "@/lib/site";
 import { unlock } from "./actions";
 
 export const metadata: Metadata = {
@@ -28,7 +29,13 @@ export default async function LockPage({
           <Wordmark size={44} />
         </h1>
 
-        <p className="mt-5 text-[17px] leading-[1.6] text-ink-muted">
+        <p className="mt-6 font-serif text-[20px] leading-[1.4]">
+          {TAGLINE}
+          <br />
+          <span className="text-ink-muted italic">{TAGLINE_SUB}</span>
+        </p>
+
+        <p className="mt-8 text-[15px] leading-[1.6] text-ink-muted">
           Stiamo lavorando al sito. L&apos;accesso è temporaneamente riservato.
           Se hai la chiave, inseriscila qui sotto.
         </p>
