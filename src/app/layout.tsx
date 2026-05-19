@@ -58,7 +58,7 @@ export const metadata: Metadata = {
       "Ripensare il modello con l'AI. Case study reali, 25 anni di operatività.",
     url: "https://giovannicambria.it",
   },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({
