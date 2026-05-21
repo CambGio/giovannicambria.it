@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { TAGLINE, TAGLINE_SUB } from "@/lib/site";
 
@@ -109,7 +110,35 @@ export default function Home() {
         </div>
       </section>
 
-      <PageRule label="P. 01 §  Apertura" next="p. 02" />
+      <PageRule label="P. 01 §  Apertura" next="tavola fuori testo" />
+
+      {/* ─────────────────────────────────────────────────────────
+       * Tavola fuori testo — Fotografia documentale, full-bleed.
+       * Regola brand §6: foto B/N, interni di aziende italiane.
+       * ───────────────────────────────────────────────────────── */}
+      <figure className="relative w-full">
+        <div className="relative aspect-[16/9] w-full bg-ink">
+          <Image
+            src="/home-apertura.png"
+            alt="Interno luminoso di un ufficio italiano: due persone al lavoro su laptop, piante, ampie vetrate verso l'esterno."
+            fill
+            sizes="100vw"
+            priority={false}
+            className="object-cover"
+          />
+        </div>
+        <figcaption className="mx-auto flex max-w-[1280px] flex-col gap-1 px-6 pt-5 md:flex-row md:items-baseline md:justify-between md:px-16">
+          <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-muted">
+            Foto 01 · Interno aziendale · Italia, 2026
+          </span>
+          <span className="font-serif text-[14px] italic leading-[1.45] text-ink-muted md:max-w-[520px] md:text-right">
+            Le imprese che servo hanno spazi così. Persone, luce naturale,
+            niente teatro.
+          </span>
+        </figcaption>
+      </figure>
+
+      <PageRule label="Tavola fuori testo" next="p. 02" />
 
       {/* ─────────────────────────────────────────────────────────
        * P. 02 — § Tracce di un mestiere (timeline asimmetrica)
