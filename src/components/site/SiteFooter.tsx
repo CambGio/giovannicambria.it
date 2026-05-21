@@ -9,17 +9,17 @@ const COLS: Col[] = [
     items: [
       { label: "Approccio", href: "/approccio" },
       { label: "Tre format", href: "/lavoro" },
-      { label: "Letture", href: "/scritti" },
+      { label: "Blog", href: "/blog" },
       { label: "Newsletter", href: "/newsletter" },
     ],
   },
   {
     title: "Lavoro",
     items: [
-      { label: "Case study", href: "/scritti?cat=case-study" },
-      { label: "Settori", href: "/lavoro#settori" },
-      { label: "Per professionisti", href: "/lavoro#professionisti" },
-      { label: "Per PMI", href: "/lavoro#pmi" },
+      { label: "Mappa dell'innovazione", href: "/lavoro/mappa" },
+      { label: "Workshop in-house", href: "/lavoro/workshop" },
+      { label: "Affiancamento", href: "/lavoro/affiancamento" },
+      { label: "Case study", href: "/blog?rubrica=storia-di" },
     ],
   },
   {
