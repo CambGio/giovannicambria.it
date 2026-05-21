@@ -4,7 +4,7 @@ import { TAGLINE, TAGLINE_SUB } from "@/lib/site";
 const FORMATS = [
   {
     n: "01",
-    t: "Mappa AI",
+    t: "Mappa dell'innovazione",
     s: "Audit strategico one-shot · 1–2 settimane",
     p: "2.500 – 4.500 €",
   },
@@ -32,7 +32,7 @@ export default function Home() {
               <span className="inline-block h-[2px] w-7 bg-accent" />
               <span className="text-accent">№ 01</span>
               <span className="text-ink-muted">
-                — Un anno di AI applicata alle PMI
+                — Tecnologia, decisioni, modello di business
               </span>
             </div>
 
@@ -44,7 +44,7 @@ export default function Home() {
               <br />
               il modello
               <br />
-              con l&apos;<span className="italic">AI</span>.
+              di business.
             </h1>
 
             <p className="mt-8 max-w-[560px] font-serif text-[22px] leading-[1.35] md:text-[24px]">
@@ -61,10 +61,10 @@ export default function Home() {
 
             <div className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-4">
               <Link
-                href="/lavoro#mappa-ai"
+                href="/lavoro"
                 className="inline-flex items-center gap-3.5 bg-ink px-6 py-4 font-sans text-[15px] font-medium text-paper tracking-[0.02em] transition-colors hover:bg-accent"
               >
-                Prenota la Mappa AI
+                Prenota la Mappa dell&apos;innovazione
                 <span aria-hidden="true">→</span>
               </Link>
               <Link

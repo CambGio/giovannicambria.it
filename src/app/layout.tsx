@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     template: "%s · Giovanni Cambria",
   },
   description:
-    "Aiuto chi fa impresa a ripensare il modello di business con l'AI — senza diventare tecnico, senza hype. Case study reali.",
+    "Consulente in innovazione dei modelli di business per imprenditori italiani che vogliono capire prima di adottare.",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
@@ -55,7 +55,7 @@ export const metadata: Metadata = {
     siteName: "Giovanni Cambria",
     title: "Giovanni Cambria — Studio di consulenza",
     description:
-      "Ripensare il modello con l'AI. Case study reali, 25 anni di operatività.",
+      "Consulente in innovazione dei modelli di business. Tecnologia come mezzo, modello come fine.",
     url: "https://giovannicambria.it",
   },
   robots: { index: false, follow: false },
