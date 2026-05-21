@@ -43,7 +43,7 @@ export function SiteFooter() {
             <div className="mb-5">
               <Wordmark size={26} color="var(--color-paper)" />
             </div>
-            <p className="font-display italic text-[22px] leading-[1.35] text-[#d9d4c8] max-w-[460px] tracking-[-0.012em]">
+            <p className="font-serif italic text-[22px] leading-[1.35] text-[#d9d4c8] max-w-[460px] tracking-[-0.005em]">
               Lo studio è un piccolo spazio di lettura. Non promette
               trasformazioni: promette di guardare il modello insieme, con calma
               e numeri.

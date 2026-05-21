@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import {
-  Bodoni_Moda,
+  Manrope,
   Source_Serif_4,
-  IBM_Plex_Sans,
   IBM_Plex_Mono,
 } from "next/font/google";
 import "./globals.css";
@@ -10,12 +9,11 @@ import { Masthead } from "@/components/site/Masthead";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 
-const display = Bodoni_Moda({
+const grotesk = Manrope({
   subsets: ["latin"],
-  style: ["normal", "italic"],
-  axes: ["opsz"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
-  variable: "--font-display",
+  variable: "--font-grotesk",
 });
 
 const serif = Source_Serif_4({
@@ -24,13 +22,6 @@ const serif = Source_Serif_4({
   axes: ["opsz"],
   display: "swap",
   variable: "--font-serif",
-});
-
-const sans = IBM_Plex_Sans({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  display: "swap",
-  variable: "--font-sans",
 });
 
 const mono = IBM_Plex_Mono({
@@ -67,7 +58,7 @@ export default function RootLayout({
   return (
     <html
       lang="it"
-      className={`${display.variable} ${serif.variable} ${sans.variable} ${mono.variable} h-full`}
+      className={`${grotesk.variable} ${serif.variable} ${mono.variable} h-full`}
     >
       <body className="min-h-full flex flex-col bg-paper text-ink">
         <Masthead />

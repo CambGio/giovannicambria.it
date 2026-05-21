@@ -233,10 +233,7 @@ export default function Lavoro() {
               <span className="text-ink-muted">— Il percorso, non il curriculum</span>
             </div>
 
-            <h1
-              className="font-display font-normal m-0 text-[48px] leading-[1.02] tracking-[-0.03em] md:text-[64px] lg:text-[72px]"
-              style={{ fontVariationSettings: '"opsz" 96' }}
-            >
+            <h1 className="font-sans font-extrabold m-0 text-[48px] leading-[0.98] tracking-[-0.035em] md:text-[68px] lg:text-[80px]">
               Vent&apos;anni a costruire
               <br />
               modelli di business.
@@ -294,17 +291,11 @@ export default function Lavoro() {
               <div className="mt-3 font-mono text-[12px] tracking-[0.04em] tabular-nums text-ink-muted">
                 {c.period} · {c.place}
               </div>
-              <h2
-                className="mt-5 font-display font-normal text-[32px] leading-[1.1] tracking-[-0.018em] md:text-[40px]"
-                style={{ fontVariationSettings: '"opsz" 60' }}
-              >
+              <h2 className="mt-5 font-sans font-bold text-[30px] leading-[1.08] tracking-[-0.022em] md:text-[40px]">
                 {c.title}
               </h2>
             </header>
-            <div
-              className="font-serif text-[18px] leading-[1.7] text-ink space-y-6 md:text-[19px] [&_p]:m-0"
-              style={{ fontVariationSettings: '"opsz" 20' }}
-            >
+            <div className="font-serif text-[18px] leading-[1.7] text-ink space-y-6 md:text-[19px] [&_p]:m-0">
               {c.body}
             </div>
           </article>
@@ -331,7 +322,7 @@ export default function Lavoro() {
             <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-muted">
               Capitolo successivo
             </div>
-            <div className="mt-2 font-display text-[24px] leading-[1.15] tracking-[-0.012em] group-hover:text-accent">
+            <div className="mt-2 font-sans font-bold text-[22px] leading-[1.15] tracking-[-0.018em] group-hover:text-accent">
               Come lavoro, e con quale metodo.
             </div>
             <div className="mt-2 font-sans text-[13px] text-ink-muted">
@@ -339,17 +330,17 @@ export default function Lavoro() {
             </div>
           </Link>
           <Link
-            href="/scritti"
+            href="/blog"
             className="group block border-t-2 border-ink pt-5 transition-colors hover:border-accent"
           >
             <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-muted">
               Letture
             </div>
-            <div className="mt-2 font-display text-[24px] leading-[1.15] tracking-[-0.012em] group-hover:text-accent">
+            <div className="mt-2 font-sans font-bold text-[22px] leading-[1.15] tracking-[-0.018em] group-hover:text-accent">
               Cosa scrivo, ogni settimana.
             </div>
             <div className="mt-2 font-sans text-[13px] text-ink-muted">
-              /scritti
+              /blog
             </div>
           </Link>
           <Link
@@ -359,7 +350,7 @@ export default function Lavoro() {
             <div className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-muted">
               Lavoriamo insieme
             </div>
-            <div className="mt-2 font-display text-[24px] leading-[1.15] tracking-[-0.012em] group-hover:text-accent">
+            <div className="mt-2 font-sans font-bold text-[22px] leading-[1.15] tracking-[-0.018em] group-hover:text-accent">
               Mettiamoci in contatto.
             </div>
             <div className="mt-2 font-sans text-[13px] text-ink-muted">
@@ -376,7 +367,7 @@ export default function Lavoro() {
       >
         <span>P. 02 — § Lavoro</span>
         <span className="hidden md:inline">
-          Tipi: Bodoni Moda · Source Serif 4 · IBM Plex
+          Tipi: Manrope · Source Serif 4 · IBM Plex Mono
         </span>
         <span>— segue a p. 03</span>
       </div>
