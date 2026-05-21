@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import homeApertura from "@/assets/home-apertura.png";
 import { TAGLINE, TAGLINE_SUB } from "@/lib/site";
 
 const FORMATS = [
@@ -38,31 +39,33 @@ export default function Home() {
     <>
       {/* ─────────────────────────────────────────────────────────
        * P. 01 — § Apertura
+       * Diptych: testo a sinistra, fotografia documentale a destra.
+       * Sotto: strip 3-col dei formati commerciali.
        * ───────────────────────────────────────────────────────── */}
       <section className="mx-auto max-w-[1280px] px-6 py-20 md:px-16 md:py-28 lg:py-32">
-        <div className="grid gap-16 lg:grid-cols-[8fr_4fr] lg:gap-[96px]">
+        <div className="grid gap-12 lg:grid-cols-[6fr_5fr] lg:gap-[80px] lg:items-end">
           <div>
             <SectionKicker n="01" label="Tecnologia, decisioni, modello di business" />
 
-            <h1 className="mt-8 font-sans text-[56px] font-extrabold leading-[0.96] tracking-[-0.04em] text-ink md:text-[80px] lg:text-[96px]">
+            <h1 className="mt-8 font-sans text-[56px] font-extrabold leading-[0.96] tracking-[-0.04em] text-ink md:text-[72px] lg:text-[84px]">
               Ripensare<br />
               il modello<br />
               di business.
             </h1>
 
-            <p className="mt-10 max-w-[560px] font-serif text-[20px] leading-[1.45] md:text-[22px]">
+            <p className="mt-9 max-w-[520px] font-serif text-[19px] leading-[1.45] md:text-[21px]">
               {TAGLINE}
               <br />
               <span className="text-ink-muted italic">{TAGLINE_SUB}</span>
             </p>
 
-            <p className="mt-7 max-w-[540px] font-serif text-[17px] leading-[1.6] text-ink-muted md:text-[18px]">
+            <p className="mt-6 max-w-[520px] font-serif text-[16px] leading-[1.6] text-ink-muted md:text-[17px]">
               Senza hype, senza slide motivazionali. Case study reali, 28 anni
               di operatività digitale, un metodo che funziona per imprese
               italiane fuori dai poli metropolitani.
             </p>
 
-            <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <div className="mt-10 flex flex-wrap items-center gap-x-7 gap-y-4">
               <Link
                 href="/lavoro/mappa"
                 className="inline-flex items-center gap-3 bg-ink px-7 py-4 font-sans text-[15px] font-semibold text-paper tracking-[-0.005em] transition-colors hover:bg-accent"
@@ -79,66 +82,71 @@ export default function Home() {
             </div>
           </div>
 
-          <aside className="border-t border-rule pt-10 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0">
-            <div className="font-sans text-[11px] uppercase tracking-[0.18em] font-semibold text-ink-muted">
-              Da questo numero
+          <figure className="flex flex-col">
+            <div className="relative aspect-[4/5] w-full bg-ink">
+              <Image
+                src={homeApertura}
+                alt="Interno luminoso di un ufficio italiano: due persone al lavoro su laptop, piante, ampie vetrate verso l'esterno."
+                fill
+                sizes="(min-width: 1024px) 45vw, 100vw"
+                priority
+                placeholder="blur"
+                className="object-cover object-[65%_center]"
+              />
             </div>
-            <div className="mt-6 border-t-2 border-ink" aria-hidden="true" />
+            <figcaption className="mt-4 flex flex-col gap-1.5 md:flex-row md:items-baseline md:justify-between md:gap-6">
+              <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-muted">
+                Foto 01 · Interno aziendale · Italia, 2026
+              </span>
+              <span className="font-serif text-[13px] italic leading-[1.4] text-ink-muted md:max-w-[260px] md:text-right">
+                Le imprese che servo hanno spazi così. Persone, luce, niente
+                teatro.
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+
+        {/* Strip formati: 3 colonne sotto il diptych, fa da "indice" alla pagina */}
+        <div className="mt-20 border-t-2 border-ink pt-8 md:mt-24">
+          <div className="flex items-baseline justify-between gap-6">
+            <div className="font-sans text-[11px] uppercase tracking-[0.18em] font-semibold text-ink-muted">
+              Da questo numero, tre porte d&apos;ingresso
+            </div>
+            <Link
+              href="/lavoro"
+              className="hidden font-mono text-[11px] uppercase tracking-[0.06em] text-ink-muted transition-colors hover:text-accent md:inline"
+            >
+              tutte le schede →
+            </Link>
+          </div>
+
+          <div className="mt-7 grid gap-px bg-rule md:grid-cols-3">
             {FORMATS.map((item) => (
               <Link
                 key={item.n}
                 href={item.href}
-                className="group grid grid-cols-[44px_1fr] items-baseline gap-5 border-b border-rule py-6 transition-colors"
+                className="group flex flex-col bg-paper p-6 transition-colors md:p-7"
               >
-                <div className="font-mono text-[12px] font-medium tracking-[0.04em] text-accent tabular-nums">
-                  {item.n}
+                <div className="flex items-baseline justify-between font-mono text-[12px] tracking-[0.04em] text-accent tabular-nums">
+                  <span>{item.n}</span>
+                  <span className="text-ink-muted">scheda</span>
                 </div>
-                <div>
-                  <div className="font-sans text-[20px] font-semibold leading-[1.15] tracking-[-0.012em] transition-colors group-hover:text-accent">
-                    {item.t}
-                  </div>
-                  <div className="mt-1.5 font-serif text-[14px] leading-[1.4] text-ink-muted">
-                    {item.s}
-                  </div>
-                  <div className="mt-3 font-mono text-[12px] tracking-[0.02em] tabular-nums">
-                    {item.p}
-                  </div>
+                <div className="mt-5 font-sans text-[22px] font-semibold leading-[1.15] tracking-[-0.014em] transition-colors group-hover:text-accent md:text-[24px]">
+                  {item.t}
+                </div>
+                <div className="mt-2 font-serif text-[15px] leading-[1.45] text-ink-muted">
+                  {item.s}
+                </div>
+                <div className="mt-5 font-mono text-[12px] tracking-[0.02em] tabular-nums">
+                  {item.p}
                 </div>
               </Link>
             ))}
-          </aside>
+          </div>
         </div>
       </section>
 
-      <PageRule label="P. 01 §  Apertura" next="tavola fuori testo" />
-
-      {/* ─────────────────────────────────────────────────────────
-       * Tavola fuori testo — Fotografia documentale, full-bleed.
-       * Regola brand §6: foto B/N, interni di aziende italiane.
-       * ───────────────────────────────────────────────────────── */}
-      <figure className="relative w-full">
-        <div className="relative aspect-[16/9] w-full bg-ink">
-          <Image
-            src="/home-apertura.png"
-            alt="Interno luminoso di un ufficio italiano: due persone al lavoro su laptop, piante, ampie vetrate verso l'esterno."
-            fill
-            sizes="100vw"
-            priority={false}
-            className="object-cover"
-          />
-        </div>
-        <figcaption className="mx-auto flex max-w-[1280px] flex-col gap-1 px-6 pt-5 md:flex-row md:items-baseline md:justify-between md:px-16">
-          <span className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-muted">
-            Foto 01 · Interno aziendale · Italia, 2026
-          </span>
-          <span className="font-serif text-[14px] italic leading-[1.45] text-ink-muted md:max-w-[520px] md:text-right">
-            Le imprese che servo hanno spazi così. Persone, luce naturale,
-            niente teatro.
-          </span>
-        </figcaption>
-      </figure>
-
-      <PageRule label="Tavola fuori testo" next="p. 02" />
+      <PageRule label="P. 01 §  Apertura" next="p. 02" />
 
       {/* ─────────────────────────────────────────────────────────
        * P. 02 — § Tracce di un mestiere (timeline asimmetrica)
