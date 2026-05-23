@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Percorso — Giovanni Cambria",
+  title: "Chi sono — Giovanni Cambria",
   description:
     "Vent'anni a costruire modelli di business: da Switch MultiMedia (1998) agli incarichi di oggi in Sicilia. Le tappe, in sintesi.",
 };
@@ -16,25 +16,11 @@ type Tappa = {
 
 const TAPPE: Tappa[] = [
   {
-    periodo: "1998 — 2007",
-    ruolo: "Switch MultiMedia — agenzia digitale propria",
-    luogo: "Milazzo",
+    periodo: "2024 — oggi",
+    ruolo: "Amendolia Assicurazioni e Sinotech",
+    luogo: "Milazzo, Milano",
     testo:
-      "Fondata a 27 anni, quando «fare web» in Sicilia era un mestiere senza nome. Dieci anni a fare tutto: vendita, strategia, esecuzione, persone.",
-  },
-  {
-    periodo: "2009 — 2018",
-    ruolo: "Eureweb — quattro ruoli, fino a General Team Manager",
-    luogo: "Brescia, Salò",
-    testo:
-      "Dieci anni in una digital agency, per clienti come Pirelli, Citroën, Lenovo, Candy, Sisal. Qui ho imparato che la disciplina vale più del talento isolato.",
-  },
-  {
-    periodo: "2019",
-    ruolo: "Consulente indipendente + Business Design Academy (Beople)",
-    luogo: "Sicilia",
-    testo:
-      "Torno a lavorare in proprio e do un nome al mestiere: consulente in innovazione dei modelli di business.",
+      "Due incarichi recenti: un'agenzia assicurativa siciliana e un'azienda milanese. La prova che il posizionamento regge anche fuori dalla Sicilia.",
   },
   {
     periodo: "2019 — oggi",
@@ -44,11 +30,25 @@ const TAPPE: Tappa[] = [
       "Co-progettazione della catena del valore col founder e lancio del canale e-commerce empirericambi.it (2021). Il cliente che mi ha dato continuità.",
   },
   {
-    periodo: "2024 — oggi",
-    ruolo: "Amendolia Assicurazioni e Sinotech",
-    luogo: "Milazzo, Milano",
+    periodo: "2019",
+    ruolo: "Consulente indipendente + Business Design Academy (Beople)",
+    luogo: "Sicilia",
     testo:
-      "Due incarichi recenti: un'agenzia assicurativa siciliana e un'azienda milanese. La prova che il posizionamento regge anche fuori dalla Sicilia.",
+      "Torno a lavorare in proprio e do un nome al mestiere: consulente in innovazione dei modelli di business.",
+  },
+  {
+    periodo: "2009 — 2018",
+    ruolo: "Eureweb — quattro ruoli, fino a General Team Manager",
+    luogo: "Brescia, Salò",
+    testo:
+      "Dieci anni in una digital agency, per clienti come Pirelli, Citroën, Lenovo, Candy, Sisal. Qui ho imparato che la disciplina vale più del talento isolato.",
+  },
+  {
+    periodo: "1998 — 2007",
+    ruolo: "Switch MultiMedia — agenzia digitale propria",
+    luogo: "Milazzo",
+    testo:
+      "Fondata a 27 anni, quando «fare web» in Sicilia era un mestiere senza nome. Dieci anni a fare tutto: vendita, strategia, esecuzione, persone.",
   },
 ];
 
@@ -116,7 +116,7 @@ export default function Percorso() {
         aria-hidden="true"
         className="mx-auto flex max-w-[1280px] items-center justify-between border-t border-rule px-6 py-3.5 md:px-16 font-mono text-[11px] tracking-[0.04em] text-ink-muted"
       >
-        <span>P. 02 — § Percorso</span>
+        <span>P. 02 — § Chi sono</span>
         <span className="hidden md:inline">Tipi: Manrope · Source Serif 4 · IBM Plex Mono</span>
         <span>— segue a p. 03</span>
       </div>

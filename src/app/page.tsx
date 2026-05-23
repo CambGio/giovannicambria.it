@@ -176,7 +176,7 @@ export default function Home() {
             href="/percorso"
             className="font-serif text-[16px] italic text-ink decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-accent hover:underline"
           >
-            la storia per intero, in pagina Percorso →
+            la storia per intero, in pagina Chi sono →
           </Link>
         </div>
       </section>
