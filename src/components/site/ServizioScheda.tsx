@@ -8,8 +8,7 @@ export function ServizioScheda({ slug }: { slug: ServizioSlug }) {
       <section className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24 lg:py-28">
         <div className="mb-7 flex items-center gap-3.5 font-sans text-[12px] uppercase tracking-[0.18em] font-medium">
           <span className="inline-block h-[2px] w-7 bg-accent" />
-          <span className="text-accent">№ {s.n}</span>
-          <span className="text-ink-muted">— Lavora con me</span>
+          <span className="text-accent">Lavora con me</span>
         </div>
 
         <h1 className="max-w-[900px] font-sans font-extrabold text-[44px] leading-[1.0] tracking-[-0.035em] text-ink md:text-[64px] lg:text-[72px]">

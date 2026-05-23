@@ -34,7 +34,13 @@ export default function Contatto() {
 
         <div className="mt-14 grid gap-px border-t border-ink bg-rule md:grid-cols-3">
           {RECAPITI.map((r) => (
-            <a key={r.label} href={r.href} className="group bg-paper p-7 transition-colors hover:bg-paper-deep" rel="noopener">
+            <a
+              key={r.label}
+              href={r.href}
+              className="group bg-paper p-7 transition-colors hover:bg-paper-deep"
+              target={r.href.startsWith("http") ? "_blank" : undefined}
+              rel={r.href.startsWith("http") ? "noopener noreferrer" : undefined}
+            >
               <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-muted">{r.label}</div>
               <div className="mt-3 font-sans text-[18px] font-semibold tracking-[-0.01em] transition-colors group-hover:text-accent">
                 {r.value}
