@@ -30,7 +30,7 @@ const FORMATS = [
 const TIMELINE = [
   { y: "1998", t: "Switch MultiMedia", s: "Co-fondazione agenzia digitale", weight: "faint" as const },
   { y: "2009", t: "Eureweb", s: "Direzione di una nuova agenzia", weight: "faint" as const },
-  { y: "2018", t: "Innovation Manager", s: "Empire S.r.l., PMI siciliana", weight: "medium" as const },
+  { y: "2019", t: "Empire S.r.l.", s: "Direttore marketing, poi Innovation Manager", weight: "medium" as const },
   { y: "2024", t: "Studio di consulenza", s: "Riposizionamento sull'innovazione del modello", weight: "now" as const },
 ];
 
@@ -173,10 +173,10 @@ export default function Home() {
 
         <div className="mt-12">
           <Link
-            href="/approccio"
+            href="/percorso"
             className="font-serif text-[16px] italic text-ink decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-accent hover:underline"
           >
-            la storia per intero, in pagina Approccio →
+            la storia per intero, in pagina Percorso →
           </Link>
         </div>
       </section>
