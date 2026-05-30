@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { articoliPerData, formattaData } from "@/lib/articoli";
 
 export const metadata: Metadata = {
   title: "Blog — Giovanni Cambria",
@@ -8,6 +9,9 @@ export const metadata: Metadata = {
 };
 
 export default function Blog() {
+  const articoli = articoliPerData;
+  const haArticoli = articoli.length > 0;
+
   return (
     <>
       <section className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24 lg:py-32">
@@ -26,9 +30,46 @@ export default function Blog() {
         </h1>
 
         <p className="mt-8 max-w-[620px] font-serif text-[20px] leading-[1.5] text-ink-muted md:text-[22px]">
-          Due letture a settimana, sul modello di business più che sul tool. I
-          primi articoli stanno arrivando.
+          {haArticoli
+            ? "Due letture a settimana, sul modello di business più che sul tool."
+            : "Due letture a settimana, sul modello di business più che sul tool. I primi articoli stanno arrivando."}
         </p>
+
+        {haArticoli && (
+          <div className="mt-14">
+            <div className="flex items-baseline justify-between border-t-2 border-ink pt-7">
+              <div className="font-sans text-[11px] uppercase tracking-[0.18em] font-semibold text-ink-muted">
+                Tutti gli articoli
+              </div>
+              <div className="font-mono text-[11px] uppercase tracking-[0.06em] text-ink-muted tabular-nums">
+                {articoli.length} {articoli.length === 1 ? "articolo" : "articoli"}
+              </div>
+            </div>
+            <div className="mt-7 grid gap-px bg-rule md:grid-cols-3">
+              {articoli.map((a) => (
+                <Link
+                  key={a.slug}
+                  href={`/blog/${a.slug}`}
+                  className="group flex flex-col bg-paper p-6 md:p-7"
+                >
+                  <div className="aspect-[16/10] w-full bg-placeholder" />
+                  <div className="mt-5 font-mono text-[11px] uppercase tracking-[0.12em] text-accent">
+                    {a.rubricaLabel}
+                  </div>
+                  <div className="mt-2 font-sans text-[20px] font-semibold leading-[1.18] tracking-[-0.012em] transition-colors group-hover:text-accent">
+                    {a.titolo}
+                  </div>
+                  <p className="mt-2 font-serif text-[15px] leading-[1.45] text-ink-muted">
+                    {a.sommario}
+                  </p>
+                  <div className="mt-4 font-mono text-[11px] uppercase tracking-[0.06em] text-ink-muted tabular-nums">
+                    {formattaData(a.data)} · {a.minuti} min
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="mt-14 border-t-2 border-ink pt-7">
           <div className="font-sans text-[11px] uppercase tracking-[0.18em] font-semibold text-ink-muted">
@@ -49,7 +90,7 @@ export default function Blog() {
         </div>
 
         <p className="mt-12 max-w-[620px] font-serif text-[17px] leading-[1.6] text-ink-muted">
-          Vuoi essere avvisato quando esce il primo?{" "}
+          Vuoi essere avvisato quando esce il prossimo?{" "}
           <Link
             href="/contatto"
             className="font-sans font-semibold text-ink underline decoration-accent decoration-2 underline-offset-4 transition-colors hover:text-accent"
@@ -66,7 +107,7 @@ export default function Blog() {
       >
         <span>P. 01 — § Blog</span>
         <span className="hidden md:inline">Tipi: Manrope · Source Serif 4 · IBM Plex Mono</span>
-        <span>indice in arrivo</span>
+        <span>{haArticoli ? `${articoli.length} pubblicati` : "indice in arrivo"}</span>
       </div>
     </>
   );
