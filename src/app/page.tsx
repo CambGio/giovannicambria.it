@@ -9,7 +9,7 @@ export default function Home() {
       {/* ── Front page: articolo in evidenza + manifesto ── */}
       <section className="mx-auto max-w-[1280px] px-6 py-14 md:px-16 md:py-20 lg:py-24">
         <div className="grid gap-12 lg:grid-cols-[1.55fr_1fr] lg:gap-[72px]">
-          <Link href="/blog" className="group block">
+          <Link href={`/blog/${hero.slug}`} className="group block">
             <div className="flex items-center gap-3 font-mono text-[11px] uppercase tracking-[0.14em]">
               <span className="inline-block h-[2px] w-6 bg-accent" />
               <span className="text-accent">In evidenza</span>
@@ -83,7 +83,7 @@ export default function Home() {
           {altri.map((a) => (
             <Link
               key={a.slug}
-              href="/blog"
+              href={`/blog/${a.slug}`}
               className="group flex flex-col bg-paper p-6 md:p-7"
             >
               <div className="aspect-[16/10] w-full bg-placeholder" />
