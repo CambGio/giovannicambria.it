@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Chi sono — Giovanni Cambria",
   description:
-    "Vent'anni a costruire modelli di business: da Switch MultiMedia (1998) agli incarichi di oggi in Sicilia. Le tappe, in sintesi.",
+    "Quasi trent'anni nel digitale: da Switch MultiMedia (1998) agli incarichi di oggi in Sicilia. Le tappe, in sintesi.",
 };
 
 type Tappa = {
@@ -20,7 +20,7 @@ const TAPPE: Tappa[] = [
     ruolo: "Amendolia Assicurazioni e Sinotech",
     luogo: "Milazzo, Milano",
     testo:
-      "Due incarichi recenti: un'agenzia assicurativa siciliana e un'azienda milanese. La prova che il posizionamento regge anche fuori dalla Sicilia.",
+      "Due incarichi recenti: un'agenzia assicurativa siciliana e un'azienda milanese. Lo stesso metodo, due contesti diversi.",
   },
   {
     periodo: "2019 — oggi",
@@ -63,7 +63,7 @@ export default function Percorso() {
         </div>
 
         <h1 className="max-w-[900px] font-sans font-extrabold text-[44px] leading-[1.0] tracking-[-0.035em] text-ink md:text-[64px] lg:text-[72px]">
-          Vent&apos;anni a costruire modelli di business.
+          Quasi trent&apos;anni nel digitale.
         </h1>
 
         <p className="mt-8 max-w-[560px] font-serif text-[20px] leading-[1.45] text-ink-muted md:text-[22px]">

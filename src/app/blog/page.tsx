@@ -31,8 +31,8 @@ export default function Blog() {
 
         <p className="mt-8 max-w-[620px] font-serif text-[20px] leading-[1.5] text-ink-muted md:text-[22px]">
           {haArticoli
-            ? "Due letture a settimana, sul modello di business più che sul tool."
-            : "Due letture a settimana, sul modello di business più che sul tool. I primi articoli stanno arrivando."}
+            ? "Una lettura a settimana, il lunedì: sul modello di business più che sul tool."
+            : "Una lettura a settimana, il lunedì: sul modello di business più che sul tool. I primi articoli stanno arrivando."}
         </p>
 
         {haArticoli && (

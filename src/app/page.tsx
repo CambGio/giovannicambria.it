@@ -37,8 +37,8 @@ export default function Home() {
               <span className="text-accent">Manifesto</span>
             </div>
             <p className="mt-6 font-serif text-[22px] leading-[1.4] text-ink md:text-[24px]">
-              Il 90% di chi vende innovazione vende un tool. Io parto dal
-              modello di business:{" "}
+              Quasi tutti quelli che vendono innovazione, in realtà, vendono un
+              tool. Io parto dal modello di business:{" "}
               <span className="italic text-ink-muted">
                 cosa cambia davvero per chi fa impresa.
               </span>
@@ -121,7 +121,7 @@ export default function Home() {
                 href="/lavoro"
                 className="mt-6 inline-flex items-center gap-3 bg-ink px-6 py-3.5 font-sans text-[14px] font-semibold text-paper transition-colors hover:bg-accent"
               >
-                Vedi i tre format <span aria-hidden="true">→</span>
+                Vedi i tre modi <span aria-hidden="true">→</span>
               </Link>
             </div>
             <div className="md:border-l md:border-rule md:pl-16">

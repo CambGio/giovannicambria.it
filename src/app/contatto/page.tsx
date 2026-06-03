@@ -59,7 +59,7 @@ export default function Contatto() {
             href="/lavoro"
             className="font-mono text-[11px] uppercase tracking-[0.06em] text-ink-muted transition-colors hover:text-accent"
           >
-            ← vedi prima i tre format
+            ← vedi prima i tre modi
           </Link>
         </div>
       </section>

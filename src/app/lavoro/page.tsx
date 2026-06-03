@@ -58,7 +58,7 @@ export default function Lavoro() {
 
         <div className="mt-12 border-t-2 border-ink pt-7">
           <p className="font-serif text-[18px] leading-[1.5] text-ink-muted">
-            Non sei sicuro di quale format scelga il tuo caso?{" "}
+            Non sei sicuro di quale sia il taglio giusto per il tuo caso?{" "}
             <Link
               href="/contatto"
               className="not-italic font-sans font-semibold text-ink underline decoration-accent decoration-2 underline-offset-4 transition-colors hover:text-accent"

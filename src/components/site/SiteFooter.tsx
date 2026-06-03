@@ -8,9 +8,8 @@ const COLS: Col[] = [
     title: "Studio",
     items: [
       { label: "Chi sono", href: "/percorso" },
-      { label: "Tre format", href: "/lavoro" },
+      { label: "Come lavoriamo", href: "/lavoro" },
       { label: "Blog", href: "/blog" },
-      { label: "Newsletter", href: "/newsletter" },
     ],
   },
   {
