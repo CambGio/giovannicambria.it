@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ServizioScheda } from "@/components/site/ServizioScheda";
 
 export const metadata: Metadata = {
-  title: "Workshop in-house — Giovanni Cambria",
+  title: "Workshop in-house «Innovazione per il tuo team»",
   description:
-    "Una giornata col team per allineare l'organizzazione sull'innovazione del modello, prima di partire con i progetti.",
+    "Una giornata in azienda per team da 8 a 30 persone: 4 ore di teoria applicata al vostro settore e 3 ore di laboratorio sui casi reali. A partire da 2.500 € a giornata.",
 };
 
 export default function Workshop() {

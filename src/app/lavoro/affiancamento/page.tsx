@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { ServizioScheda } from "@/components/site/ServizioScheda";
 
 export const metadata: Metadata = {
-  title: "Affiancamento — Giovanni Cambria",
+  title: "Affiancamento · Consulenza ricorrente per PMI italiane",
   description:
-    "Affiancamento progettuale ricorrente per PMI italiane, con KPI verificabili. Da 3 a 12 mesi.",
+    "Affiancamento progettuale da 3 mesi in su: 3–4 mezze giornate al mese, stand-up settimanale di 30 minuti, formazione del team. A partire da 2.000 € al mese.",
 };
 
 export default function Affiancamento() {

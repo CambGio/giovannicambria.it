@@ -46,6 +46,7 @@ const components: MDXComponents = {
   strong: (props) => (
     <strong className="font-semibold text-ink" {...props} />
   ),
+  em: (props) => <em className="italic" {...props} />,
   code: (props) => (
     <code
       className="bg-paper-deep px-1.5 py-0.5 font-mono text-[14px] text-ink"
@@ -59,6 +60,25 @@ const components: MDXComponents = {
     />
   ),
   hr: () => <hr className="my-12 border-rule" />,
+  // Tabelle GFM minime: i writer le evitano, ma il renderer non deve
+  // degradare se ne arriva una. Solo token brand, niente zebra né radius.
+  table: (props) => (
+    <div className="mt-6 overflow-x-auto">
+      <table className="w-full border-collapse text-left" {...props} />
+    </div>
+  ),
+  th: (props) => (
+    <th
+      className="border-b-2 border-ink px-3 py-2.5 align-bottom font-sans text-[13px] font-semibold uppercase tracking-[0.04em] text-ink first:pl-0 last:pr-0"
+      {...props}
+    />
+  ),
+  td: (props) => (
+    <td
+      className="border-b border-rule px-3 py-2.5 align-top font-serif text-[15px] leading-[1.55] text-ink first:pl-0 last:pr-0"
+      {...props}
+    />
+  ),
   blockquote: (props) => (
     <blockquote
       className="mt-6 border-l-2 border-accent pl-5 font-serif text-[18px] italic leading-[1.6] text-ink-muted"

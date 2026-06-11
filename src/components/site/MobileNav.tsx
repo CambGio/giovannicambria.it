@@ -4,15 +4,26 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NAV } from "@/lib/nav";
-import { TAGLINE } from "@/lib/site";
+import {
+  CITY,
+  EMAIL,
+  PHONE_DISPLAY,
+  PHONE_TEL,
+  TAGLINE,
+  TAGLINE_SUB,
+} from "@/lib/site";
 
 export function MobileNav() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  useEffect(() => {
+  // Chiude il pannello quando cambia rotta. Aggiustamento di stato
+  // durante il render, come da doc React, al posto di un effect.
+  const [lastPathname, setLastPathname] = useState(pathname);
+  if (pathname !== lastPathname) {
+    setLastPathname(pathname);
     setOpen(false);
-  }, [pathname]);
+  }
 
   useEffect(() => {
     if (!open) return;
@@ -117,9 +128,26 @@ export function MobileNav() {
             <p className="font-serif text-[15px] leading-[1.4] text-ink-muted">
               {TAGLINE}
             </p>
-            <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.06em] text-ink-muted">
-              studio@giovannicambria.it · Milazzo
+            <p className="mt-1 font-serif text-[15px] leading-[1.4] text-ink-muted">
+              {TAGLINE_SUB}
             </p>
+            <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-[11px] uppercase tracking-[0.06em] text-ink-muted">
+              <a
+                href={`mailto:${EMAIL}`}
+                className="transition-colors hover:text-accent"
+              >
+                {EMAIL}
+              </a>
+              <span aria-hidden="true">·</span>
+              <a
+                href={`tel:${PHONE_TEL}`}
+                className="transition-colors hover:text-accent"
+              >
+                {PHONE_DISPLAY}
+              </a>
+              <span aria-hidden="true">·</span>
+              <span>{CITY}</span>
+            </div>
           </div>
         </div>
       ) : null}

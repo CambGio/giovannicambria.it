@@ -2,9 +2,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Chi sono — Giovanni Cambria",
+  title: "Chi sono",
   description:
-    "Quasi trent'anni nel digitale: da Switch MultiMedia (1998) agli incarichi di oggi in Sicilia. Le tappe, in sintesi.",
+    "Nel digitale dal 1998: da Switch MultiMedia (Milazzo) agli incarichi di oggi, passando per Brescia. Le tappe, in sintesi.",
 };
 
 type Tappa = {
@@ -16,39 +16,53 @@ type Tappa = {
 
 const TAPPE: Tappa[] = [
   {
-    periodo: "2024 — oggi",
-    ruolo: "Amendolia Assicurazioni e Sinotech",
-    luogo: "Milazzo, Milano",
+    periodo: "Dal 2024",
+    ruolo: "Amendolia Assicurazioni e Autonoleggio Di Paola",
+    luogo: "Milazzo",
     testo:
-      "Due incarichi recenti: un'agenzia assicurativa siciliana e un'azienda milanese. Lo stesso metodo, due contesti diversi.",
+      "Per l'agenzia assicurativa un percorso partito dalla consulenza manageriale e cresciuto fino al CRM, alla lead generation e a un agente vocale per il centralino fuori orario; per l'autonoleggio, il sito con booking dei transfer e la SEO.",
   },
   {
-    periodo: "2019 — oggi",
-    ruolo: "Empire S.r.l. — Direttore marketing, poi Innovation Manager (feb 2020)",
+    periodo: "2024–2025",
+    ruolo: "Sinotech · migrazione e-commerce",
+    luogo: "Milano",
+    testo:
+      "Migrazione dell'e-commerce da PrestaShop a Shopify, più SEO e Analytics: un anno di lavoro, chiuso a giugno 2025.",
+  },
+  {
+    periodo: "Dal 2019",
+    ruolo: "Empire S.r.l. · Direttore marketing, poi Innovation Manager (feb 2020)",
     luogo: "Venetico (ME)",
     testo:
-      "Co-progettazione della catena del valore col founder e lancio del canale e-commerce empirericambi.it (2021). Il cliente che mi ha dato continuità.",
+      "Con il founder ho co-progettato la catena del valore e costruito da zero il canale e-commerce: empirericambi.it, su Shopify da aprile 2021.",
   },
   {
     periodo: "2019",
-    ruolo: "Consulente indipendente + Business Design Academy (Beople)",
+    ruolo: "Consulente indipendente",
     luogo: "Sicilia",
     testo:
-      "Torno a lavorare in proprio e do un nome al mestiere: consulente in innovazione dei modelli di business.",
+      "Torno a lavorare in proprio e, dopo la Digital Masterclass in Business Design per le PMI di Beople, do un nome al mestiere: consulente in innovazione dei modelli di business.",
   },
   {
-    periodo: "2009 — 2018",
-    ruolo: "Eureweb — quattro ruoli, fino a General Team Manager",
+    periodo: "2009–2018",
+    ruolo: "Eureweb · quattro ruoli, fino a General Team Manager",
     luogo: "Brescia, Salò",
     testo:
-      "Dieci anni in una digital agency, per clienti come Pirelli, Citroën, Lenovo, Candy, Sisal. Qui ho imparato che la disciplina vale più del talento isolato.",
+      "Una digital agency, clienti come Pirelli, Citroën, Lenovo e Candy, un team di oltre venti persone da guidare: qui ho imparato che la disciplina vale più del talento isolato.",
   },
   {
-    periodo: "1998 — 2007",
-    ruolo: "Switch MultiMedia — agenzia digitale propria",
+    periodo: "2007–2009",
+    ruolo: "Studio Cambria · freelance",
     luogo: "Milazzo",
     testo:
-      "Fondata a 27 anni, quando «fare web» in Sicilia era un mestiere senza nome. Dieci anni a fare tutto: vendita, strategia, esecuzione, persone.",
+      "Chiusa l'agenzia, resto sul mestiere da solo: clienti diretti e progetti web, prima del salto in una struttura più grande.",
+  },
+  {
+    periodo: "1998–2007",
+    ruolo: "Switch MultiMedia · agenzia digitale co-fondata",
+    luogo: "Milazzo",
+    testo:
+      "Co-fondata con un socio quando «fare web» in Sicilia era un mestiere senza nome: vendita, strategia, esecuzione, persone, tutto insieme.",
   },
 ];
 
@@ -59,15 +73,15 @@ export default function Percorso() {
         <div className="mb-7 flex items-center gap-3.5 font-sans text-[12px] uppercase tracking-[0.18em] font-medium">
           <span className="inline-block h-[2px] w-7 bg-accent" />
           <span className="text-accent">№ 02</span>
-          <span className="text-ink-muted">— Il percorso, non il curriculum</span>
+          <span className="text-ink-muted">Chi sono</span>
         </div>
 
         <h1 className="max-w-[900px] font-sans font-extrabold text-[44px] leading-[1.0] tracking-[-0.035em] text-ink md:text-[64px] lg:text-[72px]">
-          Quasi trent&apos;anni nel digitale.
+          Nel digitale dal 1998.
         </h1>
 
         <p className="mt-8 max-w-[560px] font-serif text-[20px] leading-[1.45] text-ink-muted md:text-[22px]">
-          Sicilia, Brescia, ancora Sicilia. Le tappe in sintesi — chi vuole il
+          Sicilia, Brescia, ancora Sicilia. Le tappe in sintesi: chi vuole il
           racconto lungo lo trova negli articoli del blog.
         </p>
 
@@ -101,13 +115,13 @@ export default function Percorso() {
             href="/blog"
             className="font-serif text-[16px] italic text-ink decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-accent hover:underline"
           >
-            leggi le storie di lavoro sul blog →
+            Leggi le storie di lavoro sul blog →
           </Link>
           <Link
             href="/lavoro"
             className="font-serif text-[16px] italic text-ink decoration-accent decoration-2 underline-offset-[6px] transition-colors hover:text-accent hover:underline"
           >
-            oppure vedi come lavoriamo insieme →
+            Lavora con me →
           </Link>
         </div>
       </section>
@@ -116,9 +130,9 @@ export default function Percorso() {
         aria-hidden="true"
         className="mx-auto flex max-w-[1280px] items-center justify-between border-t border-rule px-6 py-3.5 md:px-16 font-mono text-[11px] tracking-[0.04em] text-ink-muted"
       >
-        <span>P. 02 — § Chi sono</span>
+        <span>P. 02 · § Chi sono</span>
         <span className="hidden md:inline">Tipi: Manrope · Source Serif 4 · IBM Plex Mono</span>
-        <span>— segue a p. 03</span>
+        <span>segue a p. 03</span>
       </div>
     </>
   );

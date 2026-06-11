@@ -8,6 +8,12 @@ import "./globals.css";
 import { Masthead } from "@/components/site/Masthead";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
+import {
+  SITE_DESCRIPTION,
+  SITE_NAME,
+  SITE_TITLE,
+  SITE_URL,
+} from "@/lib/site";
 
 const grotesk = Manrope({
   subsets: ["latin"],
@@ -32,22 +38,19 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://giovannicambria.it"),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: "Giovanni Cambria — Studio di consulenza",
-    template: "%s · Giovanni Cambria",
+    default: SITE_TITLE,
+    template: `%s · ${SITE_NAME}`,
   },
-  description:
-    "Consulente in innovazione dei modelli di business per imprenditori italiani che vogliono capire prima di adottare.",
-  alternates: { canonical: "/" },
+  description: SITE_DESCRIPTION,
   openGraph: {
     type: "website",
     locale: "it_IT",
-    siteName: "Giovanni Cambria",
-    title: "Giovanni Cambria — Studio di consulenza",
-    description:
-      "Consulente in innovazione dei modelli di business. Tecnologia come mezzo, modello come fine.",
-    url: "https://giovannicambria.it",
+    siteName: SITE_NAME,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
   },
   robots: { index: false, follow: false },
 };

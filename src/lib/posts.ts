@@ -8,6 +8,24 @@ import matter from "gray-matter";
 
 export type RubricaSlug = "cosa-cambia-se" | "storia-di" | "modelli";
 
+// Le tre rubriche canoniche, in ordine editoriale. I label (con ellissi
+// tipografica singola …) sono derivati SOLO da questa mappa: l'eventuale
+// rubricaLabel nel frontmatter viene ignorato, così un refuso nel file
+// non crea rubriche fantasma.
+export const RUBRICHE: { slug: RubricaSlug; label: string }[] = [
+  { slug: "cosa-cambia-se", label: "Cosa cambia se…" },
+  { slug: "storia-di", label: "Storia di…" },
+  { slug: "modelli", label: "Modelli" },
+];
+
+const RUBRICA_LABEL = Object.fromEntries(
+  RUBRICHE.map((r) => [r.slug, r.label]),
+) as Record<RubricaSlug, string>;
+
+export function isRubricaSlug(v: unknown): v is RubricaSlug {
+  return typeof v === "string" && v in RUBRICA_LABEL;
+}
+
 export type Articolo = {
   slug: string;
   rubrica: RubricaSlug;
@@ -17,7 +35,6 @@ export type Articolo = {
   data: string; // ISO yyyy-mm-dd
   minuti: number;
   draft?: boolean;
-  featured?: boolean;
 };
 
 const postsDir = path.join(process.cwd(), "content/posts");
@@ -30,12 +47,61 @@ export function formattaData(iso: string): string {
   }).format(new Date(`${iso}T00:00:00`));
 }
 
+// Validazione minima del frontmatter, con errore esplicito a build time:
+// slug, titolo, data e rubrica sono obbligatori; la rubrica deve essere
+// una delle tre canoniche.
+function validaFrontmatter(file: string, raw: Record<string, unknown>): Articolo {
+  const errori: string[] = [];
+
+  if (typeof raw.slug !== "string" || raw.slug.trim() === "") {
+    errori.push("slug mancante");
+  }
+  if (typeof raw.titolo !== "string" || raw.titolo.trim() === "") {
+    errori.push("titolo mancante");
+  }
+  if (typeof raw.data !== "string" || !/^\d{4}-\d{2}-\d{2}$/.test(raw.data)) {
+    errori.push("data mancante o non in formato yyyy-mm-dd");
+  }
+  if (raw.rubrica === undefined || raw.rubrica === null || raw.rubrica === "") {
+    errori.push("rubrica mancante");
+  } else if (!isRubricaSlug(raw.rubrica)) {
+    errori.push(
+      `rubrica sconosciuta: "${String(raw.rubrica)}" (ammesse: ${RUBRICHE.map((r) => r.slug).join(", ")})`,
+    );
+  }
+
+  if (errori.length > 0) {
+    throw new Error(
+      `Frontmatter non valido in content/posts/${file}: ${errori.join("; ")}.`,
+    );
+  }
+
+  const rubrica = raw.rubrica as RubricaSlug;
+
+  return {
+    slug: (raw.slug as string).trim(),
+    rubrica,
+    rubricaLabel: RUBRICA_LABEL[rubrica],
+    titolo: raw.titolo as string,
+    sommario: typeof raw.sommario === "string" ? raw.sommario : "",
+    data: raw.data as string,
+    minuti: Number(raw.minuti) || 0,
+    draft: raw.draft === true,
+  };
+}
+
+let cache: { frontmatter: Articolo; body: string }[] | null = null;
+
 function leggiTutti(): { frontmatter: Articolo; body: string }[] {
+  // Cache solo in produzione: in dev i writer devono vedere le modifiche
+  // agli MDX senza riavviare il server.
+  if (cache && process.env.NODE_ENV === "production") return cache;
+
   const files = fs
     .readdirSync(postsDir)
     .filter((f) => f.endsWith(".mdx"));
 
-  return files.map((file) => {
+  cache = files.map((file) => {
     const raw = fs.readFileSync(path.join(postsDir, file), "utf8");
     const { data, content } = matter(raw);
     // YAML interpreta yyyy-mm-dd come Date: normalizziamo a stringa ISO yyyy-mm-dd.
@@ -43,8 +109,10 @@ function leggiTutti(): { frontmatter: Articolo; body: string }[] {
     if (fm.data instanceof Date) {
       fm.data = fm.data.toISOString().slice(0, 10);
     }
-    return { frontmatter: fm as unknown as Articolo, body: content };
+    return { frontmatter: validaFrontmatter(file, fm), body: content };
   });
+
+  return cache;
 }
 
 // Solo articoli pubblicati, più recente in testa.
@@ -53,6 +121,11 @@ export function getAllPosts(): Articolo[] {
     .map((p) => p.frontmatter)
     .filter((fm) => !fm.draft)
     .sort((a, b) => b.data.localeCompare(a.data));
+}
+
+// Solo articoli pubblicati di una rubrica, più recente in testa.
+export function getPostsByRubrica(rubrica: RubricaSlug): Articolo[] {
+  return getAllPosts().filter((fm) => fm.rubrica === rubrica);
 }
 
 // Nome/forma che i consumer (page.tsx, blog/page.tsx) si aspettano.
