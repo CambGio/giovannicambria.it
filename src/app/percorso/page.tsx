@@ -20,7 +20,7 @@ type Tappa = {
 
 // Materiale d'archivio: alcuni dei clienti gestiti in agenzia nell'era
 // Eureweb. La lista è quella confermata da Giovanni; il testo della tappa
-// (sopra) cita altri nomi a titolo di esempio (Pirelli, Citroën, Candy) —
+// (sopra) cita altri nomi a titolo di esempio (Pirelli, Citroën, Candy):
 // disallineamento noto, non un errore di questa sezione.
 const LOGHI_EUREWEB: Logo[] = [
   { src: "/loghi/eureweb/sisal.png", alt: "Sisal", width: 538, height: 179 },
