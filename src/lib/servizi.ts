@@ -62,7 +62,7 @@ export const SERVIZI: Servizio[] = [
     titolo: "Mappa dell'adozione",
     titoloBreve: "Mappa dell'adozione",
     promessa:
-      "Un assessment per capire dove l'AI serve davvero nei vostri processi — e dove no. Anche \"non serve\" è un risultato.",
+      "Un assessment per capire dove l'AI serve davvero nei vostri processi, e dove no. Anche \"non serve\" è un risultato.",
     perChi:
       "PMI e professionisti che vogliono sapere se e dove l'AI conviene, prima di spendere in strumenti.",
     perChiDettaglio: [
@@ -78,7 +78,7 @@ export const SERVIZI: Servizio[] = [
       },
     ],
     cosaRicevi: [
-      "Un documento con la mappa dei vostri processi: dove l'AI produce un ritorno reale, dove no",
+      "Un documento di 12–18 pagine con la mappa dei vostri processi: dove l'AI produce un ritorno reale, dove no",
       "3–5 punti di intervento, in ordine di priorità",
       "Una roadmap a 6–12 mesi, con i passi concreti per attuarla",
       "Una shortlist di strumenti coerente con i punti individuati, non un elenco generico di tool",
@@ -94,7 +94,7 @@ export const SERVIZI: Servizio[] = [
       {
         nome: "Analisi documentale",
         descrizione:
-          "Studio cosa usate già — numeri, processi, strumenti — prima di proporre qualunque novità.",
+          "Studio cosa usate già: numeri, processi, strumenti. Solo dopo propongo qualcosa di nuovo.",
       },
       {
         nome: "Interviste interne",
@@ -106,7 +106,7 @@ export const SERVIZI: Servizio[] = [
         nome: "Workshop di restituzione",
         tempo: "90 minuti",
         descrizione:
-          "Presento la mappa e i punti di intervento — inclusi quelli dove conviene non muoversi. Ne discutiamo insieme; la sessione viene registrata.",
+          "Presento la mappa e i punti di intervento, inclusi quelli dove conviene non muoversi. Ne discutiamo insieme; la sessione viene registrata.",
       },
       {
         nome: "Consegna",
@@ -134,7 +134,7 @@ export const SERVIZI: Servizio[] = [
         domanda:
           "Che differenza c'è tra la versione per PMI e quella per professionisti?",
         risposta:
-          "Il perimetro. Per le PMI: 1–2 settimane, due interviste interne, documento più esteso. Per i professionisti: una settimana, documento più snello, stesso metodo.",
+          "Il perimetro. Per le PMI: 1–2 settimane, due interviste interne, documento più esteso. Per i professionisti: una settimana, documento di 8–10 pagine, stesso metodo.",
       },
       {
         domanda: "E dopo la consegna?",
@@ -159,7 +159,7 @@ export const SERVIZI: Servizio[] = [
       {
         nome: "La direzione",
         descrizione:
-          "Volete una base comune prima di investire in progetti. La pre-call con il management calibra la giornata sul vostro settore — inclusi i casi in cui, onestamente, l'AI non è la priorità.",
+          "Volete una base comune prima di investire in progetti. La pre-call con il management calibra la giornata sul vostro settore, inclusi i casi in cui, onestamente, l'AI non è la priorità.",
       },
       {
         nome: "Il team",
@@ -169,8 +169,8 @@ export const SERVIZI: Servizio[] = [
     ],
     cosaRicevi: [
       "Una pre-call di 60 minuti con il management per calibrare i contenuti",
-      "Una mattina di teoria applicata al vostro settore, con esempi vicini al vostro lavoro",
-      "Un pomeriggio di laboratorio guidato sui casi reali del team",
+      "4 ore di teoria applicata al vostro settore, con esempi vicini al vostro lavoro",
+      "3 ore di laboratorio guidato sui casi reali del team",
       "Materiale di follow-up: handout, checklist, replay dei materiali",
       "La lista dei casi d'uso emersi dal laboratorio, utile per decidere i passi successivi — incluso \"nessun passo\"",
     ],
@@ -218,7 +218,7 @@ export const SERVIZI: Servizio[] = [
       {
         domanda: "Il workshop serve anche se non siamo sicuri che l'AI ci serva?",
         risposta:
-          "Sì, è proprio il punto. Se dal laboratorio emerge che per i vostri casi l'AI non è la priorità del momento, avete comunque chiarezza — e avete risparmiato mesi di tentativi.",
+          "Sì, è proprio il punto. Se dal laboratorio emerge che per i vostri casi l'AI non è la priorità del momento, avete comunque chiarezza. E avete risparmiato mesi di tentativi.",
       },
       {
         domanda: "Cosa resta al team dopo la giornata?",
@@ -236,7 +236,7 @@ export const SERVIZI: Servizio[] = [
     titolo: "Affiancamento",
     titoloBreve: "Affiancamento",
     promessa:
-      "Adozione continuativa dell'AI nei processi, misurata — non una consulenza a tempo indeterminato.",
+      "Adozione continuativa dell'AI nei processi, misurata: non una consulenza a tempo indeterminato.",
     perChi:
       "PMI che hanno già capito dove intervenire (spesso dalla Mappa) e vogliono portare il progetto a termine, con il team che resta autonomo.",
     perChiDettaglio: [
@@ -303,7 +303,7 @@ export const SERVIZI: Servizio[] = [
       {
         domanda: "Come misurate se l'adozione funziona?",
         risposta:
-          "Si concorda un indicatore di processo fin dal primo perimetro — tempo risparmiato, errori ridotti, volume gestito, a seconda del caso — e lo rivediamo a ogni revisione periodica. Se l'indicatore non si muove, ne parliamo e correggiamo la rotta: non si continua per inerzia.",
+          "Si concorda un indicatore di processo fin dal primo perimetro: tempo risparmiato, errori ridotti, volume gestito, a seconda del caso. Lo rivediamo a ogni revisione periodica. Se l'indicatore non si muove, ne parliamo e correggiamo la rotta: non si continua per inerzia.",
       },
       {
         domanda: "Come funziona dopo i primi tre mesi?",

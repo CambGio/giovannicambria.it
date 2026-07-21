@@ -48,7 +48,7 @@ export default function Lavoro() {
 
         <p className="mt-8 max-w-[620px] text-sottotitolo text-grigio">
           Si parte dai processi, non dagli strumenti: guardiamo insieme dove
-          l&apos;AI cambia davvero il vostro lavoro — e dove no. La si adotta
+          l&apos;AI cambia davvero il vostro lavoro, e dove no. La si adotta
           solo lì. Poi si misura, per sapere se sta funzionando, non solo se
           è partita.
         </p>
