@@ -43,9 +43,7 @@ export default function Contatto() {
       <section className="bg-carta">
         <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24">
           <p className="max-w-[560px] text-[18px] leading-[1.5] text-inchiostro">
-            Scrivimi o chiamami e fissiamo una call di 30 minuti, senza
-            impegno: mi racconti il tuo caso, ti dico se e come posso
-            aiutarti.
+            Una call di 30 minuti, senza impegno: si parte da lì.
           </p>
 
           <div className="mt-10 grid gap-px border-t border-inchiostro bg-inchiostro/10 md:grid-cols-3">

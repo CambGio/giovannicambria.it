@@ -47,7 +47,7 @@ const VALORI = [
     num: "03",
     titolo: "Casi reali, con nomi",
     testo:
-      "Amendolia Assicurazioni, Autonoleggio Di Paola, Sinotech: risultati verificabili, non case study anonimi. Qui sotto i clienti recenti.",
+      "Amendolia Assicurazioni, Autonoleggio Di Paola, Sinotech: risultati verificabili, non case study anonimi.",
   },
 ] as const;
 
