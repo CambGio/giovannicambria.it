@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Fraunces, Inter } from "next/font/google";
+import { Fraunces, IBM_Plex_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import { Masthead } from "@/components/site/Masthead";
 import { SiteHeader } from "@/components/site/SiteHeader";
@@ -25,6 +25,13 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+const ibmPlexMono = IBM_Plex_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  display: "swap",
+  variable: "--font-ibm-plex-mono",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -47,7 +54,10 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="it" className={`${fraunces.variable} ${inter.variable} h-full`}>
+    <html
+      lang="it"
+      className={`${fraunces.variable} ${inter.variable} ${ibmPlexMono.variable} h-full`}
+    >
       <body className="min-h-full flex flex-col bg-carta text-inchiostro">
         <Masthead />
         <SiteHeader />

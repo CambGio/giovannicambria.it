@@ -16,6 +16,19 @@
   --color-bosco-chiaro: color-mix(in oklab, var(--color-bosco), white 45%);
   --font-display: var(--font-fraunces), Georgia, serif;
   --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), ui-monospace, monospace;
+
+  --text-display: clamp(2.75rem, 7vw, 4.75rem);
+  --text-display--line-height: 1.04;
+  --text-display--letter-spacing: -0.02em;
+  --text-titolo: clamp(2rem, 4.5vw, 3rem);
+  --text-titolo--line-height: 1.1;
+  --text-titolo--letter-spacing: -0.015em;
+  --text-sottotitolo: clamp(1.35rem, 2.5vw, 1.75rem);
+  --text-sottotitolo--line-height: 1.25;
+  --text-etichetta: 0.72rem;
+  --text-etichetta--letter-spacing: 0.14em;
+  --text-etichetta--line-height: 1.4;
 }
 
 /* Alias transitori palette v2 → v3. Le pagine non ancora toccate
@@ -53,13 +66,17 @@ body {
   line-height: 1.65;
 }
 
-/* Voce di default dei titoli: Fraunces. Le pagine con classi
- * font-sans/font-mono esplicite sulle proprie heading la
- * sovrascrivono già (specificità classe > tag); questa resta la
- * rete di sicurezza per heading senza classi (es. h1 da Markdown). */
-h1, h2, h3, h4 {
-  font-family: var(--font-display);
-  letter-spacing: -0.02em;
+@layer base {
+  /* Voce di default dei titoli: Fraunces. Le pagine con classi
+   * font-sans/font-mono esplicite sulle proprie heading la
+   * sovrascrivono già (le utility Tailwind vivono in @layer
+   * utilities, che vince su questo layer base indipendentemente
+   * dalla specificità del selettore); questa resta la rete di
+   * sicurezza per heading senza classi (es. h1 da Markdown). */
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
 }
 
 ::selection {
