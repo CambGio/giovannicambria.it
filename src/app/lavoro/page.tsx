@@ -55,6 +55,14 @@ export default function Lavoro() {
             solo lì. Poi si misura, per sapere se sta funzionando, non solo se
             è partita.
           </p>
+
+          <p className="mt-6 max-w-[640px] text-[17px] leading-[1.6] text-carta/70">
+            È un percorso modulare, con un solo punto fisso: la Mappa
+            dell&apos;adozione. Da lì, se ha senso, si aggiungono il Workshop
+            pratico e l&apos;Affiancamento: ogni passo ha un output tangibile,
+            non solo slide. Non si passa al passo successivo senza una base
+            solida.
+          </p>
         </div>
       </section>
 
@@ -74,7 +82,7 @@ export default function Lavoro() {
               href="/contatto"
               className="inline-flex items-center gap-3 bg-carta px-7 py-4 font-sans text-[15px] font-semibold text-inchiostro tracking-[-0.005em] transition-colors hover:bg-inchiostro hover:text-carta"
             >
-              Scrivimi
+              Prenota una call
               <span aria-hidden="true">→</span>
             </Link>
           </div>

@@ -6,6 +6,51 @@ import { articoliPerData, formattaData } from "@/lib/articoli";
 // di "griglia": è una lista, non delle card, quindi regge bene da 0 a N.
 const POST_IN_HOME = 3;
 
+const PASSI = [
+  {
+    num: "01",
+    slug: "mappa",
+    titolo: "Mappa dell'adozione",
+    testo:
+      "Si parte sempre da qui: un assessment dei tuoi processi che dice dove l'AI porta un ritorno reale, e dove no. L'output è una roadmap con priorità, non un elenco di strumenti. Non si passa al passo dopo senza questa base.",
+  },
+  {
+    num: "02",
+    slug: "workshop",
+    titolo: "Workshop pratico",
+    testo:
+      "Se serve portare il team a bordo: una giornata sui casi reali del vostro lavoro, non su una demo preconfezionata. Ci si arriva quando il progetto ha bisogno di persone allineate, non solo di una direzione convinta.",
+  },
+  {
+    num: "03",
+    slug: "affiancamento",
+    titolo: "Affiancamento",
+    testo:
+      "Per portare la roadmap a termine: resto al fianco mentre si implementa, con verifiche periodiche su un indicatore concreto. Il team resta autonomo quando il lavoro insieme finisce.",
+  },
+] as const;
+
+const VALORI = [
+  {
+    num: "01",
+    titolo: "Metodo, non hype",
+    testo:
+      "L'AI è uno strumento, non una risposta automatica. Prima guardo il processo, poi decido se e dove serve, anche quando la risposta onesta è che non serve.",
+  },
+  {
+    num: "02",
+    titolo: "Quasi trent'anni di digitale",
+    testo:
+      "Dal 1998: e-commerce, web marketing, direzione d'agenzia. Ho visto passare diverse ondate tecnologiche: so distinguere quelle che restano da quelle che passano.",
+  },
+  {
+    num: "03",
+    titolo: "Casi reali, con nomi",
+    testo:
+      "Amendolia Assicurazioni, Autonoleggio Di Paola, Sinotech: risultati verificabili, non case study anonimi. Qui sotto i clienti recenti.",
+  },
+] as const;
+
 const CLIENTI_RECENTI = [
   {
     src: "/loghi/recenti/amendolia.svg",
@@ -58,10 +103,10 @@ export default function Home() {
 
           <div className="mt-11 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-9">
             <Link
-              href="/lavoro"
+              href="/contatto"
               className="inline-flex items-center gap-3 bg-carta px-7 py-4 font-sans text-[15px] font-semibold text-inchiostro tracking-[-0.005em] transition-colors hover:bg-inchiostro hover:text-carta"
             >
-              Lavora con me
+              Prenota una call
               <span aria-hidden="true">→</span>
             </Link>
             <Link
@@ -71,6 +116,48 @@ export default function Home() {
               Chi sono, in breve <span aria-hidden="true">→</span>
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* ── Come lavoro: il percorso in tre passi, stessa grammatica
+          visiva della timeline di /percorso (colonna mono + titolo +
+          testo), ma su carta e con link diretti alle schede di /lavoro ── */}
+      <section className="bg-carta">
+        <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24">
+          <div className="flex items-baseline justify-between border-t-2 border-bosco pt-7">
+            <div className="text-etichetta font-mono uppercase text-bosco">
+              Come lavoro
+            </div>
+          </div>
+          <p className="mt-5 max-w-[620px] text-[17px] leading-[1.6] text-grigio">
+            Un percorso che parte sempre dalla Mappa dell&apos;adozione: ogni
+            passo ha un output concreto, non si va avanti senza una base
+            solida.
+          </p>
+
+          <ol className="mt-10">
+            {PASSI.map((p) => (
+              <li key={p.slug} className="border-t border-bosco/20">
+                <Link
+                  href={`/lavoro#${p.slug}`}
+                  className="group grid gap-3 py-8 md:grid-cols-[180px_1fr] md:gap-10 md:py-9"
+                >
+                  <div className="font-mono text-[13px] uppercase tracking-[0.06em] text-bosco tabular-nums">
+                    {p.num}
+                  </div>
+                  <div>
+                    <div className="font-display text-[20px] font-semibold leading-[1.2] tracking-[-0.015em] text-inchiostro transition-colors group-hover:text-bosco md:text-[22px]">
+                      {p.titolo} <span aria-hidden="true">→</span>
+                    </div>
+                    <p className="mt-3 max-w-[620px] text-[17px] leading-[1.55] text-grigio">
+                      {p.testo}
+                    </p>
+                  </div>
+                </Link>
+              </li>
+            ))}
+            <li className="border-t border-bosco/20" aria-hidden="true" />
+          </ol>
         </div>
       </section>
 
@@ -122,6 +209,32 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Perché lavorare con me: tre punti numerati, stessa etichetta
+          a bullet-line della hero/chiusura, ma in bosco su carta ── */}
+      <section className="bg-carta">
+        <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24">
+          <div className="flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium text-bosco">
+            <span className="inline-block h-[2px] w-7 bg-bosco" />
+            <span>Perché lavorare con me</span>
+          </div>
+          <div className="mt-9 grid gap-10 md:grid-cols-3 md:gap-8">
+            {VALORI.map((v) => (
+              <div key={v.num} className="border-t-2 border-inchiostro pt-6">
+                <span className="font-mono text-[13px] text-bosco tabular-nums">
+                  {v.num}
+                </span>
+                <h3 className="mt-3 font-display text-[22px] font-semibold tracking-[-0.015em] text-inchiostro">
+                  {v.titolo}
+                </h3>
+                <p className="mt-3 text-[16px] leading-[1.6] text-grigio">
+                  {v.testo}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── Clienti recenti: striscia su carta, ponte tra il feed e la
           chiusura bosco. Loghi a colori originali (per dare colore),
           normalizzati in altezza: non in card, non in griglia ── */}
@@ -161,10 +274,10 @@ export default function Home() {
               pratico, l&apos;Affiancamento.
             </p>
             <Link
-              href="/lavoro"
+              href="/contatto"
               className="mt-8 inline-flex items-center gap-3 bg-carta px-6 py-3.5 font-sans text-[14px] font-semibold text-inchiostro transition-colors hover:bg-inchiostro hover:text-carta"
             >
-              Vedi i tre modi <span aria-hidden="true">→</span>
+              Prenota una call <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
