@@ -1,9 +1,33 @@
+import Image from "next/image";
 import Link from "next/link";
 import { articoliPerData, formattaData } from "@/lib/articoli";
 
 // Feed dei post protagonista: al massimo 3, cronologico. Nessuna soglia
 // di "griglia": è una lista, non delle card, quindi regge bene da 0 a N.
 const POST_IN_HOME = 3;
+
+const CLIENTI_RECENTI = [
+  {
+    src: "/loghi/recenti/amendolia.svg",
+    alt: "Amendolia Assicurazioni",
+    width: 1500,
+    height: 487,
+  },
+  {
+    src: "/loghi/recenti/dipaola.png",
+    alt: "Autonoleggio Di Paola",
+    width: 2277,
+    height: 936,
+  },
+  { src: "/loghi/recenti/lovekasa.png", alt: "LoveKasa", width: 400, height: 100 },
+  { src: "/loghi/recenti/sinotech.png", alt: "Sinotech", width: 1449, height: 310 },
+  {
+    src: "/loghi/recenti/empirericambi.png",
+    alt: "Empire Ricambi",
+    width: 2707,
+    height: 210,
+  },
+];
 
 export default function Home() {
   const post = articoliPerData.slice(0, POST_IN_HOME);
@@ -95,6 +119,31 @@ export default function Home() {
               I primi articoli sono in arrivo.
             </p>
           )}
+        </div>
+      </section>
+
+      {/* ── Clienti recenti: striscia su carta, ponte tra il feed e la
+          chiusura bosco. Loghi a colori originali (per dare colore),
+          normalizzati in altezza — non in card, non in griglia ── */}
+      <section className="bg-carta">
+        <div className="mx-auto max-w-[1280px] px-6 py-14 md:px-16 md:py-20">
+          <div className="flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium text-bosco">
+            <span className="inline-block h-[2px] w-7 bg-bosco" />
+            <span>Clienti recenti</span>
+          </div>
+          <div className="mt-9 flex flex-wrap items-center gap-x-12 gap-y-8">
+            {CLIENTI_RECENTI.map((c) => (
+              <Image
+                key={c.src}
+                src={c.src}
+                alt={c.alt}
+                width={c.width}
+                height={c.height}
+                unoptimized={c.src.endsWith(".svg")}
+                className="h-8 w-auto md:h-10"
+              />
+            ))}
+          </div>
         </div>
       </section>
 

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -7,12 +8,49 @@ export const metadata: Metadata = {
     "Nel digitale dal 1998: da Switch MultiMedia (Milazzo) a oggi, portando l'AI nei processi di chi lavora con me. Le tappe, in sintesi.",
 };
 
+type Logo = { src: string; alt: string; width: number; height: number };
+
 type Tappa = {
   periodo: string;
   ruolo: string;
   luogo: string;
   testo: string;
+  loghi?: Logo[];
 };
+
+// Materiale d'archivio: alcuni dei clienti gestiti in agenzia nell'era
+// Eureweb. La lista è quella confermata da Giovanni; il testo della tappa
+// (sopra) cita altri nomi a titolo di esempio (Pirelli, Citroën, Candy) —
+// disallineamento noto, non un errore di questa sezione.
+const LOGHI_EUREWEB: Logo[] = [
+  { src: "/loghi/eureweb/sisal.png", alt: "Sisal", width: 538, height: 179 },
+  {
+    src: "/loghi/eureweb/olimpia-splendid.png",
+    alt: "Olimpia Splendid",
+    width: 538,
+    height: 179,
+  },
+  { src: "/loghi/eureweb/lenovo.png", alt: "Lenovo", width: 538, height: 179 },
+  {
+    src: "/loghi/eureweb/piscine-castiglione.png",
+    alt: "Piscine Castiglione",
+    width: 538,
+    height: 179,
+  },
+  {
+    src: "/loghi/eureweb/frescopesce.png",
+    alt: "Frescopesce",
+    width: 538,
+    height: 179,
+  },
+  {
+    src: "/loghi/eureweb/il-pescatore-online.png",
+    alt: "Il Pescatore Online",
+    width: 538,
+    height: 179,
+  },
+  { src: "/loghi/eureweb/citizen.png", alt: "Citizen", width: 538, height: 179 },
+];
 
 const TAPPE: Tappa[] = [
   {
@@ -49,6 +87,7 @@ const TAPPE: Tappa[] = [
     luogo: "Brescia, Salò",
     testo:
       "Una digital agency, clienti come Pirelli, Citroën, Lenovo e Candy, un team di oltre venti persone da guidare: qui ho imparato che la disciplina vale più del talento isolato.",
+    loghi: LOGHI_EUREWEB,
   },
   {
     periodo: "2008–2009",
@@ -114,6 +153,25 @@ export default function Percorso() {
                   <p className="mt-3 max-w-[620px] text-[17px] leading-[1.55] text-grigio">
                     {t.testo}
                   </p>
+                  {t.loghi ? (
+                    <div className="mt-6">
+                      <div className="font-mono text-[11px] uppercase tracking-[0.06em] text-grigio">
+                        Alcuni dei clienti gestiti in agenzia
+                      </div>
+                      <div className="mt-4 grid max-w-[620px] grid-cols-2 items-center gap-x-8 gap-y-5 sm:grid-cols-3 md:grid-cols-4">
+                        {t.loghi.map((l) => (
+                          <Image
+                            key={l.src}
+                            src={l.src}
+                            alt={l.alt}
+                            width={l.width}
+                            height={l.height}
+                            className="h-6 w-auto grayscale transition-all duration-300 md:h-7 md:hover:grayscale-0"
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  ) : null}
                 </div>
               </li>
             ))}
