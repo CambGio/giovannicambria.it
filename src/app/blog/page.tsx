@@ -17,11 +17,13 @@ export const metadata: Metadata = {
 
 // Descrizioni delle rubriche, in linguaggio da imprenditore.
 const RUBRICHE_DESCRIZIONI: Record<RubricaSlug, string> = {
-  "cosa-cambia-se":
-    "Una novità tecnologica o normativa alla volta, letta per quello che tocca davvero nella tua impresa.",
-  "storia-di":
-    "Un lavoro vero, raccontato per decisioni: il contesto, le scelte, quello che è successo dopo.",
-  modelli:
+  "adozione":
+    "Come le PMI adottano l'AI nei processi reali. Non gli algoritmi: i modelli di business.",
+  "anti-hype":
+    "Dove l'AI non serve, e cosa usare invece. Il rumore è gratis; il focus costa.",
+  "casi":
+    "Un lavoro vero, prima e dopo. Il contesto, le scelte, quello che è successo dopo.",
+  "storia-metodo":
     "Schemi di ragionamento che restano utili anche quando lo strumento di moda cambia nome.",
 };
 
@@ -61,9 +63,7 @@ export default async function Blog({
   const tutti = articoliPerData;
   const articoli = filtro ? tutti.filter((a) => a.rubrica === filtro) : tutti;
   const haArticoli = tutti.length > 0;
-  const labelFiltro = filtro
-    ? RUBRICHE.find((r) => r.slug === filtro)?.label
-    : null;
+  const labelFiltro = filtro ? RUBRICHE[filtro] : null;
 
   return (
     <>
@@ -75,29 +75,24 @@ export default async function Blog({
         </div>
 
         <h1 className="max-w-[920px] font-sans font-extrabold text-[44px] leading-[1.0] tracking-[-0.035em] text-ink md:text-[64px] lg:text-[76px]">
-          Cosa cambia per chi fa impresa{" "}
-          <span className="font-serif italic font-normal text-ink-muted">
-            quando cambia la tecnologia.
-          </span>
+          L&apos;adozione dell&apos;AI, senza hype.
         </h1>
 
         <p className="mt-8 max-w-[620px] font-serif text-[20px] leading-[1.5] text-ink-muted md:text-[22px]">
-          {haArticoli
-            ? "Articoli sul modello di business, più che sul tool. Senza calendario di facciata: pubblico quando ho qualcosa di utile da dire."
-            : "Articoli sul modello di business, più che sul tool. I primi pezzi stanno arrivando."}
+          Quello che pubblico su LinkedIn, qui in archivio: come le PMI adottano l&apos;AI nei processi reali.
         </p>
 
         <div className="mt-14 border-t-2 border-ink pt-7">
           <div className="font-sans text-[11px] uppercase tracking-[0.18em] font-semibold text-ink-muted">
-            Le tre rubriche
+            Le quattro rubriche
           </div>
-          <ul className="mt-7 grid gap-px bg-rule md:grid-cols-3">
-            {RUBRICHE.map((r) => {
-              const attiva = filtro === r.slug;
+          <ul className="mt-7 grid gap-px bg-rule md:grid-cols-2 lg:grid-cols-4">
+            {Object.entries(RUBRICHE).map(([slug, label]) => {
+              const attiva = filtro === slug;
               return (
-                <li key={r.slug}>
+                <li key={slug}>
                   <Link
-                    href={attiva ? "/blog" : `/blog?rubrica=${r.slug}`}
+                    href={attiva ? "/blog" : `/blog?rubrica=${slug}`}
                     aria-current={attiva ? "true" : undefined}
                     className={`flex h-full flex-col p-6 transition-colors ${
                       attiva
@@ -113,14 +108,14 @@ export default async function Blog({
                       {attiva ? "Rubrica attiva · mostra tutto" : "Rubrica"}
                     </span>
                     <span className="mt-2 font-sans text-[18px] font-semibold tracking-[-0.01em]">
-                      {r.label}
+                      {label}
                     </span>
                     <span
                       className={`mt-2 font-serif text-[15px] leading-[1.5] ${
                         attiva ? "text-paper/75" : "text-ink-muted"
                       }`}
                     >
-                      {RUBRICHE_DESCRIZIONI[r.slug]}
+                      {RUBRICHE_DESCRIZIONI[slug as RubricaSlug]}
                     </span>
                   </Link>
                 </li>

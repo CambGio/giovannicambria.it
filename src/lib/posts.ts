@@ -6,21 +6,16 @@ import fs from "node:fs";
 import path from "node:path";
 import matter from "gray-matter";
 
-export type RubricaSlug = "cosa-cambia-se" | "storia-di" | "modelli";
+export const RUBRICHE = {
+  "adozione": "AI al lavoro",
+  "anti-hype": "Dove l'AI non serve",
+  "casi": "Prima e dopo",
+  "storia-metodo": "Storia e metodo",
+} as const;
 
-// Le tre rubriche canoniche, in ordine editoriale. I label (con ellissi
-// tipografica singola …) sono derivati SOLO da questa mappa: l'eventuale
-// rubricaLabel nel frontmatter viene ignorato, così un refuso nel file
-// non crea rubriche fantasma.
-export const RUBRICHE: { slug: RubricaSlug; label: string }[] = [
-  { slug: "cosa-cambia-se", label: "Cosa cambia se…" },
-  { slug: "storia-di", label: "Storia di…" },
-  { slug: "modelli", label: "Modelli" },
-];
+export type RubricaSlug = keyof typeof RUBRICHE;
 
-const RUBRICA_LABEL = Object.fromEntries(
-  RUBRICHE.map((r) => [r.slug, r.label]),
-) as Record<RubricaSlug, string>;
+const RUBRICA_LABEL = RUBRICHE;
 
 export function isRubricaSlug(v: unknown): v is RubricaSlug {
   return typeof v === "string" && v in RUBRICA_LABEL;
@@ -66,7 +61,7 @@ function validaFrontmatter(file: string, raw: Record<string, unknown>): Articolo
     errori.push("rubrica mancante");
   } else if (!isRubricaSlug(raw.rubrica)) {
     errori.push(
-      `rubrica sconosciuta: "${String(raw.rubrica)}" (ammesse: ${RUBRICHE.map((r) => r.slug).join(", ")})`,
+      `rubrica sconosciuta: "${String(raw.rubrica)}" (ammesse: ${Object.keys(RUBRICHE).join(", ")})`,
     );
   }
 
