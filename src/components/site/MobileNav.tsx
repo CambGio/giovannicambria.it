@@ -47,7 +47,7 @@ export function MobileNav() {
         aria-expanded={open}
         aria-controls="mobile-nav-panel"
         onClick={() => setOpen((v) => !v)}
-        className="-mr-2 flex h-11 w-11 items-center justify-center text-ink md:hidden"
+        className="-mr-2 flex h-11 w-11 items-center justify-center text-inchiostro md:hidden"
       >
         <span className="sr-only">{open ? "Chiudi" : "Menu"}</span>
         <svg
@@ -81,14 +81,14 @@ export function MobileNav() {
           role="dialog"
           aria-modal="true"
           aria-label="Menu di navigazione"
-          className="fixed inset-0 z-50 flex flex-col bg-paper md:hidden"
+          className="fixed inset-0 z-50 flex flex-col bg-carta md:hidden"
         >
           <div className="flex items-center justify-end px-6 py-4">
             <button
               type="button"
               aria-label="Chiudi menu"
               onClick={() => setOpen(false)}
-              className="-mr-2 flex h-11 w-11 items-center justify-center text-ink"
+              className="-mr-2 flex h-11 w-11 items-center justify-center text-inchiostro"
             >
               <svg
                 width="22"
@@ -115,7 +115,7 @@ export function MobileNav() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="font-display text-[40px] leading-[1.05] tracking-[-0.02em] text-ink transition-colors hover:text-accent"
+                    className="font-display text-[40px] leading-[1.05] tracking-[-0.02em] text-inchiostro transition-colors hover:text-bosco"
                   >
                     {item.label}
                   </Link>
@@ -124,24 +124,24 @@ export function MobileNav() {
             </ul>
           </nav>
 
-          <div className="border-t border-rule px-8 py-6">
-            <p className="font-serif text-[15px] leading-[1.4] text-ink-muted">
+          <div className="border-t border-inchiostro/10 px-8 py-6">
+            <p className="font-sans text-[15px] leading-[1.4] text-grigio">
               {TAGLINE}
             </p>
-            <p className="mt-1 font-serif text-[15px] leading-[1.4] text-ink-muted">
+            <p className="mt-1 font-sans text-[15px] leading-[1.4] text-grigio">
               {TAGLINE_SUB}
             </p>
-            <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-[11px] uppercase tracking-[0.06em] text-ink-muted">
+            <div className="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 font-sans text-[11px] uppercase tracking-[0.08em] text-grigio">
               <a
                 href={`mailto:${EMAIL}`}
-                className="transition-colors hover:text-accent"
+                className="transition-colors hover:text-bosco"
               >
                 {EMAIL}
               </a>
               <span aria-hidden="true">·</span>
               <a
                 href={`tel:${PHONE_TEL}`}
-                className="transition-colors hover:text-accent"
+                className="transition-colors hover:text-bosco"
               >
                 {PHONE_DISPLAY}
               </a>

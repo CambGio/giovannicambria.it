@@ -1,59 +1,38 @@
 @import "tailwindcss";
 
-@theme inline {
-  /* ─────────────────────────────────────────────────────────────
-   * Palette v2 (Editorial-tech ibrido, 2026-05-21)
-   * Strategia: Restrained. Neutrali tinti caldi + 1 accento ≤10%.
-   * Tutto in OKLCH, lievemente tinto verso il giallo-arancio caldo.
-   * ───────────────────────────────────────────────────────────── */
-  --color-paper: oklch(98.1% 0.004 80);          /* #FBFAF7 — bianco caldo */
-  --color-paper-deep: oklch(95.5% 0.008 80);     /* sezioni con tinta */
-  --color-ink: oklch(16% 0.006 60);              /* #181513 — nero caldo */
-  --color-ink-muted: oklch(52% 0.007 60);        /* #6E6962 */
-  --color-rule: oklch(91% 0.008 80);             /* #E5E1D9 */
-  --color-rule-strong: oklch(80% 0.012 70);
-  --color-accent: oklch(61% 0.13 50);            /* #C46A3E — terra cotta */
-  --color-accent-deep: oklch(45% 0.12 45);       /* #8B4524 */
-  --color-accent-light: oklch(75% 0.10 55);      /* su fondi scuri */
-  --color-placeholder: oklch(89% 0.012 80);
-  --color-placeholder-line: oklch(82% 0.015 75);
+/* ─────────────────────────────────────────────────────────────
+ * Design system (spec 09 §12, 2026-07-21)
+ * Tipografia protagonista su fondo chiaro: Fraunces (display) +
+ * Inter (UI). Palette a 4 colori, verde foresta come unico accento.
+ * ───────────────────────────────────────────────────────────── */
+@theme {
+  --color-carta: #FAFAF8;
+  --color-inchiostro: #141414;
+  --color-grigio: #6E6E68;
+  --color-bosco: #1F5130;
+  /* Tinta chiara di bosco: unico modo in cui l'accento compare su
+   * fondo inchiostro (es. hover di un link nel footer), dove il
+   * bosco pieno perde contrasto. */
+  --color-bosco-chiaro: color-mix(in oklab, var(--color-bosco), white 45%);
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
 
-  /* Tipografia. Variabili iniettate da next/font su <html>.
-   * --font-grotesk: Manrope. Mappato a display + sans (sostituisce
-   * Bodoni Moda + IBM Plex Sans del sistema v1).
-   * --font-serif: Source Serif 4. Corpo + sub-display.
-   * --font-mono: IBM Plex Mono. Servizio. */
-  --font-display: var(--font-grotesk);
-  --font-sans: var(--font-grotesk);
-  --font-serif: var(--font-serif);
-  --font-mono: var(--font-mono);
-
-  /* Scala tipografica v2.
-   * Headline contemporanee in grotesco. Riduco un filo i top step
-   * perché Manrope a 92px è già monumentale (non serve l'inflazione
-   * Bodoni). Body 17px per lettura comoda da editor italiano. */
-  --text-display: 5.25rem;                /* 84px — H1 hero */
-  --text-display--line-height: 0.98;
-  --text-display--letter-spacing: -0.035em;
-  --text-h1: 3.5rem;                      /* 56px */
-  --text-h1--line-height: 1.04;
-  --text-h1--letter-spacing: -0.028em;
-  --text-h2: 2.5rem;                      /* 40px */
-  --text-h2--line-height: 1.08;
-  --text-h2--letter-spacing: -0.022em;
-  --text-h3: 1.75rem;                     /* 28px */
-  --text-h3--line-height: 1.18;
-  --text-h3--letter-spacing: -0.015em;
-  --text-h4: 1.25rem;                     /* 20px */
-  --text-h4--line-height: 1.3;
-  --text-body-lg: 1.1875rem;              /* 19px */
-  --text-body-lg--line-height: 1.6;
-  --text-body: 1.0625rem;                 /* 17px */
-  --text-body--line-height: 1.65;
-  --text-meta: 0.8125rem;                 /* 13px */
-  --text-meta--line-height: 1.5;
-  --text-mono-xs: 0.6875rem;              /* 11px */
-  --text-mono-xs--line-height: 1.5;
+/* Alias transitori palette v2 → v3. Le pagine non ancora toccate
+ * dalla revisione (blog, lavoro, percorso, contatto, MDX) usano
+ * ancora questi nomi: li mappo sui nuovi valori, derivati via
+ * color-mix, così restano coerenti senza duplicare hex a mano.
+ * Da rimuovere quando quelle pagine migrano ai nomi nuovi. */
+@theme {
+  --color-paper: var(--color-carta);
+  --color-paper-deep: color-mix(in oklab, var(--color-carta), var(--color-inchiostro) 4%);
+  --color-ink: var(--color-inchiostro);
+  --color-ink-muted: var(--color-grigio);
+  --color-rule: color-mix(in oklab, var(--color-carta), var(--color-inchiostro) 10%);
+  --color-accent: var(--color-bosco);
+  --color-accent-light: var(--color-bosco-chiaro);
+  --color-accent-deep: color-mix(in oklab, var(--color-bosco), black 20%);
+  --color-placeholder: color-mix(in oklab, var(--color-carta), var(--color-inchiostro) 8%);
 }
 
 :root {
@@ -61,39 +40,33 @@
 }
 
 html {
-  background: var(--color-paper);
-  color: var(--color-ink);
+  background: var(--color-carta);
+  color: var(--color-inchiostro);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
 body {
-  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
+  font-family: var(--font-sans);
   font-size: 1.0625rem;
   line-height: 1.65;
 }
 
-/* Voce delle intestazioni: grotesco contemporaneo. Source Serif resta
- * sul corpo. Il marchio "Giovanni Cambria" nel Wordmark resta in
- * Source Serif (firma autoriale, vedi brand-guide v2 §2.2). */
+/* Voce di default dei titoli: Fraunces. Le pagine con classi
+ * font-sans/font-mono esplicite sulle proprie heading la
+ * sovrascrivono già (specificità classe > tag); questa resta la
+ * rete di sicurezza per heading senza classi (es. h1 da Markdown). */
 h1, h2, h3, h4 {
-  font-family: var(--font-grotesk), system-ui, sans-serif;
-  font-feature-settings: "ss01", "ss02";
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
 }
 
 ::selection {
-  background: var(--color-ink);
-  color: var(--color-paper);
+  background: var(--color-inchiostro);
+  color: var(--color-carta);
 }
 
 .font-mono {
   font-feature-settings: "tnum";
-}
-
-.rule-thin {
-  border-color: var(--color-rule);
-}
-.rule-strong {
-  border-color: var(--color-ink);
 }

@@ -8,7 +8,7 @@ type WordmarkProps = {
 
 export function Wordmark({ size = 22, className, color }: WordmarkProps) {
   const style: CSSProperties = {
-    fontFamily: "var(--font-serif), Georgia, serif",
+    fontFamily: "var(--font-display)",
     fontSize: size,
     fontWeight: 500,
     letterSpacing: "-0.015em",
@@ -43,7 +43,7 @@ export function Monogram({ size = 40, className, color }: MonogramProps) {
       <text
         x="22"
         y="74"
-        fontFamily="var(--font-serif), Georgia, serif"
+        fontFamily="var(--font-display)"
         fontSize="76"
         fontWeight={500}
         fill={fill}

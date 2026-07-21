@@ -1,9 +1,5 @@
 import type { Metadata } from "next";
-import {
-  Manrope,
-  Source_Serif_4,
-  IBM_Plex_Mono,
-} from "next/font/google";
+import { Fraunces, Inter } from "next/font/google";
 import "./globals.css";
 import { Masthead } from "@/components/site/Masthead";
 import { SiteHeader } from "@/components/site/SiteHeader";
@@ -15,26 +11,18 @@ import {
   SITE_URL,
 } from "@/lib/site";
 
-const grotesk = Manrope({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  display: "swap",
-  variable: "--font-grotesk",
-});
-
-const serif = Source_Serif_4({
+const fraunces = Fraunces({
   subsets: ["latin"],
   style: ["normal", "italic"],
   axes: ["opsz"],
   display: "swap",
-  variable: "--font-serif",
+  variable: "--font-fraunces",
 });
 
-const mono = IBM_Plex_Mono({
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500"],
   display: "swap",
-  variable: "--font-mono",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -59,11 +47,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="it"
-      className={`${grotesk.variable} ${serif.variable} ${mono.variable} h-full`}
-    >
-      <body className="min-h-full flex flex-col bg-paper text-ink">
+    <html lang="it" className={`${fraunces.variable} ${inter.variable} h-full`}>
+      <body className="min-h-full flex flex-col bg-carta text-inchiostro">
         <Masthead />
         <SiteHeader />
         <main className="flex-1">{children}</main>
