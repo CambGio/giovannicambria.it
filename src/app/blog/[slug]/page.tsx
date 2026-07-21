@@ -125,8 +125,8 @@ export default async function ArticoloPage({
         </div>
 
         <footer className="mx-auto mt-14 max-w-[680px]">
-          <div className="border-t-2 border-inchiostro pt-7">
-            <div className="text-etichetta font-mono uppercase text-grigio">
+          <div className="border-t-2 border-bosco pt-7">
+            <div className="text-etichetta font-mono uppercase text-bosco">
               L&apos;autore
             </div>
             <div className="mt-4 font-sans text-[18px] font-bold tracking-[-0.012em] text-inchiostro">
@@ -166,8 +166,8 @@ export default async function ArticoloPage({
 
         {correlati.length > 0 && (
           <section className="mt-16">
-            <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-t-2 border-inchiostro pt-7">
-              <div className="text-etichetta font-mono uppercase text-grigio">
+            <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-t-2 border-bosco pt-7">
+              <div className="text-etichetta font-mono uppercase text-bosco">
                 Nella stessa rubrica
               </div>
               <Link
