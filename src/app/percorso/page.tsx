@@ -30,7 +30,7 @@ const TAPPE: Tappa[] = [
       "Migrazione dell'e-commerce da PrestaShop a Shopify, più SEO e Analytics: un anno di lavoro, chiuso a giugno 2025.",
   },
   {
-    periodo: "Dal 2019",
+    periodo: "2019–2024",
     ruolo: "Empire S.r.l. · Consulente di direzione",
     luogo: "Venetico (ME)",
     testo:
