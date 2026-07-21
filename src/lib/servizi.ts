@@ -172,7 +172,7 @@ export const SERVIZI: Servizio[] = [
       "4 ore di teoria applicata al vostro settore, con esempi vicini al vostro lavoro",
       "3 ore di laboratorio guidato sui casi reali del team",
       "Materiale di follow-up: handout, checklist, replay dei materiali",
-      "La lista dei casi d'uso emersi dal laboratorio, utile per decidere i passi successivi — incluso \"nessun passo\"",
+      "La lista dei casi d'uso emersi dal laboratorio, utile per decidere i passi successivi, incluso \"nessun passo\"",
     ],
     comeFunziona: [
       {
@@ -256,7 +256,7 @@ export const SERVIZI: Servizio[] = [
       "Uno stand-up settimanale di 30 minuti per tenere il ritmo",
       "Avanzamento implementativo sul progetto, non solo indicazioni",
       "Formazione del team sulle attività che restano in casa",
-      "Una revisione periodica su un indicatore di processo concordato all'inizio, per sapere se l'adozione sta funzionando — non solo se è \"in corso\"",
+      "Una revisione periodica su un indicatore di processo concordato all'inizio, per sapere se l'adozione sta funzionando, non solo se è \"in corso\"",
     ],
     comeFunziona: [
       {
