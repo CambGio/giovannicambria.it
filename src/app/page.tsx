@@ -124,7 +124,7 @@ export default function Home() {
 
       {/* ── Clienti recenti: striscia su carta, ponte tra il feed e la
           chiusura bosco. Loghi a colori originali (per dare colore),
-          normalizzati in altezza — non in card, non in griglia ── */}
+          normalizzati in altezza: non in card, non in griglia ── */}
       <section className="bg-carta">
         <div className="mx-auto max-w-[1280px] px-6 py-14 md:px-16 md:py-20">
           <div className="flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium text-bosco">
