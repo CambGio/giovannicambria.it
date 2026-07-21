@@ -23,7 +23,7 @@ const COLS: Col[] = [
     ],
   },
   {
-    title: "Lavoro",
+    title: "Lavora con me",
     items: [
       { label: "Mappa dell'adozione", href: "/lavoro#mappa" },
       { label: "Workshop pratico", href: "/lavoro#workshop" },

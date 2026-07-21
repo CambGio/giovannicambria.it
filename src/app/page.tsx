@@ -1,6 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { articoliPerData, formattaData } from "@/lib/articoli";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 // Feed dei post protagonista: al massimo 3, cronologico. Nessuna soglia
 // di "griglia": è una lista, non delle card, quindi regge bene da 0 a N.
@@ -125,9 +130,9 @@ export default function Home() {
       <section className="bg-carta">
         <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24">
           <div className="flex items-baseline justify-between border-t-2 border-bosco pt-7">
-            <div className="text-etichetta font-mono uppercase text-bosco">
+            <h2 className="text-etichetta font-mono uppercase text-bosco">
               Come lavoro
-            </div>
+            </h2>
           </div>
           <p className="mt-5 max-w-[620px] text-[17px] leading-[1.6] text-grigio">
             Un percorso che parte sempre dalla Mappa dell&apos;adozione: ogni
@@ -167,9 +172,9 @@ export default function Home() {
       <section className="bg-carta">
         <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24">
           <div className="flex items-baseline justify-between border-t-2 border-bosco pt-7">
-            <div className="text-etichetta font-mono uppercase text-bosco">
+            <h2 className="text-etichetta font-mono uppercase text-bosco">
               Dal blog
-            </div>
+            </h2>
             {post.length > 0 ? (
               <Link
                 href="/blog"
@@ -213,10 +218,10 @@ export default function Home() {
           a bullet-line della hero/chiusura, ma in bosco su carta ── */}
       <section className="bg-carta">
         <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24">
-          <div className="flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium text-bosco">
+          <h2 className="flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium text-bosco">
             <span className="inline-block h-[2px] w-7 bg-bosco" />
             <span>Perché lavorare con me</span>
-          </div>
+          </h2>
           <div className="mt-9 grid gap-10 md:grid-cols-3 md:gap-8">
             {VALORI.map((v) => (
               <div key={v.num} className="border-t-2 border-inchiostro pt-6">
@@ -240,10 +245,10 @@ export default function Home() {
           normalizzati in altezza: non in card, non in griglia ── */}
       <section className="bg-carta">
         <div className="mx-auto max-w-[1280px] px-6 py-14 md:px-16 md:py-20">
-          <div className="flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium text-bosco">
+          <h2 className="flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium text-bosco">
             <span className="inline-block h-[2px] w-7 bg-bosco" />
             <span>Clienti recenti</span>
-          </div>
+          </h2>
           <div className="mt-9 flex flex-wrap items-center gap-x-12 gap-y-8">
             {CLIENTI_RECENTI.map((c) => (
               <Image

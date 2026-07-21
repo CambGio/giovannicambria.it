@@ -32,10 +32,10 @@ function Etichetta({ children }: { children: ReactNode }) {
   );
 }
 
-function CtaContatto({ slug }: { slug: ServizioSlug }) {
+function CtaContatto() {
   return (
     <Link
-      href={`/contatto?format=${slug}`}
+      href="/contatto"
       className="inline-flex items-center gap-3 bg-inchiostro px-7 py-4 font-sans text-[15px] font-semibold text-carta tracking-[-0.005em] transition-colors hover:bg-bosco"
     >
       Raccontami il tuo caso
@@ -92,7 +92,7 @@ export function ServizioScheda({ slug }: { slug: ServizioSlug }) {
         </dl>
 
         <div className="mt-10">
-          <CtaContatto slug={s.slug} />
+          <CtaContatto />
         </div>
       </section>
 
@@ -228,7 +228,7 @@ export function ServizioScheda({ slug }: { slug: ServizioSlug }) {
             Scrivimi due righe sul tuo caso: rispondo entro 48 ore lavorative.
           </p>
           <div className="mt-6">
-            <CtaContatto slug={s.slug} />
+            <CtaContatto />
           </div>
         </div>
       </section>

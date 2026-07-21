@@ -47,7 +47,6 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     url: SITE_URL,
   },
-  robots: { index: false, follow: false },
 };
 
 export default function RootLayout({

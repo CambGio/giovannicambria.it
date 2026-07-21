@@ -1,16 +1,18 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { EMAIL, LINKEDIN_URL, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contatto",
   description:
     "Raccontami il tuo caso per mail, telefono o LinkedIn: bastano poche righe. Rispondo entro 48 ore lavorative. studio@giovannicambria.it · +39 328 446 0482.",
+  alternates: { canonical: "/contatto" },
 };
 
 const RECAPITI = [
-  { label: "Email", value: "studio@giovannicambria.it", href: "mailto:studio@giovannicambria.it" },
-  { label: "Telefono", value: "+39 328 446 0482", href: "tel:+393284460482" },
-  { label: "LinkedIn", value: "/in/giovannicambria", href: "https://www.linkedin.com/in/giovannicambria/" },
+  { label: "Email", value: EMAIL, href: `mailto:${EMAIL}` },
+  { label: "Telefono", value: PHONE_DISPLAY, href: `tel:${PHONE_TEL}` },
+  { label: "LinkedIn", value: "/in/giovannicambria", href: LINKEDIN_URL },
 ];
 
 export default function Contatto() {

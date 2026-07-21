@@ -5,9 +5,10 @@ import { ServizioScheda } from "@/components/site/ServizioScheda";
 import { CITY, EMAIL, SITE_DESCRIPTION, SITE_NAME, SITE_URL, VAT } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Lavoro",
+  title: "Lavora con me",
   description:
     "Un percorso in tre passi per adottare l'AI nei processi: Mappa dell'adozione, Workshop pratico, Affiancamento. Niente hype, solo dove serve.",
+  alternates: { canonical: "/lavoro" },
 };
 
 const jsonLd = JSON.stringify({

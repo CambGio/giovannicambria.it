@@ -5,14 +5,14 @@ const NOINDEX = "noindex, nofollow, noarchive, nosnippet";
 
 export async function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
+  const password = process.env.SITE_PASSWORD;
 
   if (pathname.startsWith("/lock")) {
-    return withNoindex(NextResponse.next());
+    return password ? withNoindex(NextResponse.next()) : NextResponse.next();
   }
 
-  const password = process.env.SITE_PASSWORD;
   if (!password) {
-    return withNoindex(NextResponse.next());
+    return NextResponse.next();
   }
 
   const expected = await sha256Hex(password);

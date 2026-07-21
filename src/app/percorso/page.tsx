@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Chi sono",
   description:
     "Nel digitale dal 1998: da Switch MultiMedia (Milazzo) a oggi, portando l'AI nei processi di chi lavora con me. Le tappe, in sintesi.",
+  alternates: { canonical: "/percorso" },
 };
 
 type Logo = { src: string; alt: string; width: number; height: number };
@@ -57,7 +58,7 @@ const TAPPE: Tappa[] = [
     ruolo: "Amendolia Assicurazioni e Autonoleggio Di Paola",
     luogo: "Milazzo",
     testo:
-      "Per l'agenzia assicurativa un percorso partito dalla consulenza manageriale e cresciuto fino al CRM, alla lead generation e a un agente vocale per il centralino fuori orario; per l'autonoleggio, il sito con booking dei transfer e la SEO. Lo stesso metodo su entrambi: prima capire il processo, poi decidere se e dove serve l'AI.",
+      "Per l'agenzia assicurativa un percorso partito dalla consulenza manageriale e cresciuto fino al CRM, alla lead generation e, ora in sviluppo, a un agente vocale per il centralino fuori orario; per l'autonoleggio, il sito con booking dei transfer e la SEO. Lo stesso metodo su entrambi: prima capire il processo, poi decidere se e dove serve l'AI.",
   },
   {
     periodo: "2024–2025",
@@ -133,6 +134,7 @@ export default function Percorso() {
       {/* ── Timeline su carta: il respiro tra le due bande bosco ── */}
       <section className="bg-carta">
         <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24">
+          <h2 className="sr-only">Le tappe</h2>
           <ol>
             {TAPPE.map((t) => (
               <li
@@ -143,9 +145,9 @@ export default function Percorso() {
                   {t.periodo}
                 </div>
                 <div>
-                  <div className="font-display text-[20px] font-semibold leading-[1.2] tracking-[-0.015em] text-inchiostro md:text-[22px]">
+                  <h3 className="font-display text-[20px] font-semibold leading-[1.2] tracking-[-0.015em] text-inchiostro md:text-[22px]">
                     {t.ruolo}
-                  </div>
+                  </h3>
                   <div className="mt-1 font-mono text-[12px] uppercase tracking-[0.06em] text-grigio">
                     {t.luogo}
                   </div>

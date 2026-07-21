@@ -36,9 +36,9 @@ function CardArticolo({ articolo }: { articolo: Articolo }) {
       <div className="font-mono text-[11px] uppercase tracking-[0.12em] text-bosco">
         {articolo.rubricaLabel}
       </div>
-      <div className="mt-3 font-display text-[22px] font-semibold leading-[1.18] tracking-[-0.012em] text-inchiostro transition-colors group-hover:text-bosco">
+      <h3 className="mt-3 font-display text-[22px] font-semibold leading-[1.18] tracking-[-0.012em] text-inchiostro transition-colors group-hover:text-bosco">
         {articolo.titolo}
-      </div>
+      </h3>
       <p className="mt-3 text-[15px] leading-[1.45] text-grigio">
         {articolo.sommario}
       </p>
@@ -135,9 +135,9 @@ export default async function Blog({
           {haArticoli && (
             <div className="mt-14">
               <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-t-2 border-bosco pt-7">
-                <div className="text-etichetta font-mono uppercase text-bosco">
+                <h2 className="text-etichetta font-mono uppercase text-bosco">
                   {labelFiltro ?? "Tutti gli articoli"}
-                </div>
+                </h2>
                 <div className="flex items-baseline gap-5">
                   <span className="font-mono text-[11px] uppercase tracking-[0.06em] text-grigio tabular-nums">
                     {articoli.length}{" "}
