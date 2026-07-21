@@ -16,48 +16,57 @@ const RECAPITI = [
 export default function Contatto() {
   return (
     <>
-      <section className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24 lg:py-28">
-        <div className="mb-7 flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium">
-          <span className="inline-block h-[2px] w-7 bg-bosco" />
-          <span className="text-bosco">№ 04</span>
-          <span className="text-grigio">Contatto</span>
+      {/* ── Banda-hero bosco: stessa voce della home (spec DESIGN.md,
+          lane "Bosco committed") ── */}
+      <section className="bg-bosco">
+        <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-16 md:py-32 lg:py-40">
+          <div className="mb-8 flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium">
+            <span className="inline-block h-[2px] w-7 bg-carta" />
+            <span className="text-carta">№ 04</span>
+            <span className="text-carta/80">Contatto</span>
+          </div>
+
+          <h1 className="max-w-[1080px] text-mega font-black text-carta">
+            Raccontami il tuo caso.
+          </h1>
+
+          <p className="mt-10 max-w-[640px] text-sottotitolo font-light text-carta/80">
+            Raccontami il tuo processo: cosa fai oggi, quanti dati lavori, dove
+            la macchina si inceppa. Due o tre righe bastano, non serve un brief
+            perfetto. Rispondo entro 48 ore lavorative; se ha senso, ci sentiamo
+            per una call.
+          </p>
         </div>
+      </section>
 
-        <h1 className="max-w-[900px] text-display font-extrabold text-inchiostro">
-          Raccontami il tuo caso.
-        </h1>
+      {/* ── Recapiti su carta ── */}
+      <section className="bg-carta">
+        <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24">
+          <div className="grid gap-px border-t border-inchiostro bg-inchiostro/10 md:grid-cols-3">
+            {RECAPITI.map((r) => (
+              <a
+                key={r.label}
+                href={r.href}
+                className="group bg-carta p-7 transition-colors hover:bg-grigio/5"
+                target={r.href.startsWith("http") ? "_blank" : undefined}
+                rel={r.href.startsWith("http") ? "noopener noreferrer" : undefined}
+              >
+                <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-grigio">{r.label}</div>
+                <div className="mt-3 font-sans text-[18px] font-semibold tracking-[-0.01em] transition-colors group-hover:text-bosco">
+                  {r.value}
+                </div>
+              </a>
+            ))}
+          </div>
 
-        <p className="mt-8 max-w-[620px] text-sottotitolo text-grigio">
-          Raccontami il tuo processo: cosa fai oggi, quanti dati lavori, dove
-          la macchina si inceppa. Due o tre righe bastano, non serve un brief
-          perfetto. Rispondo entro 48 ore lavorative; se ha senso, ci sentiamo
-          per una call.
-        </p>
-
-        <div className="mt-14 grid gap-px border-t border-inchiostro bg-inchiostro/10 md:grid-cols-3">
-          {RECAPITI.map((r) => (
-            <a
-              key={r.label}
-              href={r.href}
-              className="group bg-carta p-7 transition-colors hover:bg-grigio/5"
-              target={r.href.startsWith("http") ? "_blank" : undefined}
-              rel={r.href.startsWith("http") ? "noopener noreferrer" : undefined}
+          <div className="mt-9">
+            <Link
+              href="/lavoro"
+              className="font-mono text-[11px] uppercase tracking-[0.06em] text-grigio transition-colors hover:text-bosco"
             >
-              <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-grigio">{r.label}</div>
-              <div className="mt-3 font-sans text-[18px] font-semibold tracking-[-0.01em] transition-colors group-hover:text-bosco">
-                {r.value}
-              </div>
-            </a>
-          ))}
-        </div>
-
-        <div className="mt-9">
-          <Link
-            href="/lavoro"
-            className="font-mono text-[11px] uppercase tracking-[0.06em] text-grigio transition-colors hover:text-bosco"
-          >
-            ← Vedi prima i tre modi
-          </Link>
+              ← Vedi prima i tre modi
+            </Link>
+          </div>
         </div>
       </section>
 

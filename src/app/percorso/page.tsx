@@ -69,72 +69,87 @@ const TAPPE: Tappa[] = [
 export default function Percorso() {
   return (
     <>
-      <section className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24 lg:py-28">
-        <div className="mb-7 flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium">
-          <span className="inline-block h-[2px] w-7 bg-bosco" />
-          <span className="text-bosco">№ 02</span>
-          <span className="text-grigio">Chi sono</span>
-        </div>
+      {/* ── Banda-hero bosco: stessa voce della home (spec DESIGN.md,
+          lane "Bosco committed") ── */}
+      <section className="bg-bosco">
+        <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-16 md:py-32 lg:py-40">
+          <div className="mb-8 flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium">
+            <span className="inline-block h-[2px] w-7 bg-carta" />
+            <span className="text-carta">№ 02</span>
+            <span className="text-carta/80">Chi sono</span>
+          </div>
 
-        <h1 className="max-w-[900px] text-display font-extrabold text-inchiostro">
-          Nel digitale dal 1998.
-        </h1>
+          <h1 className="max-w-[1080px] text-mega font-black text-carta">
+            Nel digitale dal 1998.
+          </h1>
 
-        <p className="mt-8 max-w-[620px] text-sottotitolo text-grigio">
-          Sicilia, Brescia, ancora Sicilia. Dall&apos;e-commerce al web
-          marketing, fino a portare l&apos;AI nei processi di chi lavora con
-          me oggi. Le tappe in sintesi: chi vuole il racconto lungo lo trova
-          negli articoli del blog.
-        </p>
-
-        <ol className="mt-14">
-          {TAPPE.map((t) => (
-            <li
-              key={t.periodo + t.ruolo}
-              className="grid gap-3 border-t border-inchiostro py-7 md:grid-cols-[180px_1fr] md:gap-10"
-            >
-              <div className="font-mono text-[13px] uppercase tracking-[0.06em] text-bosco tabular-nums">
-                {t.periodo}
-              </div>
-              <div>
-                <div className="font-display text-[20px] font-semibold leading-[1.2] tracking-[-0.015em] text-inchiostro md:text-[22px]">
-                  {t.ruolo}
-                </div>
-                <div className="mt-1 font-mono text-[12px] uppercase tracking-[0.06em] text-grigio">
-                  {t.luogo}
-                </div>
-                <p className="mt-3 max-w-[620px] text-[17px] leading-[1.55] text-grigio">
-                  {t.testo}
-                </p>
-              </div>
-            </li>
-          ))}
-          <li className="border-t border-inchiostro" aria-hidden="true" />
-        </ol>
-
-        <div className="mt-14 flex flex-col items-start gap-6 border-t-2 border-inchiostro pt-8 md:flex-row md:items-center md:justify-between">
-          <p className="max-w-[560px] text-sottotitolo text-inchiostro">
-            Quasi trent&apos;anni di digitale oggi si riducono a una domanda
-            sola: dove l&apos;intelligenza artificiale serve davvero al tuo
-            lavoro, e dove è solo rumore. Prima capiamo questo, poi si
-            sceglie lo strumento.
+          <p className="mt-10 max-w-[640px] text-sottotitolo font-light text-carta/80">
+            Sicilia, Brescia, ancora Sicilia. Dall&apos;e-commerce al web
+            marketing, fino a portare l&apos;AI nei processi di chi lavora con
+            me oggi. Le tappe in sintesi: chi vuole il racconto lungo lo trova
+            negli articoli del blog.
           </p>
-          <Link
-            href="/lavoro"
-            className="inline-flex shrink-0 items-center gap-3 bg-inchiostro px-7 py-4 font-sans text-[15px] font-semibold text-carta tracking-[-0.005em] transition-colors hover:bg-bosco"
-          >
-            Lavora con me
-            <span aria-hidden="true">→</span>
-          </Link>
         </div>
+      </section>
 
-        <div className="mt-7">
-          <Link
-            href="/blog"
-            className="font-sans text-[15px] font-semibold text-inchiostro underline decoration-bosco decoration-2 underline-offset-4 transition-colors hover:text-bosco"
-          >
-            Leggi le storie di lavoro sul blog →
-          </Link>
+      {/* ── Timeline su carta: il respiro tra le due bande bosco ── */}
+      <section className="bg-carta">
+        <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24">
+          <ol>
+            {TAPPE.map((t) => (
+              <li
+                key={t.periodo + t.ruolo}
+                className="grid gap-3 border-t border-inchiostro py-7 md:grid-cols-[180px_1fr] md:gap-10"
+              >
+                <div className="font-mono text-[13px] uppercase tracking-[0.06em] text-bosco tabular-nums">
+                  {t.periodo}
+                </div>
+                <div>
+                  <div className="font-display text-[20px] font-semibold leading-[1.2] tracking-[-0.015em] text-inchiostro md:text-[22px]">
+                    {t.ruolo}
+                  </div>
+                  <div className="mt-1 font-mono text-[12px] uppercase tracking-[0.06em] text-grigio">
+                    {t.luogo}
+                  </div>
+                  <p className="mt-3 max-w-[620px] text-[17px] leading-[1.55] text-grigio">
+                    {t.testo}
+                  </p>
+                </div>
+              </li>
+            ))}
+            <li className="border-t border-inchiostro" aria-hidden="true" />
+          </ol>
+        </div>
+      </section>
+
+      {/* ── Chiusura-ponte + CTA in bosco: la campata torna a chiudersi
+          nella stessa voce della hero ── */}
+      <section className="bg-bosco">
+        <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-16 md:py-28">
+          <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
+            <p className="max-w-[620px] text-sottotitolo text-carta/80">
+              Quasi trent&apos;anni di digitale oggi si riducono a una domanda
+              sola: dove l&apos;intelligenza artificiale serve davvero al tuo
+              lavoro, e dove è solo rumore. Prima capiamo questo, poi si
+              sceglie lo strumento.
+            </p>
+            <Link
+              href="/lavoro"
+              className="inline-flex shrink-0 items-center gap-3 bg-carta px-7 py-4 font-sans text-[15px] font-semibold text-inchiostro tracking-[-0.005em] transition-colors hover:bg-inchiostro hover:text-carta"
+            >
+              Lavora con me
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+
+          <div className="mt-9">
+            <Link
+              href="/blog"
+              className="font-sans text-[15px] font-semibold text-carta underline decoration-carta/50 decoration-2 underline-offset-4 transition-colors hover:decoration-carta"
+            >
+              Leggi le storie di lavoro sul blog <span aria-hidden="true">→</span>
+            </Link>
+          </div>
         </div>
       </section>
 

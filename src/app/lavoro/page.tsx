@@ -35,41 +35,49 @@ export default function Lavoro() {
         dangerouslySetInnerHTML={{ __html: jsonLd }}
       />
 
-      <section className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24 lg:py-28">
-        <div className="mb-7 flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium">
-          <span className="inline-block h-[2px] w-7 bg-bosco" />
-          <span className="text-bosco">№ 03</span>
-          <span className="text-grigio">Lavoro</span>
+      {/* ── Banda-hero bosco: stessa voce della home (spec DESIGN.md,
+          lane "Bosco committed") ── */}
+      <section className="bg-bosco">
+        <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-16 md:py-32 lg:py-40">
+          <div className="mb-8 flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium">
+            <span className="inline-block h-[2px] w-7 bg-carta" />
+            <span className="text-carta">№ 03</span>
+            <span className="text-carta/80">Lavoro</span>
+          </div>
+
+          <h1 className="max-w-[1080px] text-mega font-black text-carta">
+            Un percorso, tre passi.
+          </h1>
+
+          <p className="mt-10 max-w-[640px] text-sottotitolo font-light text-carta/80">
+            Si parte dai processi, non dagli strumenti: guardiamo insieme dove
+            l&apos;AI cambia davvero il vostro lavoro, e dove no. La si adotta
+            solo lì. Poi si misura, per sapere se sta funzionando, non solo se
+            è partita.
+          </p>
         </div>
-
-        <h1 className="max-w-[900px] text-display font-extrabold text-inchiostro">
-          Un percorso, tre passi.
-        </h1>
-
-        <p className="mt-8 max-w-[620px] text-sottotitolo text-grigio">
-          Si parte dai processi, non dagli strumenti: guardiamo insieme dove
-          l&apos;AI cambia davvero il vostro lavoro, e dove no. La si adotta
-          solo lì. Poi si misura, per sapere se sta funzionando, non solo se
-          è partita.
-        </p>
       </section>
 
       {SERVIZI.map((s) => (
         <ServizioScheda key={s.slug} slug={s.slug} />
       ))}
 
-      <section className="mx-auto max-w-[1280px] px-6 pb-16 md:px-16 md:pb-24">
-        <div className="flex flex-col items-start gap-6 border-t-2 border-inchiostro pt-7 md:flex-row md:items-center md:justify-between">
-          <p className="text-sottotitolo text-inchiostro">
-            Non sai quale scegliere?
-          </p>
-          <Link
-            href="/contatto"
-            className="inline-flex items-center gap-3 bg-inchiostro px-7 py-4 font-sans text-[15px] font-semibold text-carta tracking-[-0.005em] transition-colors hover:bg-bosco"
-          >
-            Scrivimi
-            <span aria-hidden="true">→</span>
-          </Link>
+      {/* ── CTA finale in bosco: la campata torna a chiudersi nella
+          stessa voce della hero ── */}
+      <section className="bg-bosco">
+        <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-16 md:py-28">
+          <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
+            <p className="text-sottotitolo text-carta/80">
+              Non sai quale scegliere?
+            </p>
+            <Link
+              href="/contatto"
+              className="inline-flex items-center gap-3 bg-carta px-7 py-4 font-sans text-[15px] font-semibold text-inchiostro tracking-[-0.005em] transition-colors hover:bg-inchiostro hover:text-carta"
+            >
+              Scrivimi
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
         </div>
       </section>
 
