@@ -18,6 +18,54 @@
 - **Checkpoint copy**: nei task marcati 🔍 la bozza va presentata a Giovanni e approvata PRIMA del commit.
 - Il sito resta dietro lock (`SITE_PASSWORD`) e `noindex` per tutta l'implementazione. Il go-live (Task 9) parte SOLO su GO esplicito di Giovanni.
 - Niente prezzi pubblici: rimuovere i prezzi da UI **e** da JSON-LD.
+- **Direzione di design (spec §12, D8)**: ibrido B+A — tipografia protagonista su fondo chiaro (**Fraunces** display + **Inter** UI, palette bianco `#FAFAF8` / nero `#141414` / grigio `#6E6E68` / **verde foresta `#1F5130`** unico accento), struttura content-first, momenti scuri solo puntuali. Border-radius 0 o minimo; vietati gradient/glow/effetti. I token del Task 0 sono la fonte: nessun colore/font hardcoded nei task successivi.
+- **Mobile-first**: si implementa e verifica prima a viewport 390px, poi desktop. Ogni checkpoint 🔍 include screenshot mobile E desktop (puppeteer-core + Chrome installato).
+
+---
+
+### Task 0: Design system — Fraunces + Inter, token, chrome 🔍
+
+**Files:**
+- Modify: `src/app/layout.tsx` (next/font: Fraunces + Inter come variabili CSS)
+- Modify: `src/app/globals.css` (token `@theme` Tailwind v4: palette + font)
+- Modify: `src/components/site/Masthead.tsx`, `SiteHeader.tsx`, `MobileNav.tsx`, `SiteFooter.tsx`, `Wordmark.tsx` (restyle del chrome)
+
+**Interfaces:**
+- Produces: token Tailwind `carta`/`inchiostro`/`grigio`/`bosco` + font `--font-fraunces`/`--font-inter`, usati da TUTTI i task successivi (mai colori o font hardcoded altrove).
+
+**Riferimenti visivi** (l'implementatore li consulti via WebFetch prima di scrivere CSS): corentinbernadou.com, simon.abranowicz.com, chloescheffe.github.io (trattamento tipografico/griglia) · tomcritchlow.com (struttura content-first). Identità da sposare: template caroselli LinkedIn in `/Users/giovannicambria/work/personale/giovannicambria-it/progetti/2026-contenuti-linkedin/carosello-template/`.
+
+- [ ] **Step 1: Font** — in `src/app/layout.tsx` sostituisci il setup font esistente con:
+
+```tsx
+import { Fraunces, Inter } from "next/font/google";
+const fraunces = Fraunces({ subsets: ["latin"], variable: "--font-fraunces", axes: ["opsz"] });
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+// sul tag <html>: className={`${fraunces.variable} ${inter.variable}`}
+```
+
+- [ ] **Step 2: Token** — in `src/app/globals.css` definisci (adattando ai nomi Tailwind v4 già presenti, sostituendo la palette precedente):
+
+```css
+@theme {
+  --color-carta: #FAFAF8;
+  --color-inchiostro: #141414;
+  --color-grigio: #6E6E68;
+  --color-bosco: #1F5130;
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+}
+```
+
+Radius 0; scala tipografica con display generoso (hero `clamp`, tracking stretto sui titoli grandi, letter-spacing largo sulle etichette maiuscole in Inter).
+
+- [ ] **Step 3: Chrome** — restyle mobile-first (prima 390px) di header/nav/footer: wordmark in Fraunces; nav in Inter, etichette con letter-spacing; footer con metadati "clinici" in griglia (email, LinkedIn, P.IVA da `src/lib/site.ts`); accento `bosco` solo su link/stati attivi.
+
+- [ ] **Step 4: Verifica** — `npm run build && npm run lint` verdi; screenshot puppeteer di `/` a 390px e 1440px (il copy è ancora vecchio: si valuta SOLO il sistema — font resi, palette, chrome).
+
+- [ ] **Step 5: 🔍 Checkpoint** — presenta gli screenshot a Giovanni, itera fino a OK sul sistema.
+
+- [ ] **Step 6: Commit** — `git add -A && git commit -m "feat(design): sistema Fraunces+Inter, token carta/inchiostro/bosco, chrome restyle (spec 09 §12)"`
 
 ---
 
@@ -150,7 +198,7 @@ async redirects() {
   > **L'AI in azienda non parte dagli strumenti. Parte dai processi.**
   > Aiuto PMI e professionisti ad adottare l'intelligenza artificiale dove serve al business — e a lasciarla perdere dove non serve. Niente hype: quasi trent'anni di digitale applicati con buon senso.
 
-  CTA primaria → `/lavoro`, secondaria → `/percorso`.
+  CTA primaria → `/lavoro`, secondaria → `/percorso`. Trattamento (spec §12): hero tipografico d'impatto in Fraunces (il manifesto È il design, niente immagini), e sotto il **feed dei post protagonista** (struttura content-first: lista cronologica ariosa con data/rubrica come metadati in Inter, non card patinate).
 
 - [ ] **Step 2: Rimuovi il blocco newsletter disabilitato** (deferita a v2, D6): via il form, resta la striscia scura "Lavora con me" con CTA.
 
@@ -222,5 +270,6 @@ async redirects() {
 ## Self-review (fatta)
 
 - **Copertura spec**: §5 alberatura→T3/T5-T7 · §6 offerta→T4 · §7 pipeline/semina→T1-T2 · §8 go-live→T9 · §9 docs→già fatto (commit `4d291ee`) · §10 out-of-scope rispettato (newsletter/form/automazione fuori).
-- **Deviazione dalla spec, da ratificare**: §5 prevedeva "form Resend" su /contatto; la ricognizione ha mostrato che Resend non è tra le dipendenze e il dominio non è verificato su Aruba → il form slitta a v2 (T7). Spec da emendare dopo l'OK di Giovanni.
+- **Form contatto → v2**: ratificato da Giovanni il 21-07 (D9 in spec); T7 = recapiti diretti.
+- **Design**: direzione ibrido B+A ratificata il 21-07 (D8/§12 in spec) → aggiunto Task 0 (design system), vincoli globali di palette/font/mobile-first, trattamento hero+feed nel Task 5.
 - **Tipi**: slug servizi invariati (`mappa/workshop/affiancamento`) coerenti tra T3 (redirect/anchor) e T4 (dati); slug rubriche coerenti tra T1 (definizione) e T2 (frontmatter).

@@ -54,6 +54,8 @@ il metodo, i casi. Il blog è **archivio dei post LinkedIn**. Lead generation e 
 | D5 | Articoli esistenti | Tieni AI Act + Amendolia; **parcheggia** (draft: true) Matrice 3×3 e Quattro categorie |
 | D6 | Alberatura v1 | 6 pagine (§5); newsletter, lead magnet, /risorse deferiti a v2 |
 | D7 | Go-live | Lock via **solo a v1 completa** (tutte le pagine con contenuto approvato) |
+| D8 | Direzione visiva (21-07) | **Ibrido B+A**: impatto tipografico su fondo chiaro (Fraunces display, Inter UI, verde foresta unico accento) su struttura content-first (feed dei post in home, offerta come blocchi profondi); scuro solo per momenti singoli. **Brand-kit v2 (Manrope+terracotta) abbandonato**: l'identità è quella già pubblica dei caroselli LinkedIn. Dettaglio in §12 |
+| D9 | Form contatto (21-07) | Slitta a **v2** (Resend non tra le dipendenze, dominio non verificato su Aruba); v1 = recapiti diretti |
 
 ## 5. Alberatura v1
 
@@ -63,7 +65,7 @@ il metodo, i casi. Il blog è **archivio dei post LinkedIn**. Lead generation e 
 | `/percorso` | "Chi sono" | La storia-credibilità: 28 anni di digitale → adozione AI. Attinge da about LinkedIn, doc 02, post pillar "storia&metodo" |
 | `/lavoro` | "Lavora con me" | Offerta unica in chiave adozione AI (§6), CTA contatto |
 | `/blog` + `/blog/[slug]` | "Blog" | Archivio leggero dei post LinkedIn |
-| `/contatto` | "Contatto" | Form Resend + honeypot/Turnstile (già in stack) |
+| `/contatto` | "Contatto" | Recapiti diretti (email/tel/LinkedIn); form Resend → v2 (D9) |
 
 **Modifiche strutturali rispetto all'esistente**: le 3 sottopagine `/lavoro/mappa`,
 `/lavoro/workshop`, `/lavoro/affiancamento` **si eliminano** (contenuto assorbito nella
@@ -118,6 +120,7 @@ Da quel momento i post LinkedIn iniziano a linkare gli articoli nel primo commen
 ## 10. Fuori scope v1 (deferiti, non cancellati)
 
 - Newsletter (Resend Audiences) e lead magnet "sette domande" / `/risorse`.
+- Form contatto su `/contatto` (D9; prerequisito esterno: verifica dominio Resend su Aruba — SPF/DKIM/DMARC).
 - Automazione pubblicazione LinkedIn (opzione C: cron + approval UI `/studio`).
 - Espansione SEO degli articoli (solo a posteriori, sui post che performano).
 - Foto profilo LinkedIn (blocco nel progetto LinkedIn, non riguarda il sito).
@@ -130,3 +133,24 @@ Da quel momento i post LinkedIn iniziano a linkare gli articoli nel primo commen
   paragrafi corti) — chi clicca dal profilo deve ritrovare la stessa persona.
 - Vercel Hobby: il piano vieta l'uso commerciale e il sito ha una pagina-offerta.
   Rischio basso ma reale — da rivalutare al go-live (upgrade Pro o alternativa se serve).
+
+## 12. Direzione di design (decisa 21-07, D8)
+
+**Ibrido B+A** — scelto su ricerca comparativa con screenshot reali
+(artifact "Direzioni di design", 6 riferimenti verificati):
+
+- **Trattamento (dalla direzione B)**: la tipografia è il design. Fondo chiaro, scala
+  tipografica generosa, spazio negativo, metadati "clinici" che danno ritmo, griglie
+  ordinate, UI in bianco/nero col colore solo dove serve. Riferimenti:
+  corentinbernadou.com · simon.abranowicz.com · chloescheffe.github.io.
+- **Struttura (dalla direzione A)**: content-first. Feed dei post protagonista in home,
+  offerta come pochi blocchi profondi, zero decorazione. Riferimenti: tomcritchlow.com ·
+  jarango.com.
+- **Momenti scuri (dalla direzione C)**: solo puntuali (es. striscia "Lavora con me"),
+  mai l'intero sito. Riferimento: isabelmoranta.com.
+- **Identità**: **Fraunces** (display) + **Inter** (UI/testo), palette bianco/nero +
+  **verde foresta** come unico accento — la stessa identità già pubblica dei caroselli
+  LinkedIn (coerenza profilo↔sito). Il **brand-kit v2** (Manrope + Source Serif 4,
+  terracotta — mai andato online) è **superato**; `brand-kit/` resta come archivio.
+- **Mobile-first**: si progetta e si verifica prima a 390px; border-radius 0 o minimo,
+  niente effetti/gradient/glow (anti-hype anche nel vestito).
