@@ -7,7 +7,7 @@ import { CITY, EMAIL, SITE_DESCRIPTION, SITE_NAME, SITE_URL, VAT } from "@/lib/s
 export const metadata: Metadata = {
   title: "Lavoro",
   description:
-    "Tre modi di iniziare: la Mappa dell'innovazione, il Workshop in-house, l'Affiancamento. Consulenza per PMI italiane.",
+    "Un percorso in tre passi per adottare l'AI nei processi: Mappa dell'adozione, Workshop pratico, Affiancamento. Niente hype, solo dove serve.",
 };
 
 const jsonLd = JSON.stringify({
@@ -43,13 +43,14 @@ export default function Lavoro() {
         </div>
 
         <h1 className="max-w-[900px] text-display font-extrabold text-inchiostro">
-          Tre modi di iniziare.
+          Un percorso, tre passi.
         </h1>
 
         <p className="mt-8 max-w-[620px] text-sottotitolo text-grigio">
-          Lavoro con PMI italiane che vogliono innovare il modello di business
-          prima del tool. Tre porte d&apos;ingresso, per momenti diversi del
-          bisogno.
+          Si parte dai processi, non dagli strumenti: guardiamo insieme dove
+          l&apos;AI cambia davvero il vostro lavoro — e dove no. La si adotta
+          solo lì. Poi si misura, per sapere se sta funzionando, non solo se
+          è partita.
         </p>
       </section>
 
