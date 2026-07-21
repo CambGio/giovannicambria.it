@@ -31,22 +31,6 @@
   --text-etichetta--line-height: 1.4;
 }
 
-/* Alias transitori palette v2 → v3. Le pagine non ancora toccate
- * dalla revisione (blog, lavoro, percorso, contatto, MDX) usano
- * ancora questi nomi: li mappo sui nuovi valori, derivati via
- * color-mix, così restano coerenti senza duplicare hex a mano.
- * Da rimuovere quando quelle pagine migrano ai nomi nuovi. */
-@theme {
-  --color-paper: var(--color-carta);
-  --color-paper-deep: color-mix(in oklab, var(--color-carta), var(--color-inchiostro) 4%);
-  --color-ink: var(--color-inchiostro);
-  --color-ink-muted: var(--color-grigio);
-  --color-rule: color-mix(in oklab, var(--color-carta), var(--color-inchiostro) 10%);
-  --color-accent: var(--color-bosco);
-  --color-accent-light: var(--color-bosco-chiaro);
-  --color-accent-deep: color-mix(in oklab, var(--color-bosco), black 20%);
-  --color-placeholder: color-mix(in oklab, var(--color-carta), var(--color-inchiostro) 8%);
-}
 
 :root {
   color-scheme: light;

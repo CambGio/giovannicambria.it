@@ -41,7 +41,7 @@ const TAPPE: Tappa[] = [
     ruolo: "Consulente indipendente",
     luogo: "Sicilia",
     testo:
-      "Torno a lavorare in proprio e, dopo la Digital Masterclass in Business Design per le PMI di Beople, do un nome al mestiere che faccio da sempre. Quel titolo oggi si è allargato: Innovation Manager & AI Strategist.",
+      "Torno a lavorare in proprio e, dopo la Digital Masterclass in Business Design per le PMI di Beople, do un nome al mestiere che faccio da sempre: consulente d'innovazione. Quel titolo oggi si è allargato: Innovation Manager & AI Strategist.",
   },
   {
     periodo: "2009–2018",
