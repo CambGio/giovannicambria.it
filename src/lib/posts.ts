@@ -15,10 +15,8 @@ export const RUBRICHE = {
 
 export type RubricaSlug = keyof typeof RUBRICHE;
 
-const RUBRICA_LABEL = RUBRICHE;
-
 export function isRubricaSlug(v: unknown): v is RubricaSlug {
-  return typeof v === "string" && v in RUBRICA_LABEL;
+  return typeof v === "string" && v in RUBRICHE;
 }
 
 export type Articolo = {
@@ -76,7 +74,7 @@ function validaFrontmatter(file: string, raw: Record<string, unknown>): Articolo
   return {
     slug: (raw.slug as string).trim(),
     rubrica,
-    rubricaLabel: RUBRICA_LABEL[rubrica],
+    rubricaLabel: RUBRICHE[rubrica],
     titolo: raw.titolo as string,
     sommario: typeof raw.sommario === "string" ? raw.sommario : "",
     data: raw.data as string,
