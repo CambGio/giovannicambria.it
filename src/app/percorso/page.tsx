@@ -20,8 +20,7 @@ type Tappa = {
 
 // Materiale d'archivio: alcuni dei clienti gestiti in agenzia nell'era
 // Eureweb. La lista è quella confermata da Giovanni; il testo della tappa
-// (sopra) cita altri nomi a titolo di esempio (Pirelli, Citroën, Candy):
-// disallineamento noto, non un errore di questa sezione.
+// (sopra) cita solo nomi presenti in questa lista.
 const LOGHI_EUREWEB: Logo[] = [
   { src: "/loghi/eureweb/sisal.png", alt: "Sisal", width: 538, height: 179 },
   {
@@ -86,7 +85,7 @@ const TAPPE: Tappa[] = [
     ruolo: "Eureweb · quattro ruoli, fino a General Team Manager",
     luogo: "Brescia, Salò",
     testo:
-      "Una digital agency, clienti come Pirelli, Citroën, Lenovo e Candy, un team di oltre venti persone da guidare: qui ho imparato che la disciplina vale più del talento isolato.",
+      "Una digital agency, clienti come Sisal, Lenovo, Olimpia Splendid e Citizen, un team di oltre venti persone da guidare: qui ho imparato che la disciplina vale più del talento isolato.",
     loghi: LOGHI_EUREWEB,
   },
   {
@@ -138,7 +137,7 @@ export default function Percorso() {
             {TAPPE.map((t) => (
               <li
                 key={t.periodo + t.ruolo}
-                className="grid gap-3 border-t border-inchiostro py-7 md:grid-cols-[180px_1fr] md:gap-10"
+                className="grid gap-3 border-t border-bosco/20 py-7 md:grid-cols-[180px_1fr] md:gap-10"
               >
                 <div className="font-mono text-[13px] uppercase tracking-[0.06em] text-bosco tabular-nums">
                   {t.periodo}
@@ -175,7 +174,7 @@ export default function Percorso() {
                 </div>
               </li>
             ))}
-            <li className="border-t border-inchiostro" aria-hidden="true" />
+            <li className="border-t border-bosco/20" aria-hidden="true" />
           </ol>
         </div>
       </section>

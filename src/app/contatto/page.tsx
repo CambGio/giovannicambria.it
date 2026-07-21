@@ -46,7 +46,7 @@ export default function Contatto() {
             Una call di 30 minuti, senza impegno: si parte da lì.
           </p>
 
-          <div className="mt-10 grid gap-px border-t border-inchiostro bg-inchiostro/10 md:grid-cols-3">
+          <div className="mt-10 grid gap-px border-t border-bosco bg-inchiostro/10 md:grid-cols-3">
             {RECAPITI.map((r) => (
               <a
                 key={r.label}
@@ -55,7 +55,7 @@ export default function Contatto() {
                 target={r.href.startsWith("http") ? "_blank" : undefined}
                 rel={r.href.startsWith("http") ? "noopener noreferrer" : undefined}
               >
-                <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-grigio">{r.label}</div>
+                <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-bosco">{r.label}</div>
                 <div className="mt-3 font-sans text-[18px] font-semibold tracking-[-0.01em] transition-colors group-hover:text-bosco">
                   {r.value}
                 </div>

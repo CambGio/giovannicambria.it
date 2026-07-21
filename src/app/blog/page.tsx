@@ -90,8 +90,8 @@ export default async function Blog({
       {/* ── Rubriche e lista su carta: il respiro dopo la testata ── */}
       <section className="bg-carta">
         <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24">
-          <div className="border-t-2 border-inchiostro pt-7">
-            <div className="text-etichetta font-mono uppercase text-grigio">
+          <div className="border-t-2 border-bosco pt-7">
+            <div className="text-etichetta font-mono uppercase text-bosco">
               Le quattro rubriche
             </div>
             <ul className="mt-7 grid gap-px bg-inchiostro/10 md:grid-cols-2 lg:grid-cols-4">
@@ -134,8 +134,8 @@ export default async function Blog({
 
           {haArticoli && (
             <div className="mt-14">
-              <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-t-2 border-inchiostro pt-7">
-                <div className="text-etichetta font-mono uppercase text-grigio">
+              <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-2 border-t-2 border-bosco pt-7">
+                <div className="text-etichetta font-mono uppercase text-bosco">
                   {labelFiltro ?? "Tutti gli articoli"}
                 </div>
                 <div className="flex items-baseline gap-5">

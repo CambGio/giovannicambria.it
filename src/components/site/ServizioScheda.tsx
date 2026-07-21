@@ -26,7 +26,7 @@ function jsonLdServizio(s: Servizio): string {
 
 function Etichetta({ children }: { children: ReactNode }) {
   return (
-    <h3 className="text-etichetta font-mono uppercase text-grigio">
+    <h3 className="text-etichetta font-mono uppercase text-bosco">
       {children}
     </h3>
   );
@@ -98,7 +98,7 @@ export function ServizioScheda({ slug }: { slug: ServizioSlug }) {
 
       {/* Per chi è */}
       <section className="mx-auto max-w-[1280px] px-6 pb-14 md:px-16">
-        <div className="border-t-2 border-inchiostro pt-7">
+        <div className="border-t-2 border-bosco pt-7">
           <Etichetta>Per chi è</Etichetta>
           <div className="mt-6 grid gap-px border-t border-inchiostro/10 bg-inchiostro/10 md:grid-cols-2">
             {s.perChiDettaglio.map((c) => (
@@ -117,7 +117,7 @@ export function ServizioScheda({ slug }: { slug: ServizioSlug }) {
 
       {/* Cosa ricevi */}
       <section className="mx-auto max-w-[1280px] px-6 pb-14 md:px-16">
-        <div className="border-t-2 border-inchiostro pt-7">
+        <div className="border-t-2 border-bosco pt-7">
           <Etichetta>Cosa ricevi</Etichetta>
           <ul className="mt-6 max-w-[760px] divide-y divide-inchiostro/10 border-y border-inchiostro/10">
             {s.cosaRicevi.map((voce) => (
@@ -137,7 +137,7 @@ export function ServizioScheda({ slug }: { slug: ServizioSlug }) {
 
       {/* Come funziona */}
       <section className="mx-auto max-w-[1280px] px-6 pb-14 md:px-16">
-        <div className="border-t-2 border-inchiostro pt-7">
+        <div className="border-t-2 border-bosco pt-7">
           <Etichetta>Come funziona</Etichetta>
           <ol className="mt-6 max-w-[760px]">
             {s.comeFunziona.map((fase, i) => (
@@ -175,7 +175,7 @@ export function ServizioScheda({ slug }: { slug: ServizioSlug }) {
           key={sez.titolo}
           className="mx-auto max-w-[1280px] px-6 pb-14 md:px-16"
         >
-          <div className="border-t-2 border-inchiostro pt-7">
+          <div className="border-t-2 border-bosco pt-7">
             <Etichetta>{sez.titolo}</Etichetta>
             {sez.paragrafi.map((p) => (
               <p
@@ -201,7 +201,7 @@ export function ServizioScheda({ slug }: { slug: ServizioSlug }) {
 
       {/* FAQ */}
       <section className="mx-auto max-w-[1280px] px-6 pb-14 md:px-16">
-        <div className="border-t-2 border-inchiostro pt-7">
+        <div className="border-t-2 border-bosco pt-7">
           <Etichetta>Domande frequenti</Etichetta>
           <dl className="mt-6 max-w-[760px]">
             {s.faq.map((f) => (
@@ -223,7 +223,7 @@ export function ServizioScheda({ slug }: { slug: ServizioSlug }) {
 
       {/* CTA finale */}
       <section className="mx-auto max-w-[1280px] px-6 pb-16 md:px-16 md:pb-24">
-        <div className="border-t-2 border-inchiostro pt-7">
+        <div className="border-t-2 border-bosco pt-7">
           <p className="max-w-[620px] text-[18px] leading-[1.5] text-grigio">
             Scrivimi due righe sul tuo caso: rispondo entro 48 ore lavorative.
           </p>
