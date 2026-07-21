@@ -10,100 +10,110 @@ export default function Home() {
 
   return (
     <>
-      {/* ── Manifesto: il testo È il design, niente immagini (spec §12) ── */}
-      <section className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24 lg:py-32">
-        <div className="mb-7 flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium">
-          <span className="inline-block h-[2px] w-7 bg-bosco" />
-          <span className="text-bosco">Manifesto</span>
-        </div>
-
-        <h1 className="max-w-[980px] text-display font-extrabold text-inchiostro">
-          L&apos;AI in azienda non parte dagli strumenti. Parte dai processi.
-        </h1>
-
-        <p className="mt-8 max-w-[680px] text-sottotitolo text-grigio">
-          Aiuto PMI e professionisti ad adottare l&apos;intelligenza
-          artificiale dove serve al business, e a lasciarla perdere dove non
-          serve. Niente hype: quasi trent&apos;anni di digitale applicati con
-          buon senso.
-        </p>
-
-        <div className="mt-9 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-8">
-          <Link
-            href="/lavoro"
-            className="inline-flex items-center gap-3 bg-inchiostro px-7 py-4 font-sans text-[15px] font-semibold text-carta tracking-[-0.005em] transition-colors hover:bg-bosco"
-          >
-            Lavora con me
-            <span aria-hidden="true">→</span>
-          </Link>
-          <Link
-            href="/percorso"
-            className="font-sans text-[15px] font-semibold text-inchiostro underline decoration-bosco decoration-2 underline-offset-4 transition-colors hover:text-bosco"
-          >
-            Chi sono, in breve <span aria-hidden="true">→</span>
-          </Link>
-        </div>
-      </section>
-
-      {/* ── Feed dei post: content-first, lista cronologica ariosa ── */}
-      <section className="mx-auto max-w-[1280px] px-6 pb-16 md:px-16 md:pb-24">
-        <div className="flex items-baseline justify-between border-t-2 border-inchiostro pt-7">
-          <div className="text-etichetta font-mono uppercase text-grigio">
-            Dal blog
+      {/* ── Manifesto: bosco pieno, tipografia carta monumentale. Il
+          verde smette di essere accento (spec DESIGN.md, lane
+          "Bosco committed") ── */}
+      <section className="bg-bosco">
+        <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-16 md:py-32 lg:py-40">
+          <div className="mb-8 flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium text-carta">
+            <span className="inline-block h-[2px] w-7 bg-carta" />
+            <span>Manifesto</span>
           </div>
-          {post.length > 0 ? (
-            <Link
-              href="/blog"
-              className="font-mono text-[11px] uppercase tracking-[0.06em] text-grigio transition-colors hover:text-bosco"
-            >
-              Tutti gli articoli <span aria-hidden="true">→</span>
-            </Link>
-          ) : null}
-        </div>
 
-        {post.length > 0 ? (
-          <ul className="mt-2 divide-y divide-inchiostro/10 border-b border-inchiostro/10">
-            {post.map((a) => (
-              <li key={a.slug}>
-                <Link
-                  href={`/blog/${a.slug}`}
-                  className="group flex flex-col gap-3 py-8 md:py-9"
-                >
-                  <div className="font-mono text-[11px] uppercase tracking-[0.08em] text-grigio tabular-nums">
-                    {formattaData(a.data)} · {a.rubricaLabel} · {a.minuti} min
-                  </div>
-                  <div className="max-w-[820px] font-display text-sottotitolo font-medium text-inchiostro transition-colors group-hover:text-bosco">
-                    {a.titolo}
-                  </div>
-                  <p className="max-w-[640px] text-[16px] leading-[1.6] text-grigio">
-                    {a.sommario}
-                  </p>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        ) : (
-          <p className="mt-7 max-w-[560px] text-[17px] leading-[1.6] text-grigio">
-            I primi articoli sono in arrivo.
+          <h1 className="max-w-[1080px] text-mega font-black text-carta">
+            L&apos;AI in azienda non parte dagli strumenti. Parte dai
+            processi.
+          </h1>
+
+          <p className="mt-10 max-w-[640px] text-sottotitolo font-light text-carta/80">
+            Aiuto PMI e professionisti ad adottare l&apos;intelligenza
+            artificiale dove serve al business, e a lasciarla perdere dove non
+            serve. Niente hype: quasi trent&apos;anni di digitale applicati
+            con buon senso.
           </p>
-        )}
+
+          <div className="mt-11 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-9">
+            <Link
+              href="/lavoro"
+              className="inline-flex items-center gap-3 bg-carta px-7 py-4 font-sans text-[15px] font-semibold text-inchiostro tracking-[-0.005em] transition-colors hover:bg-inchiostro hover:text-carta"
+            >
+              Lavora con me
+              <span aria-hidden="true">→</span>
+            </Link>
+            <Link
+              href="/percorso"
+              className="font-sans text-[15px] font-semibold text-carta underline decoration-carta/50 decoration-2 underline-offset-4 transition-colors hover:decoration-carta"
+            >
+              Chi sono, in breve <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+        </div>
       </section>
 
-      {/* ── Momento scuro puntuale: lavora con me (spec §12) ── */}
-      <section className="bg-inchiostro">
-        <div className="mx-auto max-w-[1280px] px-6 py-14 md:px-16 md:py-16">
+      {/* ── Feed dei post: la campata-respiro su carta, ma il bosco
+          resta il filo che tiene insieme le righe (regole e
+          etichette in bosco, non più in grigio neutro) ── */}
+      <section className="bg-carta">
+        <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24">
+          <div className="flex items-baseline justify-between border-t-2 border-bosco pt-7">
+            <div className="text-etichetta font-mono uppercase text-bosco">
+              Dal blog
+            </div>
+            {post.length > 0 ? (
+              <Link
+                href="/blog"
+                className="font-mono text-[11px] uppercase tracking-[0.06em] text-grigio transition-colors hover:text-bosco"
+              >
+                Tutti gli articoli <span aria-hidden="true">→</span>
+              </Link>
+            ) : null}
+          </div>
+
+          {post.length > 0 ? (
+            <ul className="mt-2 divide-y divide-bosco/15 border-b border-bosco/15">
+              {post.map((a) => (
+                <li key={a.slug}>
+                  <Link
+                    href={`/blog/${a.slug}`}
+                    className="group flex flex-col gap-3 py-8 md:py-9"
+                  >
+                    <div className="font-mono text-[11px] uppercase tracking-[0.08em] text-grigio tabular-nums">
+                      {formattaData(a.data)} · {a.rubricaLabel} · {a.minuti} min
+                    </div>
+                    <div className="max-w-[820px] font-display text-sottotitolo font-medium text-inchiostro transition-colors group-hover:text-bosco">
+                      {a.titolo}
+                    </div>
+                    <p className="max-w-[640px] text-[16px] leading-[1.6] text-grigio">
+                      {a.sommario}
+                    </p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          ) : (
+            <p className="mt-7 max-w-[560px] text-[17px] leading-[1.6] text-grigio">
+              I primi articoli sono in arrivo.
+            </p>
+          )}
+        </div>
+      </section>
+
+      {/* ── Chiusura in bosco: la campata apre e chiude nella stessa
+          voce, la carta in mezzo è il respiro, non la regola ── */}
+      <section className="bg-bosco">
+        <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-16 md:py-28">
           <div className="max-w-[640px]">
-            <div className="flex items-center gap-3 font-mono text-[12px] uppercase tracking-[0.18em] font-medium text-bosco-chiaro">
-              <span className="inline-block h-[2px] w-7 bg-bosco-chiaro" />
+            <div className="flex items-center gap-3 font-mono text-[12px] uppercase tracking-[0.18em] font-medium text-carta">
+              <span className="inline-block h-[2px] w-7 bg-carta" />
               Lavora con me
             </div>
-            <p className="mt-5 text-sottotitolo text-carta">
+            <p className="mt-5 text-sottotitolo text-carta/80">
               Tre modi di iniziare: la Mappa dell&apos;adozione, il Workshop
               pratico, l&apos;Affiancamento.
             </p>
             <Link
               href="/lavoro"
-              className="mt-7 inline-flex items-center gap-3 bg-carta px-6 py-3.5 font-sans text-[14px] font-semibold text-inchiostro transition-colors hover:bg-bosco hover:text-carta"
+              className="mt-8 inline-flex items-center gap-3 bg-carta px-6 py-3.5 font-sans text-[14px] font-semibold text-inchiostro transition-colors hover:bg-inchiostro hover:text-carta"
             >
               Vedi i tre modi <span aria-hidden="true">→</span>
             </Link>
