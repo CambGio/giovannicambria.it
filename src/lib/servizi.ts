@@ -292,7 +292,7 @@ export const SERVIZI: Servizio[] = [
         paragrafi: [
           "In genere si parte da una Mappa dell'innovazione: un audit di 1–2 settimane che definisce i punti di intervento e la roadmap su cui l'affiancamento lavora. Non è un obbligo, ma evita di passare mesi su un perimetro sbagliato.",
         ],
-        link: { href: "/lavoro/mappa", label: "Vedi la scheda della Mappa" },
+        link: { href: "/lavoro#mappa", label: "Vedi la scheda della Mappa" },
       },
     ],
     faq: [

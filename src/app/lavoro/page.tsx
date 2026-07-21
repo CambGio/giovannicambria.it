@@ -1,14 +1,8 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { SERVIZI } from "@/lib/servizi";
-import {
-  CITY,
-  EMAIL,
-  SITE_DESCRIPTION,
-  SITE_NAME,
-  SITE_URL,
-  VAT,
-} from "@/lib/site";
+import { ServizioScheda } from "@/components/site/ServizioScheda";
+import { CITY, EMAIL, SITE_DESCRIPTION, SITE_NAME, SITE_URL, VAT } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Lavoro",
@@ -31,25 +25,6 @@ const jsonLd = JSON.stringify({
   },
   areaServed: { "@type": "Country", name: "Italia" },
   founder: { "@type": "Person", name: SITE_NAME },
-  hasOfferCatalog: {
-    "@type": "OfferCatalog",
-    name: "Servizi di consulenza",
-    itemListElement: SERVIZI.map((s) => ({
-      "@type": "Offer",
-      itemOffered: {
-        "@type": "Service",
-        name: s.titolo,
-        description: s.promessa,
-        url: `${SITE_URL}${s.href}`,
-      },
-      priceSpecification: {
-        "@type": s.prezzoUnita ? "UnitPriceSpecification" : "PriceSpecification",
-        minPrice: s.prezzoMin,
-        priceCurrency: "EUR",
-        ...(s.prezzoUnita ? { unitText: s.prezzoUnita } : {}),
-      },
-    })),
-  },
 }).replace(/</g, "\\u003c");
 
 export default function Lavoro() {
@@ -61,65 +36,35 @@ export default function Lavoro() {
       />
 
       <section className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24 lg:py-28">
-        <div className="mb-7 flex items-center gap-3.5 font-sans text-[12px] uppercase tracking-[0.18em] font-medium">
-          <span className="inline-block h-[2px] w-7 bg-accent" />
-          <span className="text-accent">№ 03</span>
-          <span className="text-ink-muted">Lavoro</span>
+        <div className="mb-7 flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium">
+          <span className="inline-block h-[2px] w-7 bg-bosco" />
+          <span className="text-bosco">№ 03</span>
+          <span className="text-grigio">Lavoro</span>
         </div>
 
-        <h1 className="max-w-[900px] font-sans font-extrabold text-[44px] leading-[1.0] tracking-[-0.035em] text-ink md:text-[64px] lg:text-[72px]">
+        <h1 className="max-w-[900px] text-display font-extrabold text-inchiostro">
           Tre modi di iniziare.
         </h1>
 
-        <p className="mt-8 max-w-[620px] font-serif text-[20px] leading-[1.5] text-ink-muted md:text-[22px]">
+        <p className="mt-8 max-w-[620px] text-sottotitolo text-grigio">
           Lavoro con PMI italiane che vogliono innovare il modello di business
           prima del tool. Tre porte d&apos;ingresso, per momenti diversi del
           bisogno.
         </p>
+      </section>
 
-        <div className="mt-14 grid gap-px bg-rule md:grid-cols-3">
-          {SERVIZI.map((s) => (
-            <Link
-              key={s.slug}
-              href={s.href}
-              className="group flex flex-col bg-paper p-7 transition-colors md:p-8"
-            >
-              <div className="flex items-baseline justify-between font-mono text-[12px] tracking-[0.04em] text-accent tabular-nums">
-                <span>{s.n}</span>
-                <span className="text-ink-muted">scheda</span>
-              </div>
-              <h2 className="mt-5 font-sans text-[24px] font-semibold leading-[1.15] tracking-[-0.015em] transition-colors group-hover:text-accent">
-                {s.titolo}
-              </h2>
-              <p className="mt-3 font-serif text-[16px] leading-[1.5] text-ink-muted">
-                {s.promessa}
-              </p>
-              <div className="mt-5">
-                <div className="font-mono text-[11px] uppercase tracking-[0.14em] text-ink-muted">
-                  Per chi è
-                </div>
-                <p className="mt-1.5 font-serif text-[15px] leading-[1.5] text-ink">
-                  {s.perChi}
-                </p>
-              </div>
-              <div className="mt-6 grid gap-1.5 font-mono text-[12px] uppercase tracking-[0.04em] text-ink-muted tabular-nums">
-                <span>{s.tempi}</span>
-                <span>{s.prezzo}</span>
-              </div>
-              <div className="mt-auto pt-6 font-serif text-[15px] italic text-ink decoration-accent decoration-2 underline-offset-[5px] transition-colors group-hover:text-accent group-hover:underline">
-                Vedi scheda →
-              </div>
-            </Link>
-          ))}
-        </div>
+      {SERVIZI.map((s) => (
+        <ServizioScheda key={s.slug} slug={s.slug} />
+      ))}
 
-        <div className="mt-12 flex flex-col items-start gap-6 border-t-2 border-ink pt-7 md:flex-row md:items-center md:justify-between">
-          <p className="font-serif text-[20px] leading-[1.4] text-ink">
+      <section className="mx-auto max-w-[1280px] px-6 pb-16 md:px-16 md:pb-24">
+        <div className="flex flex-col items-start gap-6 border-t-2 border-inchiostro pt-7 md:flex-row md:items-center md:justify-between">
+          <p className="text-sottotitolo text-inchiostro">
             Non sai quale scegliere?
           </p>
           <Link
             href="/contatto"
-            className="inline-flex items-center gap-3 bg-ink px-7 py-4 font-sans text-[15px] font-semibold text-paper tracking-[-0.005em] transition-colors hover:bg-accent"
+            className="inline-flex items-center gap-3 bg-inchiostro px-7 py-4 font-sans text-[15px] font-semibold text-carta tracking-[-0.005em] transition-colors hover:bg-bosco"
           >
             Scrivimi
             <span aria-hidden="true">→</span>
@@ -129,11 +74,11 @@ export default function Lavoro() {
 
       <div
         aria-hidden="true"
-        className="mx-auto flex max-w-[1280px] items-center justify-between border-t border-rule px-6 py-3.5 md:px-16 font-mono text-[11px] tracking-[0.04em] text-ink-muted"
+        className="mx-auto flex max-w-[1280px] items-center justify-between border-t border-inchiostro/10 px-6 py-3.5 md:px-16 font-mono text-[11px] tracking-[0.04em] text-grigio"
       >
         <span>P. 03 · § Lavoro</span>
         <span className="hidden md:inline">
-          Tipi: Manrope · Source Serif 4 · IBM Plex Mono
+          Tipi: Fraunces · Inter · IBM Plex Mono
         </span>
         <span>segue a p. 04</span>
       </div>

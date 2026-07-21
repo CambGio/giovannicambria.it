@@ -1,7 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return ["mappa", "workshop", "affiancamento"].map((s) => ({
+      source: `/lavoro/${s}`,
+      destination: `/lavoro#${s}`,
+      permanent: true, // 308
+    }));
+  },
 };
 
 export default nextConfig;

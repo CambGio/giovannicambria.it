@@ -25,9 +25,9 @@ const COLS: Col[] = [
   {
     title: "Lavoro",
     items: [
-      { label: "Mappa dell'innovazione", href: "/lavoro/mappa" },
-      { label: "Workshop in-house", href: "/lavoro/workshop" },
-      { label: "Affiancamento", href: "/lavoro/affiancamento" },
+      { label: "Mappa dell'innovazione", href: "/lavoro#mappa" },
+      { label: "Workshop in-house", href: "/lavoro#workshop" },
+      { label: "Affiancamento", href: "/lavoro#affiancamento" },
       { label: "Case study", href: "/blog?rubrica=casi" },
     ],
   },
