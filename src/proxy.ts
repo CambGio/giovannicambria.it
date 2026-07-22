@@ -33,7 +33,11 @@ function withNoindex(res: NextResponse) {
 }
 
 export const config = {
+  // Esclusi dal lock anche i file statici (path con estensione: loghi,
+  // icone, OG image): l'optimizer di next/image li richiede internamente
+  // SENZA il cookie di accesso, e dietro lock riceverebbe il redirect
+  // ("isn't a valid image"). Sono asset pubblici per natura.
   matcher: [
-    "/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml).*)",
+    "/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|.*\\..*).*)",
   ],
 };

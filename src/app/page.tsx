@@ -56,7 +56,14 @@ const VALORI = [
   },
 ] as const;
 
-const CLIENTI_RECENTI = [
+const CLIENTI_RECENTI: {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+  /** Override di misura per loghi con proporzioni anomale. */
+  classe?: string;
+}[] = [
   {
     src: "/loghi/recenti/amendolia.svg",
     alt: "Amendolia Assicurazioni",
@@ -76,6 +83,9 @@ const CLIENTI_RECENTI = [
     alt: "Empire Ricambi",
     width: 2707,
     height: 210,
+    // Rapporto ~13:1: a pari altezza diventerebbe 3-5 volte più largo
+    // degli altri, quindi lo si vincola in larghezza.
+    classe: "h-auto w-28 md:w-36",
   },
 ];
 
@@ -256,7 +266,7 @@ export default function Home() {
                 width={c.width}
                 height={c.height}
                 unoptimized={c.src.endsWith(".svg")}
-                className="h-8 w-auto md:h-10"
+                className={c.classe ?? "h-8 w-auto md:h-10"}
               />
             ))}
           </div>
