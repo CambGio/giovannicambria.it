@@ -11,20 +11,20 @@ import type { Articolo, RubricaSlug } from "@/lib/articoli";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "Come le PMI e i professionisti italiani adottano l'intelligenza artificiale nei processi reali: metodo, casi concreti, niente hype.",
+    "L'archivio dei miei post LinkedIn: casi veri di AI nelle PMI italiane, cosa abbiamo sistemato e come. Cinque minuti a pezzo.",
   alternates: { canonical: "/blog" },
 };
 
 // Descrizioni delle rubriche, in linguaggio da imprenditore.
 const RUBRICHE_DESCRIZIONI: Record<RubricaSlug, string> = {
   "adozione":
-    "Come le PMI adottano l'AI nei processi reali. Non gli algoritmi: i processi che contano.",
+    "Come si porta l'AI in un'azienda vera: da dove si parte, cosa si sistema prima.",
   "anti-hype":
-    "Dove l'AI non serve, e cosa usare invece. Il rumore è gratis; il focus costa.",
+    "Dove l'AI non conviene, e cosa usare invece: strumenti più semplici, o niente.",
   "casi":
-    "Un lavoro vero, prima e dopo. Il contesto, le scelte, quello che è successo dopo.",
+    "Un lavoro vero, prima e dopo: il contesto, le scelte, i risultati.",
   "storia-metodo":
-    "Schemi di ragionamento che restano utili anche quando lo strumento di moda cambia nome.",
+    "Modi di ragionare che restano utili anche quando lo strumento di moda cambia nome.",
 };
 
 function CardArticolo({ articolo }: { articolo: Articolo }) {
@@ -78,11 +78,12 @@ export default async function Blog({
           </div>
 
           <h1 className="max-w-[1080px] text-mega font-black text-carta">
-            L&apos;adozione dell&apos;AI, senza hype.
+            Storie di AI in aziende vere.
           </h1>
 
           <p className="mt-10 max-w-[640px] text-sottotitolo font-light text-carta/80">
-            Quello che pubblico su LinkedIn, qui in archivio: come le PMI adottano l&apos;AI nei processi reali.
+            Quello che pubblico su LinkedIn resta qui in archivio: casi,
+            metodi e qualche presa di posizione. Cinque minuti a pezzo.
           </p>
         </div>
       </section>

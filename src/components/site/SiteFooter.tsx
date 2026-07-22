@@ -28,7 +28,7 @@ const COLS: Col[] = [
       { label: "Mappa dell'adozione", href: "/lavoro#mappa" },
       { label: "Workshop pratico", href: "/lavoro#workshop" },
       { label: "Affiancamento", href: "/lavoro#affiancamento" },
-      { label: "Case study", href: "/blog?rubrica=casi" },
+      { label: "Casi reali", href: "/blog?rubrica=casi" },
     ],
   },
   {
@@ -54,9 +54,9 @@ export function SiteFooter() {
               <Wordmark size={26} color="var(--color-carta)" />
             </div>
             <p className="font-display italic text-[22px] leading-[1.35] text-carta/85 max-w-[460px] tracking-[-0.005em]">
-              Lo studio è un piccolo spazio di lettura. Non prometto
-              trasformazioni: prometto di guardare i processi insieme, con
-              calma e numeri.
+              Lavoro da Milazzo con aziende di tutta Italia. Il modo più
+              rapido per capire se posso esserti utile è mezz&apos;ora di call
+              sul tuo caso.
             </p>
           </div>
           {COLS.map((col) => (

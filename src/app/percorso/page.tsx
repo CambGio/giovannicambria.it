@@ -58,7 +58,7 @@ const TAPPE: Tappa[] = [
     ruolo: "Amendolia Assicurazioni e Autonoleggio Di Paola",
     luogo: "Milazzo",
     testo:
-      "Per l'agenzia assicurativa un percorso partito dalla consulenza manageriale e cresciuto fino al CRM, alla lead generation e, ora in sviluppo, a un agente vocale per il centralino fuori orario; per l'autonoleggio, il sito con booking dei transfer e la SEO. Lo stesso metodo su entrambi: prima capire il processo, poi decidere se e dove serve l'AI.",
+      "Per l'agenzia assicurativa un percorso partito dalla consulenza manageriale e cresciuto fino al CRM, alle campagne per trovare nuovi clienti e, ora in sviluppo, a un agente vocale per il centralino fuori orario; per l'autonoleggio, il sito con la prenotazione dei transfer e la SEO. Su entrambi allo stesso modo: prima vengo a vedere come si lavora, poi si decide se e dove serve l'AI.",
   },
   {
     periodo: "2024–2025",
@@ -72,7 +72,7 @@ const TAPPE: Tappa[] = [
     ruolo: "Empire S.r.l. · Consulente di direzione",
     luogo: "Venetico (ME)",
     testo:
-      "Con il founder ho co-progettato la catena del valore e costruito da zero il canale e-commerce: empirericambi.it, su Shopify da aprile 2021.",
+      "Con il fondatore ho co-progettato la catena del valore e costruito da zero il canale e-commerce: empirericambi.it, su Shopify da aprile 2021.",
   },
   {
     periodo: "2019",
@@ -86,7 +86,7 @@ const TAPPE: Tappa[] = [
     ruolo: "Eureweb · quattro ruoli, fino a General Team Manager",
     luogo: "Brescia, Salò",
     testo:
-      "Una digital agency, clienti come Sisal, Lenovo, Olimpia Splendid e Citizen, un team di oltre venti persone da guidare: qui ho imparato che la disciplina vale più del talento isolato.",
+      "Una digital agency, clienti come Sisal, Lenovo, Olimpia Splendid e Citizen, un team di oltre venti persone da guidare: gli anni in cui ho imparato a far lavorare bene le persone insieme.",
     loghi: LOGHI_EUREWEB,
   },
   {
@@ -187,10 +187,9 @@ export default function Percorso() {
         <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-16 md:py-28">
           <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
             <p className="max-w-[620px] text-sottotitolo text-carta/80">
-              Quasi trent&apos;anni di digitale oggi si riducono a una domanda
-              sola: dove l&apos;intelligenza artificiale serve davvero al tuo
-              lavoro, e dove è solo rumore. Prima capiamo questo, poi si
-              sceglie lo strumento.
+              Quasi trent&apos;anni dopo, il mestiere è lo stesso: guardare
+              come lavora un&apos;azienda e sistemare quello che le fa perdere
+              tempo. Oggi lo strumento più potente per farlo è l&apos;AI.
             </p>
             <Link
               href="/lavoro"

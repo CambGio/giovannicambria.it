@@ -17,42 +17,42 @@ const PASSI = [
     slug: "mappa",
     titolo: "Mappa dell'adozione",
     testo:
-      "Si parte sempre da qui: un assessment dei tuoi processi che dice dove l'AI porta un ritorno reale, e dove no. L'output è una roadmap con priorità, non un elenco di strumenti. Non si passa al passo dopo senza questa base.",
+      "Prima di proporti qualsiasi cosa vengo a vedere come lavorate. Da lì esce una mappa: cosa conviene automatizzare subito, cosa può aspettare, cosa è meglio lasciare com'è.",
   },
   {
     num: "02",
     slug: "workshop",
     titolo: "Workshop pratico",
     testo:
-      "Se serve portare il team a bordo: una giornata sui casi reali del vostro lavoro, non su una demo preconfezionata. Ci si arriva quando il progetto ha bisogno di persone allineate, non solo di una direzione convinta.",
+      "Quando serve portare il team a bordo: una giornata in azienda, sui casi vostri. Le persone escono sapendo usare l'AI sul proprio lavoro, non su una demo.",
   },
   {
     num: "03",
     slug: "affiancamento",
     titolo: "Affiancamento",
     testo:
-      "Per portare la roadmap a termine: resto al fianco mentre si implementa, con verifiche periodiche su un indicatore concreto. Il team resta autonomo quando il lavoro insieme finisce.",
+      "Per arrivare fino in fondo: resto al fianco del team mentre il progetto prende forma, e ogni mese guardiamo un numero concordato per capire se sta rendendo. Alla fine sapete andare avanti da soli.",
   },
 ] as const;
 
 const VALORI = [
   {
     num: "01",
-    titolo: "Metodo, non hype",
+    titolo: "Prima guardo, poi propongo",
     testo:
-      "L'AI è uno strumento, non una risposta automatica. Prima guardo il processo, poi decido se e dove serve, anche quando la risposta onesta è che non serve.",
+      "Non arrivo con lo strumento già in valigia: guardo come lavora la tua azienda e ti dico dove l'AI conviene, anche quando la risposta onesta è che, lì, non conviene.",
   },
   {
     num: "02",
     titolo: "Quasi trent'anni di digitale",
     testo:
-      "Dal 1998: e-commerce, web marketing, direzione d'agenzia. Ho visto passare diverse ondate tecnologiche: so distinguere quelle che restano da quelle che passano.",
+      "Dal 1998: e-commerce, web marketing, direzione d'agenzia. Di tecnologie «che cambiano tutto» ne ho viste passare parecchie: dopo un po' impari a capire in fretta quali restano.",
   },
   {
     num: "03",
-    titolo: "Casi reali, con nomi",
+    titolo: "Casi con nome e cognome",
     testo:
-      "Amendolia Assicurazioni, Autonoleggio Di Paola, Sinotech: risultati verificabili, non case study anonimi.",
+      "Amendolia Assicurazioni, Autonoleggio Di Paola, Sinotech: lavori veri che si possono verificare, non casi anonimi da brochure.",
   },
 ] as const;
 
@@ -91,19 +91,18 @@ export default function Home() {
         <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-16 md:py-32 lg:py-40">
           <div className="mb-8 flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium text-carta">
             <span className="inline-block h-[2px] w-7 bg-carta" />
-            <span>Manifesto</span>
+            <span>In due parole</span>
           </div>
 
           <h1 className="max-w-[1080px] text-mega font-black text-carta">
-            L&apos;AI in azienda non parte dagli strumenti. Parte dai
-            processi.
+            Porto l&apos;AI nelle aziende. Una cosa alla volta.
           </h1>
 
           <p className="mt-10 max-w-[640px] text-sottotitolo font-light text-carta/80">
-            Aiuto PMI e professionisti ad adottare l&apos;intelligenza
-            artificiale dove serve al business, e a lasciarla perdere dove non
-            serve. Niente hype: quasi trent&apos;anni di digitale applicati
-            con buon senso.
+            Si parte da un lavoro che ti costa tempo ogni settimana, lo
+            sistemiamo, si misura il risultato. Poi si passa al prossimo.
+            Lavoro così da quasi trent&apos;anni: prima col digitale, adesso
+            con l&apos;AI.
           </p>
 
           <div className="mt-11 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-9">
@@ -135,9 +134,8 @@ export default function Home() {
             </h2>
           </div>
           <p className="mt-5 max-w-[620px] text-[17px] leading-[1.6] text-grigio">
-            Un percorso che parte sempre dalla Mappa dell&apos;adozione: ogni
-            passo ha un output concreto, non si va avanti senza una base
-            solida.
+            Tre passi, sempre nello stesso ordine. Si comincia guardando come
+            lavorate; il resto si aggiunge solo se serve.
           </p>
 
           <ol className="mt-10">
@@ -275,8 +273,8 @@ export default function Home() {
               Lavora con me
             </div>
             <p className="mt-5 text-sottotitolo text-carta/80">
-              Tre modi di iniziare: la Mappa dell&apos;adozione, il Workshop
-              pratico, l&apos;Affiancamento.
+              Il primo passo è sempre lo stesso: mezz&apos;ora al telefono sul
+              tuo caso. Poi si vede se ha senso continuare.
             </p>
             <Link
               href="/contatto"

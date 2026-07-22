@@ -62,7 +62,7 @@ export const SERVIZI: Servizio[] = [
     titolo: "Mappa dell'adozione",
     titoloBreve: "Mappa dell'adozione",
     promessa:
-      "Un assessment per capire dove l'AI serve davvero nei vostri processi, e dove no. Anche \"non serve\" è un risultato.",
+      "Una o due settimane per capire dove l'AI vi ripaga e dove no. Anche «non serve» è un risultato: vi risparmia uno strumento comprato a vuoto.",
     perChi:
       "PMI e professionisti che vogliono sapere se e dove l'AI conviene, prima di spendere in strumenti.",
     perChiDettaglio: [
@@ -78,18 +78,18 @@ export const SERVIZI: Servizio[] = [
       },
     ],
     cosaRicevi: [
-      "Un documento di 12–18 pagine con la mappa dei vostri processi: dove l'AI produce un ritorno reale, dove no",
+      "Un documento di 12–18 pagine (8–10 nella versione per professionisti) con la mappa dei vostri processi: dove l'AI produce un ritorno reale, dove no",
       "3–5 punti di intervento, in ordine di priorità",
-      "Una roadmap a 6–12 mesi, con i passi concreti per attuarla",
-      "Una shortlist di strumenti coerente con i punti individuati, non un elenco generico di tool",
+      "Un piano a 6–12 mesi, con i passi concreti in ordine",
+      "Una selezione di strumenti coerente con i punti individuati, non un elenco generico",
       "La registrazione del workshop di restituzione, da condividere internamente",
     ],
     comeFunziona: [
       {
-        nome: "Kick-off",
+        nome: "Primo incontro",
         tempo: "90 minuti",
         descrizione:
-          "Una sessione con chi decide: quali processi guardiamo, cosa cambierebbe se funzionassero meglio.",
+          "Con chi decide: quali lavori guardiamo, cosa cambierebbe se funzionassero meglio.",
       },
       {
         nome: "Analisi documentale",
@@ -111,7 +111,7 @@ export const SERVIZI: Servizio[] = [
       {
         nome: "Consegna",
         descrizione:
-          "Il documento finale: mappa dei processi, punti di intervento, roadmap, shortlist di strumenti.",
+          "Il documento finale: la mappa dei vostri processi, i punti di intervento, il piano e la lista degli strumenti consigliati.",
       },
     ],
     faq: [
@@ -123,10 +123,10 @@ export const SERVIZI: Servizio[] = [
       {
         domanda: "Chi sceglie le persone da intervistare?",
         risposta:
-          "Le scegliamo insieme al kick-off. Servono due punti di vista diversi sul processo: in genere chi vende e chi gestisce le operazioni, ma dipende dalla vostra struttura.",
+          "Le scegliamo insieme al primo incontro. Servono due punti di vista diversi sullo stesso lavoro: in genere chi vende e chi gestisce le operazioni, ma dipende dalla vostra struttura.",
       },
       {
-        domanda: "Cosa devo preparare per il kick-off?",
+        domanda: "Cosa devo preparare per il primo incontro?",
         risposta:
           "Niente di nuovo. Bastano i documenti che usate già: listini, organigramma, report. L'analisi documentale parte da lì.",
       },
@@ -139,7 +139,7 @@ export const SERVIZI: Servizio[] = [
       {
         domanda: "E dopo la consegna?",
         risposta:
-          "Il documento è vostro: potete eseguire la roadmap da soli o con i fornitori che preferite. Se volete continuare insieme, il passo naturale è l'affiancamento.",
+          "Il documento è vostro: potete seguire il piano da soli o con i fornitori che preferite. Se volete continuare insieme, il passo naturale è l'affiancamento.",
       },
     ],
     tempi: "1–2 settimane",
@@ -159,27 +159,27 @@ export const SERVIZI: Servizio[] = [
       {
         nome: "La direzione",
         descrizione:
-          "Volete una base comune prima di investire in progetti. La pre-call con il management calibra la giornata sul vostro settore, inclusi i casi in cui, onestamente, l'AI non è la priorità.",
+          "Volete una base comune prima di investire in progetti. L'incontro preliminare con la direzione calibra la giornata sul vostro settore, compresi i casi in cui, onestamente, l'AI non è la priorità.",
       },
       {
         nome: "Il team",
         descrizione:
-          "Le persone che useranno gli strumenti ogni giorno. Il laboratorio del pomeriggio lavora sui vostri casi reali, non su esercizi da manuale.",
+          "Le persone che useranno gli strumenti ogni giorno. Nel laboratorio del pomeriggio lavorano ognuna su un caso del proprio lavoro.",
       },
     ],
     cosaRicevi: [
-      "Una pre-call di 60 minuti con il management per calibrare i contenuti",
+      "Un incontro preliminare di 60 minuti con la direzione per calibrare i contenuti",
       "4 ore di teoria applicata al vostro settore, con esempi vicini al vostro lavoro",
       "3 ore di laboratorio guidato sui casi reali del team",
-      "Materiale di follow-up: handout, checklist, replay dei materiali",
-      "La lista dei casi d'uso emersi dal laboratorio, utile per decidere i passi successivi, incluso \"nessun passo\"",
+      "Materiale che resta al team: dispense, liste di controllo, registrazioni",
+      "La lista dei casi emersi dal laboratorio, utile per decidere i passi successivi, compreso «nessun passo»",
     ],
     comeFunziona: [
       {
-        nome: "Pre-call",
+        nome: "Incontro preliminare",
         tempo: "60 minuti",
         descrizione:
-          "Con il management: settore, aspettative, casi su cui ha senso lavorare davvero.",
+          "Con la direzione: settore, aspettative, casi su cui ha senso lavorare davvero.",
       },
       {
         nome: "Mattina",
@@ -191,12 +191,12 @@ export const SERVIZI: Servizio[] = [
         nome: "Pomeriggio",
         tempo: "3 ore",
         descrizione:
-          "Laboratorio guidato: il team lavora sui propri casi reali, non su demo preconfezionate.",
+          "Laboratorio guidato sui casi scelti nell'incontro preliminare: ognuno sul proprio lavoro.",
       },
       {
-        nome: "Follow-up",
+        nome: "Dopo la giornata",
         descrizione:
-          "Handout, checklist e replay dei materiali, più la lista dei casi d'uso emersi.",
+          "Dispense, liste di controllo e registrazioni, più la lista dei casi emersi.",
       },
     ],
     faq: [
@@ -213,7 +213,7 @@ export const SERVIZI: Servizio[] = [
       {
         domanda: "Su cosa lavora il laboratorio?",
         risposta:
-          "Sui casi del vostro lavoro quotidiano, individuati nella pre-call con il management. Non esercizi astratti: situazioni che il team riconosce.",
+          "Sui casi del vostro lavoro quotidiano, scelti nell'incontro preliminare con la direzione: situazioni che il team riconosce al primo sguardo.",
       },
       {
         domanda: "Il workshop serve anche se non siamo sicuri che l'AI ci serva?",
@@ -223,7 +223,7 @@ export const SERVIZI: Servizio[] = [
       {
         domanda: "Cosa resta al team dopo la giornata?",
         risposta:
-          "L'handout, le checklist e il replay dei materiali. E la lista dei casi d'uso più sentiti, emersa dal laboratorio: spesso è il punto di partenza per un affiancamento.",
+          "Le dispense, le liste di controllo e le registrazioni. E la lista dei casi più sentiti, emersa dal laboratorio: spesso è il punto di partenza per un affiancamento.",
       },
     ],
     tempi: "1 giornata",
@@ -236,7 +236,7 @@ export const SERVIZI: Servizio[] = [
     titolo: "Affiancamento",
     titoloBreve: "Affiancamento",
     promessa:
-      "Adozione continuativa dell'AI nei processi, misurata: non una consulenza a tempo indeterminato.",
+      "Resto al fianco del team finché il progetto non è in piedi e non gira da solo. Si misura ogni mese, e ci si ferma quando è giusto fermarsi.",
     perChi:
       "PMI che hanno già capito dove intervenire (spesso dalla Mappa) e vogliono portare il progetto a termine, con il team che resta autonomo.",
     perChiDettaglio: [
@@ -253,8 +253,8 @@ export const SERVIZI: Servizio[] = [
     ],
     cosaRicevi: [
       "3–4 mezze giornate al mese di lavoro operativo insieme",
-      "Uno stand-up settimanale di 30 minuti per tenere il ritmo",
-      "Avanzamento implementativo sul progetto, non solo indicazioni",
+      "Un punto settimanale di 30 minuti per tenere il ritmo",
+      "Lavoro fatto sul progetto, non solo indicazioni",
       "Formazione del team sulle attività che restano in casa",
       "Una revisione periodica su un indicatore di processo concordato all'inizio, per sapere se l'adozione sta funzionando, non solo se è \"in corso\"",
     ],
@@ -262,7 +262,7 @@ export const SERVIZI: Servizio[] = [
       {
         nome: "Perimetro",
         descrizione:
-          "Definiamo progetto, persone coinvolte, ritmo e un indicatore di processo per misurare se l'adozione funziona. Se c'è già una Mappa dell'adozione, si parte dalla sua roadmap.",
+          "Definiamo progetto, persone coinvolte, ritmo e il numero su cui misureremo se sta funzionando. Se c'è già una Mappa dell'adozione, si parte dal suo piano.",
       },
       {
         nome: "Ogni mese",
@@ -272,7 +272,8 @@ export const SERVIZI: Servizio[] = [
       {
         nome: "Ogni settimana",
         tempo: "30 minuti",
-        descrizione: "Stand-up: avanzamento, blocchi, prossimi passi.",
+        descrizione:
+          "Un punto veloce: a che punto siamo, cosa è bloccato, cosa si fa dopo.",
       },
       {
         nome: "Revisione",
@@ -284,7 +285,7 @@ export const SERVIZI: Servizio[] = [
       {
         titolo: "Come iniziamo",
         paragrafi: [
-          "In genere si parte da una Mappa dell'adozione: un assessment di 1–2 settimane che dice dove l'AI serve nei vostri processi e dove no, e diventa la roadmap su cui l'affiancamento lavora. Non è un obbligo, ma evita di passare mesi su un perimetro sbagliato.",
+          "In genere si parte da una Mappa dell'adozione: una o due settimane in cui vengo a vedere come lavorate e vi dico dove l'AI serve e dove no. Quel documento diventa il piano su cui l'affiancamento lavora. Non è un obbligo, ma evita di passare mesi sul progetto sbagliato.",
         ],
         link: { href: "/lavoro#mappa", label: "Vedi la scheda della Mappa" },
       },

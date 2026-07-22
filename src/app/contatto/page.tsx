@@ -5,7 +5,7 @@ import { EMAIL, LINKEDIN_URL, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contatto",
   description:
-    "Raccontami il tuo caso per mail, telefono o LinkedIn: bastano poche righe. Rispondo entro 48 ore lavorative. studio@giovannicambria.it · +39 328 446 0482.",
+    "Due o tre righe sul tuo caso bastano: mail, telefono o LinkedIn. Rispondo entro 48 ore lavorative. studio@giovannicambria.it · +39 328 446 0482.",
   alternates: { canonical: "/contatto" },
 };
 
@@ -33,10 +33,9 @@ export default function Contatto() {
           </h1>
 
           <p className="mt-10 max-w-[640px] text-sottotitolo font-light text-carta/80">
-            Raccontami il tuo processo: cosa fai oggi, quanti dati lavori, dove
-            la macchina si inceppa. Due o tre righe bastano, non serve un brief
-            perfetto. Rispondo entro 48 ore lavorative; se ha senso, ci sentiamo
-            per una call.
+            Due o tre righe bastano: cosa fa la tua azienda e qual è il lavoro
+            che ti porta via più tempo. Rispondo entro 48 ore lavorative; se
+            ha senso, ci sentiamo per una call.
           </p>
         </div>
       </section>

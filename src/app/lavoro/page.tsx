@@ -7,7 +7,7 @@ import { CITY, EMAIL, SITE_DESCRIPTION, SITE_NAME, SITE_URL, VAT } from "@/lib/s
 export const metadata: Metadata = {
   title: "Lavora con me",
   description:
-    "Un percorso in tre passi per adottare l'AI nei processi: Mappa dell'adozione, Workshop pratico, Affiancamento. Niente hype, solo dove serve.",
+    "Tre modi di lavorare insieme: Mappa dell'adozione, Workshop pratico, Affiancamento. Si parte sempre guardando come lavorate, non dagli strumenti.",
   alternates: { canonical: "/lavoro" },
 };
 
@@ -51,18 +51,16 @@ export default function Lavoro() {
           </h1>
 
           <p className="mt-10 max-w-[640px] text-sottotitolo font-light text-carta/80">
-            Si parte dai processi, non dagli strumenti: guardiamo insieme dove
-            l&apos;AI cambia davvero il vostro lavoro, e dove no. La si adotta
-            solo lì. Poi si misura, per sapere se sta funzionando, non solo se
-            è partita.
+            Prima vengo a vedere come lavorate. Poi, se serve, portiamo a
+            bordo il team e restiamo fianco a fianco finché il progetto non
+            gira da solo. Si parte sempre dal primo passo.
           </p>
 
           <p className="mt-6 max-w-[640px] text-[17px] leading-[1.6] text-carta/70">
-            È un percorso modulare, con un solo punto fisso: la Mappa
-            dell&apos;adozione. Da lì, se ha senso, si aggiungono il Workshop
-            pratico e l&apos;Affiancamento: ogni passo ha un output tangibile,
-            non solo slide. Non si passa al passo successivo senza una base
-            solida.
+            La Mappa dell&apos;adozione è il punto fisso: senza quella non
+            comincio. Workshop e Affiancamento si aggiungono solo se hanno
+            senso per voi, e da ogni passo resta qualcosa in mano al team: un
+            documento, una lista di priorità, un lavoro che funziona.
           </p>
         </div>
       </section>
@@ -77,7 +75,8 @@ export default function Lavoro() {
         <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-16 md:py-28">
           <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
             <p className="text-sottotitolo text-carta/80">
-              Non sai quale scegliere?
+              Non sai da dove iniziare? Mezz&apos;ora al telefono basta per
+              capirlo.
             </p>
             <Link
               href="/contatto"
