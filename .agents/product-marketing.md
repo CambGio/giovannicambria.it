@@ -102,3 +102,24 @@ dichiarazione di principio.
 Vale per: tutte le pagine del sito, microcopy (bottoni, form, 404, footer), meta
 description, OG. NON vale per gli articoli del blog: quelli sono la voce LinkedIn di
 Giovanni, già sua, e non si riscrivono con queste regole.
+
+## Legge di voce sovraordinata (dal 2026-07-26)
+
+Questo file resta valido su target, lessico vietato e anti-modelli, ma **il registro lo
+detta un altro documento**, fuori da questo repo perche' vive col corpus di voce:
+
+- `~/work/personale/giovannicambria-it/voce/registro-dichiarativo.md` — **registro
+  dichiarativo** (riferimento indicato da Giovanni: boraso.com). Verbo in prima posizione,
+  frasi corte, una affermazione per frase, la data esatta (1998) al posto del tondo
+  evocativo, i nomi dei clienti come prova al posto degli aneddoti in home, antitesi secca
+  come firma (una per pagina), **attenuazioni: massimo una per pagina**. Contiene anche i
+  dati biografici verificati e utilizzabili.
+- `~/work/personale/giovannicambria-it/voce/profilo-voce.md` — ritmo, parole sue, e
+  soprattutto le **Scene cliente disponibili**: unica fonte autorizzata sui clienti.
+- `~/work/personale/giovannicambria-it/voce/citazionario.md` — citazioni a peso, piu' i
+  vincoli dalle lacune non colmate (niente scene inventate del sopralluogo, niente
+  episodi-obiezione in prima persona, zero numeri di risultato).
+
+In caso di conflitto fra questo file e `registro-dichiarativo.md`, **vince quest'ultimo**.
+La v1 del 22-07 era stata bocciata per il manifesto continuo; la v2 del 25-07 (narrativa)
+per il tono dimesso: anti-hype non vuol dire piccoli.
