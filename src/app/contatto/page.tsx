@@ -5,7 +5,7 @@ import { EMAIL, LINKEDIN_URL, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contatto",
   description:
-    "Due o tre righe sul tuo caso bastano: mail, telefono o LinkedIn. Rispondo entro 48 ore lavorative. studio@giovannicambria.it · +39 328 446 0482.",
+    "Scrivimi, chiamami o trovami su LinkedIn. Rispondo entro due giorni lavorativi. Sono a Milazzo.",
   alternates: { canonical: "/contatto" },
 };
 
@@ -29,13 +29,13 @@ export default function Contatto() {
           </div>
 
           <h1 className="max-w-[1080px] text-mega font-black text-carta">
-            Raccontami il tuo caso.
+            Raccontami come lavorate.
           </h1>
 
           <p className="mt-10 max-w-[640px] text-sottotitolo font-light text-carta/80">
-            Due o tre righe bastano: cosa fa la tua azienda e qual è il lavoro
-            che ti porta via più tempo. Rispondo entro 48 ore lavorative; se
-            ha senso, ci sentiamo per una call.
+            Ti rispondo io, non un centralino. Scrivimi due o tre righe: cosa
+            fa la tua azienda, cosa vi porta via più tempo. In due giorni
+            lavorativi hai una risposta, poi ci sentiamo per una call.
           </p>
         </div>
       </section>
@@ -44,7 +44,7 @@ export default function Contatto() {
       <section className="bg-carta">
         <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24">
           <p className="max-w-[560px] text-[18px] leading-[1.5] text-inchiostro">
-            Una call di 30 minuti, senza impegno: si parte da lì.
+            Si parte da una call di mezz&apos;ora.
           </p>
 
           <div className="mt-10 grid gap-px border-t border-bosco bg-inchiostro/10 md:grid-cols-3">
@@ -69,7 +69,7 @@ export default function Contatto() {
               href="/lavoro"
               className="font-mono text-[11px] uppercase tracking-[0.06em] text-grigio transition-colors hover:text-bosco"
             >
-              ← Vedi prima i tre modi
+              Come lavoro, in tre passi →
             </Link>
           </div>
         </div>

@@ -17,42 +17,42 @@ const PASSI = [
     slug: "mappa",
     titolo: "Mappa dell'adozione",
     testo:
-      "Prima di proporti qualsiasi cosa vengo a vedere come lavorate. Da lì esce una mappa: cosa conviene automatizzare subito, cosa può aspettare, cosa è meglio lasciare com'è.",
+      "Vengo in azienda e guardo come lavorate. Esce una mappa: cosa conviene automatizzare subito, cosa può aspettare, cosa è meglio lasciare com'è.",
   },
   {
     num: "02",
     slug: "workshop",
     titolo: "Workshop pratico",
     testo:
-      "Quando serve portare il team a bordo: una giornata in azienda, sui casi vostri. Le persone escono sapendo usare l'AI sul proprio lavoro, non su una demo.",
+      "Una giornata sul vostro lavoro vero, sui preventivi e sulle mail di questa settimana. Il team esce sapendo fare, non sapendo cos'è l'AI.",
   },
   {
     num: "03",
     slug: "affiancamento",
     titolo: "Affiancamento",
     testo:
-      "Per arrivare fino in fondo: resto al fianco del team mentre il progetto prende forma, e ogni mese guardiamo un numero concordato per capire se sta rendendo. Alla fine sapete andare avanti da soli.",
+      "Resto sul progetto finché cammina da solo. Ogni mese una misura sola, decisa insieme.",
   },
 ] as const;
 
 const VALORI = [
   {
     num: "01",
-    titolo: "Prima guardo, poi propongo",
+    titolo: "Nel digitale dal 1998",
     testo:
-      "Non arrivo con lo strumento già in valigia: guardo come lavora la tua azienda e ti dico dove l'AI conviene, anche quando la risposta onesta è che, lì, non conviene.",
+      "Ho fondato e diretto la mia agenzia per dieci anni. Poi nove anni in un'agenzia in Lombardia, quattro ruoli fino alla direzione del team. L'AI è la quarta ondata che vedo arrivare. So riconoscere quelle che restano.",
   },
   {
     num: "02",
-    titolo: "Quasi trent'anni di digitale",
+    titolo: "Il software viene per ultimo",
     testo:
-      "Dal 1998: e-commerce, web marketing, direzione d'agenzia. Di tecnologie «che cambiano tutto» ne ho viste passare parecchie: dopo un po' impari a capire in fretta quali restano.",
+      "Non prendo provvigioni da nessun fornitore. Scelgo lo strumento dopo aver visto come lavorate, non prima.",
   },
   {
     num: "03",
-    titolo: "Casi con nome e cognome",
+    titolo: "Cinque aziende, con nome e cognome",
     testo:
-      "Amendolia Assicurazioni, Autonoleggio Di Paola, Sinotech: lavori veri che si possono verificare, non casi anonimi da brochure.",
+      "Amendolia Assicurazioni, Autonoleggio Di Paola, LoveKasa, Sinotech, Empire Ricambi. Qui sotto c'è cosa ho fatto per ognuna.",
   },
 ] as const;
 
@@ -61,6 +61,8 @@ const CLIENTI_RECENTI: {
   alt: string;
   width: number;
   height: number;
+  /** Riga descrittiva sotto il logo. */
+  nota: string;
   /** Override di misura per loghi con proporzioni anomale. */
   classe?: string;
 }[] = [
@@ -69,20 +71,35 @@ const CLIENTI_RECENTI: {
     alt: "Amendolia Assicurazioni",
     width: 1500,
     height: 487,
+    nota: "Amendolia Assicurazioni: le procedure mappate e il CRM da cui passano clienti e prospect",
   },
   {
     src: "/loghi/recenti/dipaola.png",
     alt: "Autonoleggio Di Paola",
     width: 2277,
     height: 936,
+    nota: "Autonoleggio Di Paola: il booking degli shuttle bus per l'aeroporto di Catania e il sito nuovo",
   },
-  { src: "/loghi/recenti/lovekasa.png", alt: "LoveKasa", width: 400, height: 100 },
-  { src: "/loghi/recenti/sinotech.png", alt: "Sinotech", width: 1449, height: 310 },
+  {
+    src: "/loghi/recenti/lovekasa.png",
+    alt: "LoveKasa",
+    width: 400,
+    height: 100,
+    nota: "LoveKasa: il CRM del customer care e le campagne WhatsApp",
+  },
+  {
+    src: "/loghi/recenti/sinotech.png",
+    alt: "Sinotech",
+    width: 1449,
+    height: 310,
+    nota: "Sinotech: l'e-commerce passato a Shopify",
+  },
   {
     src: "/loghi/recenti/empirericambi.png",
     alt: "Empire Ricambi",
     width: 2707,
     height: 210,
+    nota: "Empire Ricambi: l'impresa seguita dall'inizio, fino a empirericambi.it",
     // Rapporto ~13:1: a pari altezza diventerebbe 3-5 volte più largo
     // degli altri, quindi lo si vincola in larghezza.
     classe: "h-auto w-28 md:w-36",
@@ -101,18 +118,20 @@ export default function Home() {
         <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-16 md:py-32 lg:py-40">
           <div className="mb-8 flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium text-carta">
             <span className="inline-block h-[2px] w-7 bg-carta" />
-            <span>In due parole</span>
+            <span>Consulente indipendente · Milazzo</span>
           </div>
 
           <h1 className="max-w-[1080px] text-mega font-black text-carta">
-            Porto l&apos;AI nelle aziende. Una cosa alla volta.
+            Aiuto le PMI a usare l&apos;AI, non a sperimentarla.
           </h1>
 
           <p className="mt-10 max-w-[640px] text-sottotitolo font-light text-carta/80">
-            Si parte da un lavoro che ti costa tempo ogni settimana, lo
-            sistemiamo, si misura il risultato. Poi si passa al prossimo.
-            Lavoro così da quasi trent&apos;anni: prima col digitale, adesso
-            con l&apos;AI.
+            Scelgo gli strumenti, li porto dentro il lavoro di ogni giorno e
+            resto finché il team li usa da solo. Ho fondato la mia prima
+            società di internet a Milazzo nel 1998, l&apos;anno in cui nasceva
+            Google, quando in Sicilia eravamo in pochissimi a farlo. Da
+            allora il mestiere è lo stesso: far entrare in azienda la
+            tecnologia che conviene, quando conviene.
           </p>
 
           <div className="mt-11 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-9">
@@ -144,8 +163,7 @@ export default function Home() {
             </h2>
           </div>
           <p className="mt-5 max-w-[620px] text-[17px] leading-[1.6] text-grigio">
-            Tre passi, sempre nello stesso ordine. Si comincia guardando come
-            lavorate; il resto si aggiunge solo se serve.
+            Tre passi. Si comincia sempre dal primo.
           </p>
 
           <ol className="mt-10">
@@ -257,17 +275,21 @@ export default function Home() {
             <span className="inline-block h-[2px] w-7 bg-bosco" />
             <span>Clienti recenti</span>
           </h2>
-          <div className="mt-9 flex flex-wrap items-center gap-x-12 gap-y-8">
+          <div className="mt-9 flex flex-wrap items-start gap-x-12 gap-y-10">
             {CLIENTI_RECENTI.map((c) => (
-              <Image
-                key={c.src}
-                src={c.src}
-                alt={c.alt}
-                width={c.width}
-                height={c.height}
-                unoptimized={c.src.endsWith(".svg")}
-                className={c.classe ?? "h-8 w-auto md:h-10"}
-              />
+              <div key={c.src} className="max-w-[280px]">
+                <Image
+                  src={c.src}
+                  alt={c.alt}
+                  width={c.width}
+                  height={c.height}
+                  unoptimized={c.src.endsWith(".svg")}
+                  className={c.classe ?? "h-8 w-auto md:h-10"}
+                />
+                <p className="mt-4 text-[16px] leading-[1.6] text-grigio">
+                  {c.nota}
+                </p>
+              </div>
             ))}
           </div>
         </div>
@@ -283,8 +305,9 @@ export default function Home() {
               Lavora con me
             </div>
             <p className="mt-5 text-sottotitolo text-carta/80">
-              Il primo passo è sempre lo stesso: mezz&apos;ora al telefono sul
-              tuo caso. Poi si vede se ha senso continuare.
+              Mezz&apos;ora al telefono sul tuo caso. Esci sapendo dove
+              l&apos;AI ti ripaga e dove no, anche se poi non lavoriamo
+              insieme.
             </p>
             <Link
               href="/contatto"

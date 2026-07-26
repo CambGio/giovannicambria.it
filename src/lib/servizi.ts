@@ -62,87 +62,101 @@ export const SERVIZI: Servizio[] = [
     titolo: "Mappa dell'adozione",
     titoloBreve: "Mappa dell'adozione",
     promessa:
-      "Una o due settimane per capire dove l'AI vi ripaga e dove no. Anche «non serve» è un risultato: vi risparmia uno strumento comprato a vuoto.",
+      "Una o due settimane per capire dove l'AI vi ripaga. Anche «non serve» è un risultato: vi risparmia uno strumento comprato a vuoto.",
     perChi:
-      "PMI e professionisti che vogliono sapere se e dove l'AI conviene, prima di spendere in strumenti.",
+      "PMI e professionisti che vogliono sapere dove l'AI conviene, prima di metterci soldi.",
     perChiDettaglio: [
       {
         nome: "PMI",
         descrizione:
-          "Aziende dai 5 ai 100 dipendenti, in settori tradizionali, dove decide il titolare o la direzione. Non sapete da dove iniziare e non volete comprare uno strumento per poi scoprire che non serviva. La Mappa vi dice quali processi guadagnano davvero dall'AI, quali no, e in che ordine muoversi.",
+          "Aziende dove decide il titolare o la direzione, in settori tradizionali: assicurazioni, noleggio, commercio, industria. Avete già pensato che con l'AI c'è qualcosa da fare, ma non sapete da dove cominciare. La Mappa vi dice quali lavori ci guadagnano e in che ordine muoversi.",
       },
       {
         nome: "Professionisti",
         descrizione:
-          "Studi legali, commercialisti, agenzie, architetti, consulenti. Per chi lavora da solo o in piccolo team esiste una versione ridotta: una settimana di lavoro, documento più snello, stesso metodo.",
+          "Studi legali, commercialisti, agenzie, architetti, consulenti. Per chi lavora da solo o in un piccolo team c'è una versione ridotta: una settimana di lavoro e un documento più snello. Il metodo è lo stesso.",
       },
     ],
     cosaRicevi: [
-      "Un documento di 12–18 pagine (8–10 nella versione per professionisti) con la mappa dei vostri processi: dove l'AI produce un ritorno reale, dove no",
-      "3–5 punti di intervento, in ordine di priorità",
-      "Un piano a 6–12 mesi, con i passi concreti in ordine",
-      "Una selezione di strumenti coerente con i punti individuati, non un elenco generico",
-      "La registrazione del workshop di restituzione, da condividere internamente",
+      "Il documento con la mappa dei vostri processi, nero su bianco",
+      "I punti dove conviene intervenire, in ordine di priorità",
+      "Un piano per i mesi a venire, coi passi concreti in fila",
+      "Una selezione di strumenti agganciata a quei punti",
+      "La registrazione dell'incontro finale, da far girare internamente",
     ],
     comeFunziona: [
       {
         nome: "Primo incontro",
-        tempo: "90 minuti",
+        tempo: "un'ora e mezza",
         descrizione:
-          "Con chi decide: quali lavori guardiamo, cosa cambierebbe se funzionassero meglio.",
+          "Con chi decide: quali lavori guardiamo, cosa cambia se girano meglio.",
       },
       {
-        nome: "Analisi documentale",
+        nome: "Studio dei documenti",
         descrizione:
-          "Studio cosa usate già: numeri, processi, strumenti. Solo dopo propongo qualcosa di nuovo.",
+          "Guardo quello che usate già, i numeri e gli strumenti. Solo dopo si parla di cose nuove.",
       },
       {
         nome: "Interviste interne",
-        tempo: "2 incontri",
+        tempo: "due incontri",
         descrizione:
-          "Due conversazioni con chi vive il processo ogni giorno, non solo con chi lo racconta dall'alto.",
+          "Due conversazioni con chi il lavoro lo fa ogni giorno: chi compila i preventivi, chi risponde al telefono.",
       },
       {
-        nome: "Workshop di restituzione",
-        tempo: "90 minuti",
+        nome: "Incontro finale",
+        tempo: "un'ora e mezza",
         descrizione:
-          "Presento la mappa e i punti di intervento, inclusi quelli dove conviene non muoversi. Ne discutiamo insieme; la sessione viene registrata.",
+          "Vi presento la mappa e i punti d'intervento, e se ne discute insieme.",
       },
       {
         nome: "Consegna",
         descrizione:
-          "Il documento finale: la mappa dei vostri processi, i punti di intervento, il piano e la lista degli strumenti consigliati.",
+          "Il documento arriva dopo l'incontro finale, con dentro quello che ci siamo detti.",
+      },
+    ],
+    sezioni: [
+      {
+        titolo: "Com'è andata davvero",
+        paragrafi: [
+          "Con Amendolia Assicurazioni abbiamo iniziato dalla mappa dei processi interni: un manuale delle procedure e un mansionario. Poi sono arrivate le campagne di lead generation su Google Ads e Meta Ads, insieme a un CRM di marketing costruito sulle loro esigenze. Da lì passano tutti i contatti con clienti e prospect: le email e un canale WhatsApp gestito direttamente dalla piattaforma. Adesso lavoriamo su un agente AI che risponde alle chiamate fuori orario, e su un progetto pilota con Claude Team per gli operatori: strumenti calati sul lavoro di ogni singola persona, il primo passo verso l'adozione in tutta l'azienda. La collaborazione è ancora attiva.",
+          "Per Sinotech ho gestito la migrazione dell'e-commerce da PrestaShop a Shopify. Da allora vendere è molto più semplice, anche per chi si occupa del marketing.",
+          "Quello che gira già oggi sono siti, CRM, campagne, e-commerce, con dentro i primi pezzi di AI: il canale WhatsApp che risponde dalla piattaforma, l'agente che prende le chiamate fuori orario. I progetti AI più ambiziosi sono in cantiere adesso, non ancora finiti. Su quello che è già in piedi potete giudicarmi subito.",
+        ],
       },
     ],
     faq: [
       {
-        domanda: "E se poi l'AI non serve?",
-        risposta:
-          "Succede, ed è un risultato valido. La Mappa può concludere che per voi, oggi, non conviene muoversi: meglio saperlo prima di aver comprato uno strumento che resta inutilizzato.",
-      },
-      {
         domanda: "Chi sceglie le persone da intervistare?",
         risposta:
-          "Le scegliamo insieme al primo incontro. Servono due punti di vista diversi sullo stesso lavoro: in genere chi vende e chi gestisce le operazioni, ma dipende dalla vostra struttura.",
+          "Le scegliamo insieme al primo incontro. Servono due punti di vista diversi sullo stesso lavoro: di solito chi vende e chi manda avanti le operazioni, ma dipende da come siete organizzati.",
+      },
+      {
+        domanda: "Cosa dico ai miei dipendenti?",
+        risposta:
+          "Che vengo a guardare come funziona il lavoro, non come lavorano le persone. Le interviste servono a capire dove il processo perde tempo, e quel tempo di solito lo perdono le persone per prime: quando la cosa è chiara, collaborano volentieri. La presentazione al team la organizziamo insieme, prima che io cominci.",
       },
       {
         domanda: "Cosa devo preparare per il primo incontro?",
         risposta:
-          "Niente di nuovo. Bastano i documenti che usate già: listini, organigramma, report. L'analisi documentale parte da lì.",
+          "Niente di nuovo. Bastano i documenti che usate già: il listino e i report che guardate ogni mese.",
       },
       {
-        domanda:
-          "Che differenza c'è tra la versione per PMI e quella per professionisti?",
+        domanda: "Dove finiscono i nostri documenti e le registrazioni?",
         risposta:
-          "Il perimetro. Per le PMI: 1–2 settimane, due interviste interne, documento più esteso. Per i professionisti: una settimana, documento di 8–10 pagine, stesso metodo.",
+          "Restano su un archivio mio, ci accedo solo io e non li vede nessun altro. Firmo un accordo di riservatezza prima di cominciare, se lo volete. A fine lavoro, se preferite, cancello tutto e vi resta solo il documento.",
+      },
+      {
+        domanda: "Prendi provvigioni sugli strumenti che consigli?",
+        risposta:
+          "No, da nessun fornitore. Il piano che vi consegno lo può eseguire chiunque, anche senza di me.",
       },
       {
         domanda: "E dopo la consegna?",
         risposta:
-          "Il documento è vostro: potete seguire il piano da soli o con i fornitori che preferite. Se volete continuare insieme, il passo naturale è l'affiancamento.",
+          "Il documento è vostro: potete seguire il piano da soli o con i fornitori che preferite. Il passo naturale per continuare insieme è l'Affiancamento.",
       },
     ],
-    tempi: "1–2 settimane",
+    tempi: "una o due settimane",
     href: "/lavoro#mappa",
   },
   {
@@ -152,81 +166,76 @@ export const SERVIZI: Servizio[] = [
     titolo: "Workshop pratico",
     titoloBreve: "Workshop pratico",
     promessa:
-      "Una giornata in azienda: il team impara l'AI sul proprio lavoro reale, non su una demo.",
+      "Una giornata in azienda: il team impara a usare l'AI sul lavoro che ha davanti ogni giorno.",
     perChi:
-      "PMI con un team da 8 a 30 persone che deve iniziare a usare l'AI sul serio, non solo sentirne parlare.",
+      "PMI con un team che deve cominciare a usare l'AI sul lavoro di ogni giorno.",
     perChiDettaglio: [
       {
         nome: "La direzione",
         descrizione:
-          "Volete una base comune prima di investire in progetti. L'incontro preliminare con la direzione calibra la giornata sul vostro settore, compresi i casi in cui, onestamente, l'AI non è la priorità.",
+          "Volete una base comune prima di investire in progetti. L'incontro che facciamo prima della giornata serve a calibrarla sul vostro settore.",
       },
       {
         nome: "Il team",
         descrizione:
-          "Le persone che useranno gli strumenti ogni giorno. Nel laboratorio del pomeriggio lavorano ognuna su un caso del proprio lavoro.",
+          "Le persone che gli strumenti li useranno ogni giorno. Nel laboratorio del pomeriggio ognuno porta un caso suo: un preventivo, una mail, un documento che maneggia ogni settimana.",
       },
     ],
     cosaRicevi: [
-      "Un incontro preliminare di 60 minuti con la direzione per calibrare i contenuti",
-      "4 ore di teoria applicata al vostro settore, con esempi vicini al vostro lavoro",
-      "3 ore di laboratorio guidato sui casi reali del team",
-      "Materiale che resta al team: dispense, liste di controllo, registrazioni",
-      "La lista dei casi emersi dal laboratorio, utile per decidere i passi successivi, compreso «nessun passo»",
+      "Le dispense e le registrazioni della giornata, che restano al team",
+      "Le liste di controllo per rifare da soli il lavoro del laboratorio",
+      "La lista dei casi emersi, da cui decidere i passi successivi",
     ],
     comeFunziona: [
       {
         nome: "Incontro preliminare",
-        tempo: "60 minuti",
+        tempo: "un'ora",
         descrizione:
           "Con la direzione: settore, aspettative, casi su cui ha senso lavorare davvero.",
       },
       {
         nome: "Mattina",
-        tempo: "4 ore",
+        tempo: "quattro ore",
         descrizione:
-          "Teoria applicata al vostro settore: cosa cambia per i vostri processi, con esempi vicini al vostro lavoro.",
+          "Teoria applicata al vostro settore: cosa cambia per i lavori che fate, con casi che riconoscete al volo.",
       },
       {
         nome: "Pomeriggio",
-        tempo: "3 ore",
+        tempo: "tre ore",
         descrizione:
-          "Laboratorio guidato sui casi scelti nell'incontro preliminare: ognuno sul proprio lavoro.",
+          "Laboratorio guidato: ognuno sul proprio lavoro, sui casi scelti prima con la direzione.",
       },
       {
-        nome: "Dopo la giornata",
-        descrizione:
-          "Dispense, liste di controllo e registrazioni, più la lista dei casi emersi.",
+        nome: "Dopo",
+        descrizione: "Vi mando tutto il materiale della giornata.",
+      },
+    ],
+    sezioni: [
+      {
+        titolo: "Da dove viene questa giornata",
+        paragrafi: [
+          "Con Empire Ricambi ho affiancato l'imprenditore fin dall'inizio: abbiamo formato il team mentre l'azienda si metteva in piedi, e messo in ordine i processi. La formazione delle persone la faccio da anni, dentro percorsi più lunghi di una giornata sola. Qui c'è lo stesso lavoro, stretto in un giorno: le persone escono sapendo usare l'AI sul lavoro che hanno davanti.",
+        ],
       },
     ],
     faq: [
       {
         domanda: "Quante persone possono partecipare?",
         risposta:
-          "Il formato funziona da 8 a 30 persone. Fuori da questo intervallo il laboratorio perde efficacia: in quei casi ne parliamo e cerchiamo il taglio giusto.",
+          "Il formato rende con un gruppo da otto a trenta persone. Fuori da lì il laboratorio perde efficacia: in quei casi ne parliamo e si trova il taglio giusto.",
       },
       {
         domanda: "In azienda o da remoto?",
         risposta:
-          "In azienda: il laboratorio sui casi reali rende in presenza. La trasferta incide sul preventivo, inclusa o esclusa in base alla località.",
+          "In azienda: il laboratorio sui casi reali rende in presenza. La trasferta entra nel preventivo, in base alla località.",
       },
       {
-        domanda: "Su cosa lavora il laboratorio?",
+        domanda: "Il nostro settore è particolare, funziona lo stesso?",
         risposta:
-          "Sui casi del vostro lavoro quotidiano, scelti nell'incontro preliminare con la direzione: situazioni che il team riconosce al primo sguardo.",
-      },
-      {
-        domanda: "Il workshop serve anche se non siamo sicuri che l'AI ci serva?",
-        risposta:
-          "Sì, è proprio il punto. Se dal laboratorio emerge che per i vostri casi l'AI non è la priorità del momento, avete comunque chiarezza. E avete risparmiato mesi di tentativi.",
-      },
-      {
-        domanda: "Cosa resta al team dopo la giornata?",
-        risposta:
-          "Le dispense, le liste di controllo e le registrazioni. E la lista dei casi più sentiti, emersa dal laboratorio: spesso è il punto di partenza per un affiancamento.",
+          "Per questo la giornata comincia una settimana prima, con la direzione. La mattina si costruisce sui lavori che fate voi, non su esempi generici.",
       },
     ],
-    tempi: "1 giornata",
+    tempi: "una giornata",
     href: "/lavoro#workshop",
   },
   {
@@ -236,88 +245,92 @@ export const SERVIZI: Servizio[] = [
     titolo: "Affiancamento",
     titoloBreve: "Affiancamento",
     promessa:
-      "Resto al fianco del team finché il progetto non è in piedi e non gira da solo. Si misura ogni mese, e ci si ferma quando è giusto fermarsi.",
+      "Resto al fianco del team finché il progetto non sta in piedi da solo. Ogni mese si guarda una misura concordata, e da lì si decide se andare avanti.",
     perChi:
-      "PMI che hanno già capito dove intervenire (spesso dalla Mappa) e vogliono portare il progetto a termine, con il team che resta autonomo.",
+      "PMI che sanno già dove intervenire e vogliono portare il progetto fino in fondo, con il team che impara a mandarlo avanti.",
     perChiDettaglio: [
       {
-        nome: "PMI con un progetto da portare a terra",
+        nome: "PMI con un progetto da mettere in piedi",
         descrizione:
-          "Avete deciso dove intervenire e volete una guida nell'esecuzione: perimetro contenuto, ritmo sostenibile, verifiche periodiche su cosa sta funzionando davvero.",
+          "Avete deciso dove intervenire e volete qualcuno al fianco mentre si fa, con un ritmo che il team riesce a reggere.",
       },
       {
         nome: "Direzioni che vogliono un team autonomo",
         descrizione:
-          "L'affiancamento include la formazione delle persone interne: l'obiettivo è che l'adozione continui anche quando il lavoro insieme finisce.",
+          "Formo le persone interne mentre si lavora. Quando il lavoro insieme finisce, l'adozione va avanti lo stesso.",
       },
     ],
     cosaRicevi: [
-      "3–4 mezze giornate al mese di lavoro operativo insieme",
-      "Un punto settimanale di 30 minuti per tenere il ritmo",
-      "Lavoro fatto sul progetto, non solo indicazioni",
-      "Formazione del team sulle attività che restano in casa",
-      "Una revisione periodica su un indicatore di processo concordato all'inizio, per sapere se l'adozione sta funzionando, non solo se è \"in corso\"",
+      "Lavoro fatto sul progetto, seduto accanto a chi lo porta avanti",
+      "La formazione delle persone sulle attività che restano in casa",
+      "Una misura concordata all'inizio, per sapere se sta rendendo",
     ],
     comeFunziona: [
       {
-        nome: "Perimetro",
+        nome: "Cosa copriamo",
         descrizione:
-          "Definiamo progetto, persone coinvolte, ritmo e il numero su cui misureremo se sta funzionando. Se c'è già una Mappa dell'adozione, si parte dal suo piano.",
+          "Decidiamo insieme progetto, persone coinvolte e la misura su cui capiremo se sta funzionando. Se c'è già una Mappa dell'adozione, si lavora sul suo piano.",
       },
       {
         nome: "Ogni mese",
-        tempo: "3–4 mezze giornate",
-        descrizione: "Lavoro operativo insieme, sul progetto e con il team.",
+        tempo: "tre o quattro mezze giornate",
+        descrizione: "Lavoro operativo sul progetto, con il team.",
       },
       {
         nome: "Ogni settimana",
-        tempo: "30 minuti",
-        descrizione:
-          "Un punto veloce: a che punto siamo, cosa è bloccato, cosa si fa dopo.",
+        tempo: "mezz'ora",
+        descrizione: "Un punto veloce: cosa è fermo e cosa si fa dopo.",
       },
       {
-        nome: "Revisione",
+        nome: "Il punto del mese",
         descrizione:
-          "Guardiamo l'indicatore concordato: cosa è cambiato, cosa va corretto. Si decide insieme il passo successivo.",
+          "Si guarda la misura concordata: cosa è cambiato, cosa va corretto. Il passo dopo si decide insieme.",
       },
     ],
     sezioni: [
       {
         titolo: "Come iniziamo",
         paragrafi: [
-          "In genere si parte da una Mappa dell'adozione: una o due settimane in cui vengo a vedere come lavorate e vi dico dove l'AI serve e dove no. Quel documento diventa il piano su cui l'affiancamento lavora. Non è un obbligo, ma evita di passare mesi sul progetto sbagliato.",
+          "In genere il primo passo è una Mappa dell'adozione: una o due settimane in cui vengo a vedere come lavorate, e da lì esce il piano su cui l'affiancamento lavora. È facoltativa: se sapete già dove mettere le mani, si comincia dal progetto.",
         ],
         link: { href: "/lavoro#mappa", label: "Vedi la scheda della Mappa" },
+      },
+      {
+        titolo: "Percorsi in corso",
+        paragrafi: [
+          "Con Autonoleggio Di Paola abbiamo portato online il loro primo sistema di prenotazione degli shuttle bus per l'aeroporto di Catania. Quando è servito un sistema più solido, della selezione delle piattaforme mi sono occupato io: è quello che usano adesso. Poi è arrivato il CRM Delera, con un canale WhatsApp per parlare con i clienti, e il nuovo sito su misura. Chi cerca lo scuolabus o il noleggio a lungo termine trova tutto sullo stesso sito. Lavoriamo insieme da più di un anno.",
+          "Per LoveKasa ho costruito il CRM Delera su come seguono i clienti: le richieste che arrivano, le consulenze da prenotare nei punti vendita. Da lì partono anche le campagne di messaggi su WhatsApp. Le richieste che arrivano diventano consulenze da fissare nei punti vendita. Il primo sito era embrionale; quello nuovo, pensato anche per farsi trovare su Google, lo stiamo costruendo adesso.",
+        ],
       },
     ],
     faq: [
       {
         domanda: "Perché la durata minima è di tre mesi?",
         risposta:
-          "Perché l'affiancamento lavora su implementazione e abitudini del team. Sotto i tre mesi il ritmo non fa in tempo a produrre effetti che restano.",
+          "Perché qui si lavora sulle abitudini del team, non solo sugli strumenti. Sotto i tre mesi il ritmo non fa in tempo a produrre effetti che restano.",
       },
       {
         domanda: "Serve aver fatto prima la Mappa dell'adozione?",
         risposta:
-          "No, ma è il percorso più frequente: la Mappa definisce dove intervenire, l'affiancamento porta a terra. Se il perimetro è già chiaro, si parte direttamente.",
+          "Quasi sempre sì: la Mappa dice dove intervenire, l'affiancamento porta il lavoro fino in fondo. Se sapete già dove mettere le mani, si comincia dal progetto.",
       },
       {
-        domanda: "Come misurate se l'adozione funziona?",
+        domanda: "Come si capisce se l'adozione funziona?",
         risposta:
-          "Si concorda un indicatore di processo fin dal primo perimetro: tempo risparmiato, errori ridotti, volume gestito, a seconda del caso. Lo rivediamo a ogni revisione periodica. Se l'indicatore non si muove, ne parliamo e correggiamo la rotta: non si continua per inerzia.",
+          "Si concorda una misura all'inizio: tempo risparmiato, errori in meno, dipende dal caso. La guardiamo insieme ogni mese. Se dopo qualche settimana non si muove, si cambia il modo di lavorarci. O si cambia il pezzo di lavoro.",
       },
       {
         domanda: "Come funziona dopo i primi tre mesi?",
         risposta:
-          "L'ingaggio resta mensile e si prosegue finché il progetto lo richiede. La revisione dei progressi serve anche a decidere insieme quando ha senso fermarsi.",
+          "Si va di mese in mese, finché il progetto lo richiede. Si chiude con un mese di preavviso, senza penali.",
       },
       {
         domanda: "Il mio team è coinvolto?",
         risposta:
-          "Sì, è il punto del formato: formo le persone interne sulle attività che restano in casa. L'obiettivo è l'autonomia del team, non la dipendenza dal consulente.",
+          "Sì: formo le persone sulle attività che restano in casa, così poi andate avanti da soli.",
       },
     ],
-    tempi: "da 3 mesi in su",
+    tempi: "da tre mesi in su",
     href: "/lavoro#affiancamento",
   },
 ];

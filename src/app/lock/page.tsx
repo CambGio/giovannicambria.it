@@ -36,8 +36,7 @@ export default async function LockPage({
         </p>
 
         <p className="mt-8 text-[15px] leading-[1.6] text-grigio">
-          Stiamo lavorando al sito. L&apos;accesso è temporaneamente riservato.
-          Se hai la chiave, inseriscila qui sotto.
+          L&apos;accesso è riservato. Se hai la chiave, inseriscila qui sotto.
         </p>
 
         <form action={unlock} className="mt-10 flex flex-col gap-4">

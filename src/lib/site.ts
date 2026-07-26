@@ -14,9 +14,9 @@ export const SITE_DOMAIN = "giovannicambria.it";
 /* Tagline ufficiale (2026-07-21, riallineata al posizionamento adozione-AI
  * di LinkedIn). Mai parafrasata, mai tradotta. Le due righe insieme nei
  * contesti istituzionali; solo la prima nei contesti compressi. */
-export const TAGLINE = "Innovation Manager & AI Strategist.";
+export const TAGLINE = "Consulente per l'adozione dell'AI in azienda.";
 export const TAGLINE_SUB =
-  "Aiuto PMI e professionisti ad adottare l'intelligenza artificiale nei processi, senza hype.";
+  "Porto l'AI nel lavoro quotidiano di PMI e professionisti, un processo alla volta.";
 
 /* Description SEO e Open Graph: tagline + sottotitolo, intatti. */
 export const SITE_DESCRIPTION = `${TAGLINE} ${TAGLINE_SUB}`;

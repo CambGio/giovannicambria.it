@@ -35,7 +35,7 @@
    * pavimento, questo è il soffitto per un titolo che deve occupare
    * una campata intera a bosco pieno. Tracking più stretto e riga
    * quasi 1:1, coerenti con un peso estremo (font-black). */
-  --text-mega: clamp(3.5rem, 13vw, 8.5rem);
+  --text-mega: clamp(3rem, 13vw, 8.5rem);
   --text-mega--line-height: 0.95;
   --text-mega--letter-spacing: -0.03em;
 }

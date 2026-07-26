@@ -38,7 +38,7 @@ function CtaContatto() {
       href="/contatto"
       className="inline-flex items-center gap-3 bg-inchiostro px-7 py-4 font-sans text-[15px] font-semibold text-carta tracking-[-0.005em] transition-colors hover:bg-bosco"
     >
-      Raccontami il tuo caso
+      Prenota mezz&apos;ora al telefono
       <span aria-hidden="true">→</span>
     </Link>
   );
@@ -217,6 +217,19 @@ export function ServizioScheda({ slug }: { slug: ServizioSlug }) {
                 </dd>
               </div>
             ))}
+            <div className="border-t border-inchiostro/10 py-5">
+              <dt className="font-sans text-[17px] font-semibold tracking-[-0.01em] text-inchiostro">
+                Quanto costa?
+              </dt>
+              <dd className="mt-2 text-[16px] leading-[1.6] text-grigio">
+                Dipende dal lavoro che serve, e ogni scheda dice quanto dura
+                il suo passo. Il prezzo si fissa per iscritto prima di
+                cominciare e non cambia in corsa, nemmeno se alla fine la
+                Mappa dice di non muoversi: il lavoro per scoprirlo è lo
+                stesso. Se vuoi una cifra: mezz&apos;ora al telefono e te la
+                do.
+              </dd>
+            </div>
           </dl>
         </div>
       </section>
@@ -225,7 +238,8 @@ export function ServizioScheda({ slug }: { slug: ServizioSlug }) {
       <section className="mx-auto max-w-[1280px] px-6 pb-16 md:px-16 md:pb-24">
         <div className="border-t-2 border-bosco pt-7">
           <p className="max-w-[620px] text-[18px] leading-[1.5] text-grigio">
-            Scrivimi due righe sul tuo caso: rispondo entro 48 ore lavorative.
+            Preferisci scrivere? Mandami due righe sul tuo caso: rispondo
+            entro due giorni lavorativi.
           </p>
           <div className="mt-6">
             <CtaContatto />

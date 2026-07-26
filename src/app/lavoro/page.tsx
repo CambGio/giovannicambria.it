@@ -5,9 +5,9 @@ import { ServizioScheda } from "@/components/site/ServizioScheda";
 import { CITY, EMAIL, SITE_DESCRIPTION, SITE_NAME, SITE_URL, VAT } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Lavora con me",
+  title: "Come lavoro",
   description:
-    "Tre modi di lavorare insieme: Mappa dell'adozione, Workshop pratico, Affiancamento. Si parte sempre guardando come lavorate, non dagli strumenti.",
+    "Comincio dal lavoro, non dallo strumento. Tre modi di lavorare insieme: Mappa dell'adozione, Workshop pratico, Affiancamento.",
   alternates: { canonical: "/lavoro" },
 };
 
@@ -47,20 +47,22 @@ export default function Lavoro() {
           </div>
 
           <h1 className="max-w-[1080px] text-mega font-black text-carta">
-            Un percorso, tre passi.
+            Comincio dal lavoro, non dallo strumento.
           </h1>
 
           <p className="mt-10 max-w-[640px] text-sottotitolo font-light text-carta/80">
-            Prima vengo a vedere come lavorate. Poi, se serve, portiamo a
-            bordo il team e restiamo fianco a fianco finché il progetto non
-            gira da solo. Si parte sempre dal primo passo.
+            Vengo a vedere come lavorate. Poi formo le persone e resto al
+            fianco del team finché il progetto non cammina da solo. Tre
+            passi, sempre nello stesso ordine.
           </p>
 
           <p className="mt-6 max-w-[640px] text-[17px] leading-[1.6] text-carta/70">
             La Mappa dell&apos;adozione è il punto fisso: senza quella non
-            comincio. Workshop e Affiancamento si aggiungono solo se hanno
-            senso per voi, e da ogni passo resta qualcosa in mano al team: un
-            documento, una lista di priorità, un lavoro che funziona.
+            comincio. Da lì esce il documento che dice dove l&apos;AI vi
+            conviene. Workshop e Affiancamento arrivano dopo, quando servono.
+            In ogni scheda trovate il lavoro fatto con Amendolia
+            Assicurazioni, Autonoleggio Di Paola, LoveKasa, Sinotech, Empire
+            Ricambi.
           </p>
         </div>
       </section>
@@ -75,14 +77,14 @@ export default function Lavoro() {
         <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-16 md:py-28">
           <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
             <p className="text-sottotitolo text-carta/80">
-              Non sai da dove iniziare? Mezz&apos;ora al telefono basta per
-              capirlo.
+              Non sai da quale passo cominciare? Mezz&apos;ora al telefono
+              basta per capirlo, anche se poi non lavoriamo insieme.
             </p>
             <Link
               href="/contatto"
               className="inline-flex items-center gap-3 bg-carta px-7 py-4 font-sans text-[15px] font-semibold text-inchiostro tracking-[-0.005em] transition-colors hover:bg-inchiostro hover:text-carta"
             >
-              Prenota una call
+              Prenota mezz&apos;ora al telefono
               <span aria-hidden="true">→</span>
             </Link>
           </div>

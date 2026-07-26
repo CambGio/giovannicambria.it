@@ -23,7 +23,7 @@ const COLS: Col[] = [
     ],
   },
   {
-    title: "Lavora con me",
+    title: "Come lavoro",
     items: [
       { label: "Mappa dell'adozione", href: "/lavoro#mappa" },
       { label: "Workshop pratico", href: "/lavoro#workshop" },
@@ -54,9 +54,8 @@ export function SiteFooter() {
               <Wordmark size={26} color="var(--color-carta)" />
             </div>
             <p className="font-display italic text-[22px] leading-[1.35] text-carta/85 max-w-[460px] tracking-[-0.005em]">
-              Lavoro da Milazzo con aziende di tutta Italia. Il modo più
-              rapido per capire se posso esserti utile è mezz&apos;ora di call
-              sul tuo caso.
+              Lavoro da Milazzo, con aziende di tutta Italia. Il primo passo
+              è mezz&apos;ora al telefono sul tuo caso.
             </p>
           </div>
           {COLS.map((col) => (
@@ -70,7 +69,7 @@ export function SiteFooter() {
           <span>
             {SITE_DESCRIPTOR} · {CITY}
           </span>
-          <span>Sito sobrio · 0 cookie di profilazione</span>
+          <span>Zero cookie di profilazione</span>
         </div>
       </div>
     </footer>

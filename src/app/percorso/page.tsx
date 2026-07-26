@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Chi sono",
   description:
-    "Nel digitale dal 1998: da Switch MultiMedia (Milazzo) a oggi, portando l'AI nei processi di chi lavora con me. Le tappe, in sintesi.",
+    "Nel digitale dal 1998: da Switch MultiMedia a oggi, con l'AI nei processi di chi lavora con me adesso. Le tappe, in sintesi.",
   alternates: { canonical: "/percorso" },
 };
 
@@ -58,35 +58,35 @@ const TAPPE: Tappa[] = [
     ruolo: "Amendolia Assicurazioni e Autonoleggio Di Paola",
     luogo: "Milazzo",
     testo:
-      "Per l'agenzia assicurativa un percorso partito dalla consulenza manageriale e cresciuto fino al CRM, alle campagne per trovare nuovi clienti e, ora in sviluppo, a un agente vocale per il centralino fuori orario; per l'autonoleggio, il sito con la prenotazione dei transfer e la SEO. Su entrambi allo stesso modo: prima vengo a vedere come si lavora, poi si decide se e dove serve l'AI.",
+      "Con Amendolia Assicurazioni: consulenza manageriale, poi il CRM e le campagne per trovare nuovi clienti. È in sviluppo un agente vocale per il centralino fuori orario. Con Autonoleggio Di Paola: il sito con la prenotazione dei transfer e la SEO. Con entrambi lo stesso metodo: vengo a vedere come si lavora, poi decidiamo dove serve l'AI.",
   },
   {
     periodo: "2024–2025",
     ruolo: "Sinotech · migrazione e-commerce",
     luogo: "Milano",
     testo:
-      "Migrazione dell'e-commerce da PrestaShop a Shopify, più SEO e Analytics: un anno di lavoro, chiuso a giugno 2025.",
+      "Migrazione dell'e-commerce da PrestaShop a Shopify, più SEO e Analytics. Un anno di lavoro, chiuso a giugno 2025.",
   },
   {
     periodo: "2019–2024",
     ruolo: "Empire S.r.l. · Consulente di direzione",
     luogo: "Venetico (ME)",
     testo:
-      "Con il fondatore ho co-progettato la catena del valore e costruito da zero il canale e-commerce: empirericambi.it, su Shopify da aprile 2021.",
+      "Con il fondatore, ho co-progettato la catena del valore e costruito da zero il canale e-commerce: empirericambi.it, su Shopify da aprile 2021.",
   },
   {
     periodo: "2019",
     ruolo: "Consulente indipendente",
     luogo: "Sicilia",
     testo:
-      "Torno a lavorare in proprio e, dopo la Digital Masterclass in Business Design per le PMI di Beople, do un nome al mestiere che faccio da sempre: consulente d'innovazione. Quel titolo oggi si è allargato: Innovation Manager & AI Strategist.",
+      "Torno a lavorare in proprio. Dopo la Digital Masterclass in Business Design per le PMI di Beople, do un nome al mestiere che faccio da sempre: consulente d'innovazione. Quel titolo oggi si è allargato: Innovation Manager & AI Strategist.",
   },
   {
     periodo: "2009–2018",
     ruolo: "Eureweb · quattro ruoli, fino a General Team Manager",
     luogo: "Brescia, Salò",
     testo:
-      "Una digital agency, clienti come Sisal, Lenovo, Olimpia Splendid e Citizen, un team di oltre venti persone da guidare: gli anni in cui ho imparato a far lavorare bene le persone insieme.",
+      "Una digital agency, clienti come Sisal, Lenovo, Olimpia Splendid e Citizen, un team di oltre venti persone da guidare. Gli anni in cui ho imparato a far lavorare bene le persone insieme.",
     loghi: LOGHI_EUREWEB,
   },
   {
@@ -94,14 +94,14 @@ const TAPPE: Tappa[] = [
     ruolo: "Web marketing · in proprio",
     luogo: "Milazzo",
     testo:
-      "Chiusa l'agenzia, un anno da solo con clienti diretti e progetti web, prima del salto in una struttura più grande.",
+      "Chiusa l'agenzia, un anno da solo: clienti diretti, progetti web. Poi il salto in una struttura più grande.",
   },
   {
     periodo: "1998–2007",
     ruolo: "Switch MultiMedia · agenzia digitale co-fondata",
     luogo: "Milazzo",
     testo:
-      "Co-fondata con un socio quando «fare web» in Sicilia era un mestiere senza nome: vendita, strategia, esecuzione, persone, tutto insieme.",
+      "Co-fondata con un socio, quando «fare web» in Sicilia era un mestiere senza nome. Vendita, strategia, esecuzione, persone: tutto insieme.",
   },
 ];
 
@@ -119,14 +119,13 @@ export default function Percorso() {
           </div>
 
           <h1 className="max-w-[1080px] text-mega font-black text-carta">
-            Nel digitale dal 1998.
+            Non cambio mestiere: cambio strumento.
           </h1>
 
           <p className="mt-10 max-w-[640px] text-sottotitolo font-light text-carta/80">
-            Sicilia, Brescia, ancora Sicilia. Dall&apos;e-commerce al web
-            marketing, fino a portare l&apos;AI nei processi di chi lavora con
-            me oggi. Le tappe in sintesi: chi vuole il racconto lungo lo trova
-            negli articoli del blog.
+            Dal 1998: prima il digitale, poi l&apos;AI. Sicilia, Brescia, di
+            nuovo Sicilia. Le tappe qui sotto, in sintesi. Il racconto lungo
+            vive negli articoli del blog.
           </p>
         </div>
       </section>
@@ -187,15 +186,14 @@ export default function Percorso() {
         <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-16 md:py-28">
           <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
             <p className="max-w-[620px] text-sottotitolo text-carta/80">
-              Quasi trent&apos;anni dopo, il mestiere è lo stesso: guardare
-              come lavora un&apos;azienda e sistemare quello che le fa perdere
-              tempo. Oggi lo strumento più potente per farlo è l&apos;AI.
+              Le tappe sopra raccontano come sono arrivato fin qui. Cosa
+              faccio oggi, passo per passo, è nella pagina Come lavoro.
             </p>
             <Link
               href="/lavoro"
               className="inline-flex shrink-0 items-center gap-3 bg-carta px-7 py-4 font-sans text-[15px] font-semibold text-inchiostro tracking-[-0.005em] transition-colors hover:bg-inchiostro hover:text-carta"
             >
-              Lavora con me
+              Come lavoro
               <span aria-hidden="true">→</span>
             </Link>
           </div>
