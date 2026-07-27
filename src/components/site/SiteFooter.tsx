@@ -19,15 +19,7 @@ const COLS: Col[] = [
     items: [
       { label: "Blog", href: "/blog" },
       { label: "Chi sono", href: "/percorso" },
-      { label: "Lavoro", href: "/lavoro" },
-    ],
-  },
-  {
-    title: "Come lavoro",
-    items: [
-      { label: "Mappa dell'adozione", href: "/lavoro#mappa" },
-      { label: "Workshop pratico", href: "/lavoro#workshop" },
-      { label: "Affiancamento", href: "/lavoro#affiancamento" },
+      { label: "Clienti", href: "/lavoro" },
       { label: "Casi reali", href: "/blog?rubrica=casi" },
     ],
   },
@@ -48,7 +40,7 @@ export function SiteFooter() {
   return (
     <footer className="bg-inchiostro text-carta">
       <div className="mx-auto max-w-[1280px] px-6 pt-12 pb-7 md:px-16">
-        <div className="grid gap-10 border-b border-carta/15 pb-9 md:grid-cols-[2fr_1fr_1fr_1fr] md:gap-16">
+        <div className="grid gap-10 border-b border-carta/15 pb-9 md:grid-cols-[2fr_1fr_1fr] md:gap-16">
           <div>
             <div className="mb-5">
               <Wordmark size={26} color="var(--color-carta)" />

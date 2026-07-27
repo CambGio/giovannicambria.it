@@ -11,51 +11,6 @@ export const metadata: Metadata = {
 // di "griglia": è una lista, non delle card, quindi regge bene da 0 a N.
 const POST_IN_HOME = 3;
 
-const PASSI = [
-  {
-    num: "01",
-    slug: "mappa",
-    titolo: "Mappa dell'adozione",
-    testo:
-      "Vengo in azienda e guardo come lavorate. Esce una mappa: cosa conviene automatizzare subito, cosa può aspettare, cosa è meglio lasciare com'è.",
-  },
-  {
-    num: "02",
-    slug: "workshop",
-    titolo: "Workshop pratico",
-    testo:
-      "Una giornata sul vostro lavoro vero, sui preventivi e sulle mail di questa settimana. Il team esce sapendo fare, non sapendo cos'è l'AI.",
-  },
-  {
-    num: "03",
-    slug: "affiancamento",
-    titolo: "Affiancamento",
-    testo:
-      "Resto sul progetto finché cammina da solo. Ogni mese una misura sola, decisa insieme.",
-  },
-] as const;
-
-const VALORI = [
-  {
-    num: "01",
-    titolo: "Nel digitale dal 1998",
-    testo:
-      "Ho fondato e diretto la mia agenzia per dieci anni. Poi nove anni in un'agenzia in Lombardia, quattro ruoli fino alla direzione del team. L'AI è la quarta ondata che vedo arrivare. So riconoscere quelle che restano.",
-  },
-  {
-    num: "02",
-    titolo: "Il software viene per ultimo",
-    testo:
-      "Non prendo provvigioni da nessun fornitore. Scelgo lo strumento dopo aver visto come lavorate, non prima.",
-  },
-  {
-    num: "03",
-    titolo: "Cinque aziende, con nome e cognome",
-    testo:
-      "Amendolia Assicurazioni, Autonoleggio Di Paola, LoveKasa, Sinotech, Empire Ricambi. Qui sotto c'è cosa ho fatto per ognuna.",
-  },
-] as const;
-
 const CLIENTI_RECENTI: {
   src: string;
   alt: string;
@@ -88,13 +43,6 @@ const CLIENTI_RECENTI: {
     nota: "LoveKasa: il CRM del customer care e le campagne WhatsApp",
   },
   {
-    src: "/loghi/recenti/sinotech.png",
-    alt: "Sinotech",
-    width: 1449,
-    height: 310,
-    nota: "Sinotech: l'e-commerce passato a Shopify",
-  },
-  {
     src: "/loghi/recenti/empirericambi.png",
     alt: "Empire Ricambi",
     width: 2707,
@@ -103,6 +51,13 @@ const CLIENTI_RECENTI: {
     // Rapporto ~13:1: a pari altezza diventerebbe 3-5 volte più largo
     // degli altri, quindi lo si vincola in larghezza.
     classe: "h-auto w-28 md:w-36",
+  },
+  {
+    src: "/loghi/recenti/sinotech.png",
+    alt: "Sinotech",
+    width: 1449,
+    height: 310,
+    nota: "Sinotech: l'e-commerce passato a Shopify",
   },
 ];
 
@@ -127,11 +82,7 @@ export default function Home() {
 
           <p className="mt-10 max-w-[640px] text-sottotitolo font-light text-carta/80">
             Scelgo gli strumenti, li porto dentro il lavoro di ogni giorno e
-            resto finché il team li usa da solo. Ho fondato la mia prima
-            società di internet a Milazzo nel 1998, l&apos;anno in cui nasceva
-            Google, quando in Sicilia eravamo in pochissimi a farlo. Da
-            allora il mestiere è lo stesso: far entrare in azienda la
-            tecnologia che conviene, quando conviene.
+            resto finché il team li usa da solo.
           </p>
 
           <div className="mt-11 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-9">
@@ -142,19 +93,43 @@ export default function Home() {
               Prenota una call
               <span aria-hidden="true">→</span>
             </Link>
-            <Link
-              href="/percorso"
-              className="font-sans text-[15px] font-semibold text-carta underline decoration-carta/50 decoration-2 underline-offset-4 transition-colors hover:decoration-carta"
-            >
-              Chi sono, in breve <span aria-hidden="true">→</span>
-            </Link>
           </div>
         </div>
       </section>
 
-      {/* ── Come lavoro: il percorso in tre passi, stessa grammatica
-          visiva della timeline di /percorso (colonna mono + titolo +
-          testo), ma su carta e con link diretti alle schede di /lavoro ── */}
+      {/* ── Chi sono: traiettoria compressa, prosa su carta con link
+          di approfondimento a /percorso ── */}
+      <section className="bg-carta">
+        <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24">
+          <h2 className="flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium text-bosco">
+            <span className="inline-block h-[2px] w-7 bg-bosco" />
+            <span>Chi sono</span>
+          </h2>
+          <p className="mt-7 max-w-[680px] text-[17px] leading-[1.6] text-grigio">
+            Nel 1998 ho co-fondato a Milazzo la mia prima società di
+            internet, l&apos;anno in cui nasceva Google, quando in Sicilia
+            eravamo in pochissimi a farlo. Poi nove anni in Lombardia,
+            dentro un&apos;agenzia che lavorava per Pirelli, Citroën, Lenovo
+            e Sisal: sono entrato come project manager e sono uscito che
+            dirigevo il team. Dal 2019 lavoro in proprio, con le imprese del
+            Sud.
+          </p>
+          <p className="mt-5 max-w-[680px] text-[17px] leading-[1.6] text-grigio">
+            È sempre lo stesso mestiere: portare in azienda la tecnologia che
+            conviene, quando conviene. Prima il web, adesso l&apos;AI.
+          </p>
+          <p className="mt-6">
+            <Link
+              href="/percorso"
+              className="font-sans text-[15px] font-semibold text-inchiostro underline decoration-bosco decoration-2 underline-offset-4 transition-colors hover:text-bosco"
+            >
+              Da dove vengo <span aria-hidden="true">→</span>
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      {/* ── Come lavoro: tre righe, senza pacchetti né numeri ── */}
       <section className="bg-carta">
         <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24">
           <div className="flex items-baseline justify-between border-t-2 border-bosco pt-7">
@@ -163,32 +138,11 @@ export default function Home() {
             </h2>
           </div>
           <p className="mt-5 max-w-[620px] text-[17px] leading-[1.6] text-grigio">
-            Tre passi. Si comincia sempre dal primo.
+            Comincio guardando come lavorate, non da uno strumento da
+            vendere. Si sistema un lavoro alla volta, e ogni mese si guarda
+            una misura sola, decisa insieme. Quando andate avanti da soli, ho
+            finito.
           </p>
-
-          <ol className="mt-10">
-            {PASSI.map((p) => (
-              <li key={p.slug} className="border-t border-bosco/20">
-                <Link
-                  href={`/lavoro#${p.slug}`}
-                  className="group grid gap-3 py-8 md:grid-cols-[180px_1fr] md:gap-10 md:py-9"
-                >
-                  <div className="font-mono text-[13px] uppercase tracking-[0.06em] text-bosco tabular-nums">
-                    {p.num}
-                  </div>
-                  <div>
-                    <div className="font-display text-[20px] font-semibold leading-[1.2] tracking-[-0.015em] text-inchiostro transition-colors group-hover:text-bosco md:text-[22px]">
-                      {p.titolo} <span aria-hidden="true">→</span>
-                    </div>
-                    <p className="mt-3 max-w-[620px] text-[17px] leading-[1.55] text-grigio">
-                      {p.testo}
-                    </p>
-                  </div>
-                </Link>
-              </li>
-            ))}
-            <li className="border-t border-bosco/20" aria-hidden="true" />
-          </ol>
         </div>
       </section>
 
@@ -240,40 +194,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Perché lavorare con me: tre punti numerati, stessa etichetta
-          a bullet-line della hero/chiusura, ma in bosco su carta ── */}
-      <section className="bg-carta">
-        <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24">
-          <h2 className="flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium text-bosco">
-            <span className="inline-block h-[2px] w-7 bg-bosco" />
-            <span>Perché lavorare con me</span>
-          </h2>
-          <div className="mt-9 grid gap-10 md:grid-cols-3 md:gap-8">
-            {VALORI.map((v) => (
-              <div key={v.num} className="border-t-2 border-inchiostro pt-6">
-                <span className="font-mono text-[13px] text-bosco tabular-nums">
-                  {v.num}
-                </span>
-                <h3 className="mt-3 font-display text-[22px] font-semibold tracking-[-0.015em] text-inchiostro">
-                  {v.titolo}
-                </h3>
-                <p className="mt-3 text-[16px] leading-[1.6] text-grigio">
-                  {v.testo}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Clienti recenti: striscia su carta, ponte tra il feed e la
-          chiusura bosco. Loghi a colori originali (per dare colore),
-          normalizzati in altezza: non in card, non in griglia ── */}
+      {/* ── Clienti: striscia su carta, ponte tra il feed e la chiusura
+          bosco. Loghi a colori originali (per dare colore), normalizzati
+          in altezza: non in card, non in griglia ── */}
       <section className="bg-carta">
         <div className="mx-auto max-w-[1280px] px-6 py-14 md:px-16 md:py-20">
           <h2 className="flex items-center gap-3.5 font-mono text-[12px] uppercase tracking-[0.18em] font-medium text-bosco">
             <span className="inline-block h-[2px] w-7 bg-bosco" />
-            <span>Clienti recenti</span>
+            <span>Clienti</span>
           </h2>
           <div className="mt-9 flex flex-wrap items-start gap-x-12 gap-y-10">
             {CLIENTI_RECENTI.map((c) => (
@@ -292,6 +220,14 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <p className="mt-9">
+            <Link
+              href="/lavoro"
+              className="font-sans text-[15px] font-semibold text-inchiostro underline decoration-bosco decoration-2 underline-offset-4 transition-colors hover:text-bosco"
+            >
+              Cosa ho fatto per loro <span aria-hidden="true">→</span>
+            </Link>
+          </p>
         </div>
       </section>
 

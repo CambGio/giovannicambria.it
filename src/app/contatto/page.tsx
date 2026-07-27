@@ -69,7 +69,7 @@ export default function Contatto() {
               href="/lavoro"
               className="font-mono text-[11px] uppercase tracking-[0.06em] text-grigio transition-colors hover:text-bosco"
             >
-              Come lavoro, in tre passi →
+              Cosa ho fatto per loro →
             </Link>
           </div>
         </div>

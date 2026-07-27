@@ -4,7 +4,7 @@ const nextConfig: NextConfig = {
   async redirects() {
     return ["mappa", "workshop", "affiancamento"].map((s) => ({
       source: `/lavoro/${s}`,
-      destination: `/lavoro#${s}`,
+      destination: `/lavoro`,
       permanent: true, // 308
     }));
   },
