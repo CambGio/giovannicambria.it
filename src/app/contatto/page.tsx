@@ -5,7 +5,7 @@ import { EMAIL, LINKEDIN_URL, PHONE_DISPLAY, PHONE_TEL } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contatto",
   description:
-    "Scrivimi, chiamami o trovami su LinkedIn. Rispondo entro due giorni lavorativi. Sono a Milazzo.",
+    "Parliamo del tuo progetto, dei processi aziendali e delle tecnologie che stai valutando.",
   alternates: { canonical: "/contatto" },
 };
 
@@ -29,13 +29,12 @@ export default function Contatto() {
           </div>
 
           <h1 className="max-w-[1080px] text-mega font-black text-carta">
-            Raccontami come lavorate.
+            Parliamo del tuo progetto.
           </h1>
 
           <p className="mt-10 max-w-[640px] text-sottotitolo font-light text-carta/80">
-            Ti rispondo io, non un centralino. Scrivimi due o tre righe: cosa
-            fa la tua azienda, cosa vi porta via più tempo. In due giorni
-            lavorativi hai una risposta, poi ci sentiamo per una call.
+            Raccontami dove l&apos;azienda perde tempo, quale processo vuoi
+            rivedere o quale tecnologia stai valutando.
           </p>
         </div>
       </section>
@@ -44,7 +43,13 @@ export default function Contatto() {
       <section className="bg-carta">
         <div className="mx-auto max-w-[1280px] px-6 py-16 md:px-16 md:py-24">
           <p className="max-w-[560px] text-[18px] leading-[1.5] text-inchiostro">
-            Si parte da una call di mezz&apos;ora.
+            Il primo confronto serve a definire il problema.
+          </p>
+
+          <p className="mt-5 max-w-[560px] text-[17px] leading-[1.6] text-grigio">
+            Ti dirò dove l&apos;AI o una soluzione digitale possono produrre
+            valore e dove invece non servono. Se il progetto è adatto al mio
+            lavoro, definiamo il passo successivo. Se non lo è, te lo dico.
           </p>
 
           <div className="mt-10 grid gap-px border-t border-bosco bg-inchiostro/10 md:grid-cols-3">

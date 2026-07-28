@@ -6,7 +6,7 @@ import { CITY, EMAIL, SITE_DESCRIPTION, SITE_NAME, SITE_URL, VAT } from "@/lib/s
 export const metadata: Metadata = {
   title: "Clienti",
   description:
-    "Cinque aziende, con nome e cognome. Cosa c'era prima, cosa ho fatto, dove sono adesso.",
+    "Progetti digitali per aziende: tecnologia, processi e risultati concreti.",
   alternates: { canonical: "/lavoro" },
 };
 
@@ -46,11 +46,12 @@ export default function Lavoro() {
           </div>
 
           <h1 className="max-w-[1080px] text-mega font-black text-carta">
-            Cinque aziende, con nome e cognome.
+            Tecnologia, processi e risultati concreti.
           </h1>
 
           <p className="mt-10 max-w-[640px] text-sottotitolo font-light text-carta/80">
-            Cosa c&apos;era prima, cosa ho fatto, dove sono adesso.
+            Ogni progetto parte dal lavoro dell&apos;azienda. La tecnologia arriva
+            dopo, quando serve.
           </p>
         </div>
       </section>
@@ -90,14 +91,15 @@ export default function Lavoro() {
         <div className="mx-auto max-w-[1280px] px-6 py-24 md:px-16 md:py-28">
           <div className="flex flex-col items-start gap-8 md:flex-row md:items-center md:justify-between">
             <p className="text-sottotitolo text-carta/80">
-              Mezz&apos;ora al telefono per dirti se il tuo caso somiglia a
-              uno di questi, anche se poi non lavoriamo insieme.
+              Hai un progetto digitale o un processo che assorbe troppo tempo?
+              Parliamone. Il primo obiettivo è capire se serve davvero una
+              tecnologia e quale.
             </p>
             <Link
               href="/contatto"
               className="inline-flex items-center gap-3 bg-carta px-7 py-4 font-sans text-[15px] font-semibold text-inchiostro tracking-[-0.005em] transition-colors hover:bg-inchiostro hover:text-carta"
             >
-              Prenota una call
+              Fissa un appuntamento
               <span aria-hidden="true">→</span>
             </Link>
           </div>

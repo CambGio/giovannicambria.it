@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Da dove vengo",
   description:
-    "Faccio entrare la tecnologia nelle aziende dal 1998. Prima i siti, poi la SEO e le campagne, adesso l'AI.",
+    "Dal 1998 porto la tecnologia nelle aziende. Prima i siti, poi SEO e marketing digitale. Oggi l'AI.",
   alternates: { canonical: "/percorso" },
 };
 
@@ -17,17 +17,18 @@ type Tappa = {
 
 const TAPPE: Tappa[] = [
   {
-    ruolo: "Prima del mestiere, la passione",
+    ruolo: "Gli inizi: tecnologia prima del mestiere",
     testo: [
-      "Ho cominciato da ragazzo, con un VIC 20 e poi un Commodore 64. Da allora sono sempre stato quello che prova le cose nuove per primo. Non è cambiato niente: gli strumenti di AI li uso sul mio lavoro mesi prima di proporli a un cliente.",
+      "Ho cominciato da ragazzo, con un VIC 20 e poi un Commodore 64. Da allora ho continuato a provare le tecnologie nuove sul mio lavoro prima di proporle a un cliente.",
     ],
   },
   {
-    ruolo: "Gli studi: economia, non informatica",
+    ruolo: "Gli studi: economia e marketing",
     periodo: "~2000–2002",
     luogo: "Lecce",
     testo: [
-      "Ho studiato economia e marketing. È la metà che serve davvero, perché la tecnologia da sola non vende niente e non fa funzionare nessuna azienda. Le due cose insieme sono diventate il mio mestiere.",
+      "Ho studiato economia e marketing. La tecnologia, da sola, non vende e non fa funzionare un'azienda. Serve capire anche il mercato, i margini e il modo in cui le persone lavorano.",
+      "È da questa combinazione che nasce il mio mestiere.",
     ],
   },
   {
@@ -35,13 +36,13 @@ const TAPPE: Tappa[] = [
     periodo: "1998–2007",
     luogo: "Milazzo",
     testo: [
-      "Mentre ancora studiavo ho incontrato altri imprenditori e insieme abbiamo fondato Switch MultiMedia. Per la Sicilia di allora era roba avveniristica: internet lo faceva quasi nessuno, e noi aprivamo una società per farlo. Google nasceva lo stesso anno. Siamo partiti dallo sviluppo di siti internet, e l'ho amministrata per dieci anni.",
+      "Ho co-fondato Switch MultiMedia mentre ancora studiavo. In Sicilia internet era agli inizi e le aziende che lavoravano sul web erano pochissime. Siamo partiti dallo sviluppo di siti internet. Poi abbiamo aggiunto il marketing digitale: prima la SEO, poi le campagne a parola chiave.",
     ],
   },
   {
     ruolo: "Poi il marketing, quando il web ha retto",
     testo: [
-      "Man mano che l'infrastruttura si completava abbiamo aggiunto il marketing digitale. Prima la SEO, poi la conseguenza logica: le campagne a parola chiave. Lì ho visto per la prima volta una tecnologia passare da curiosità a strumento di lavoro quotidiano. Da allora è successo altre tre volte.",
+      "Lì ho visto per la prima volta una tecnologia passare da curiosità a strumento di lavoro quotidiano. Da allora è successo altre tre volte.",
     ],
   },
   {
@@ -49,8 +50,8 @@ const TAPPE: Tappa[] = [
     periodo: "2009–2018",
     luogo: "Salò, Brescia",
     testo: [
-      "Sono entrato in Eureweb come project manager e sono uscito che dirigevo il team: quattro ruoli in nove anni. L'agenzia lavorava per Pirelli, Citroën, Lenovo, Sisal, Candy, Citizen. Ho affiancato l'imprenditore lungo tutta la crescita, e in quegli anni l'azienda è passata da qualche centinaio di migliaia di euro di fatturato a svariati milioni all'anno.",
-      "Lì dentro sono nati IlPescatoreOnline, che nel 2014 consegnava pesce fresco in ventiquattro ore tenendo la catena del freddo, e Rideook, i tour in bici elettrica sul lago di Garda.",
+      "In Eureweb sono entrato come project manager e sono arrivato a dirigere il team. L'agenzia lavorava per Pirelli, Citroën, Lenovo, Sisal, Candy e Citizen. Ho affiancato l'imprenditore lungo la crescita dell'azienda: da qualche centinaio di migliaia di euro di fatturato a svariati milioni all'anno.",
+      "In quegli anni sono nati anche IlPescatoreOnline, e-commerce di pesce fresco con consegna in ventiquattro ore, e Rideook, progetto di bike tour in e-bike sul lago di Garda.",
     ],
   },
   {
@@ -58,13 +59,13 @@ const TAPPE: Tappa[] = [
     periodo: "2019",
     luogo: "Sicilia",
     testo: [
-      "Sono tornato in Sicilia e ho aperto in proprio. Lo stesso anno ho preso un master in business design per le PMI: sapevo già con chi volevo lavorare. Il primo cliente è stato Empire, dove ho affiancato l'imprenditore dall'inizio, dal business plan fino a empirericambi.it.",
+      "Nel 2019 sono tornato in Sicilia e ho aperto in proprio. Lo stesso anno ho approfondito il business design per le PMI. Il primo cliente è stato Empire Ricambi, dove ho affiancato l'imprenditore dalla fase iniziale fino allo sviluppo dell'e-commerce empirericambi.it.",
     ],
   },
   {
     ruolo: "Adesso",
     testo: [
-      "L'AI è la quarta ondata che vedo arrivare, e le prime tre mi hanno insegnato a riconoscere quelle che restano. Faccio la stessa cosa che facevo nel 1998: prendo una tecnologia nuova e la porto dentro il lavoro di un'azienda, un pezzo alla volta.",
+      "L'AI è la fase più recente di una storia cominciata con internet. Non propongo una tecnologia perché è nuova. Capisco prima dove può servire, la porto nel lavoro e verifico che produca un risultato concreto.",
     ],
   },
 ];

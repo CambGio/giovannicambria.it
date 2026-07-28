@@ -26,28 +26,28 @@ const CLIENTI_RECENTI: {
     alt: "Amendolia Assicurazioni",
     width: 1500,
     height: 487,
-    nota: "Amendolia Assicurazioni: le procedure mappate e il CRM da cui passano clienti e prospect",
+    nota: "Amendolia Assicurazioni: processi, CRM e gestione dei contatti con clienti e prospect",
   },
   {
     src: "/loghi/recenti/dipaola.png",
     alt: "Autonoleggio Di Paola",
     width: 2277,
     height: 936,
-    nota: "Autonoleggio Di Paola: il booking degli shuttle bus per l'aeroporto di Catania e il sito nuovo",
+    nota: "Autonoleggio Di Paola: prenotazione online degli shuttle bus e nuovo sito aziendale",
   },
   {
     src: "/loghi/recenti/lovekasa.png",
     alt: "LoveKasa",
     width: 400,
     height: 100,
-    nota: "LoveKasa: il CRM del customer care e le campagne WhatsApp",
+    nota: "LoveKasa: CRM per la gestione delle richieste e campagne WhatsApp",
   },
   {
     src: "/loghi/recenti/empirericambi.png",
     alt: "Empire Ricambi",
     width: 2707,
     height: 210,
-    nota: "Empire Ricambi: l'impresa seguita dall'inizio, fino a empirericambi.it",
+    nota: "Empire Ricambi: affiancamento all'imprenditore fino allo sviluppo dell'e-commerce",
     // Rapporto ~13:1: a pari altezza diventerebbe 3-5 volte più largo
     // degli altri, quindi lo si vincola in larghezza.
     classe: "h-auto w-28 md:w-36",
@@ -57,7 +57,7 @@ const CLIENTI_RECENTI: {
     alt: "Sinotech",
     width: 1449,
     height: 310,
-    nota: "Sinotech: l'e-commerce passato a Shopify",
+    nota: "Sinotech: migrazione dell'e-commerce da PrestaShop a Shopify",
   },
 ];
 
@@ -77,12 +77,13 @@ export default function Home() {
           </div>
 
           <h1 className="max-w-[1080px] text-mega font-black text-carta">
-            Aiuto le PMI a usare l&apos;AI, non a sperimentarla.
+            Porto l&apos;AI nei processi aziendali.
           </h1>
 
           <p className="mt-10 max-w-[640px] text-sottotitolo font-light text-carta/80">
-            Scelgo gli strumenti, li porto dentro il lavoro di ogni giorno e
-            resto finché il team li usa da solo.
+            Individuo dove il lavoro perde tempo, scelgo gli strumenti adatti
+            e li integro nei processi. L&apos;obiettivo non è usare più
+            tecnologia. È far funzionare meglio l&apos;azienda.
           </p>
 
           <div className="mt-11 flex flex-col items-start gap-5 sm:flex-row sm:items-center sm:gap-9">
@@ -106,17 +107,18 @@ export default function Home() {
             <span>Chi sono</span>
           </h2>
           <p className="mt-7 max-w-[680px] text-[17px] leading-[1.6] text-grigio">
-            Nel 1998 ho co-fondato a Milazzo la mia prima società di
-            internet, l&apos;anno in cui nasceva Google, quando in Sicilia
-            eravamo in pochissimi a farlo. Poi nove anni in Lombardia,
-            dentro un&apos;agenzia che lavorava per Pirelli, Citroën, Lenovo
-            e Sisal: sono entrato come project manager e sono uscito che
-            dirigevo il team. Dal 2019 lavoro in proprio, con le imprese del
-            Sud.
+            Dal 1998 lavoro per portare la tecnologia dentro le aziende. Ho
+            co-fondato a Milazzo la mia prima società di internet quando in
+            Sicilia erano ancora in pochi a occuparsene. Poi ho lavorato per
+            nove anni in Lombardia, in un&apos;agenzia con clienti come
+            Pirelli, Citroën, Lenovo e Sisal. Sono entrato come project
+            manager e sono arrivato a dirigere il team.
           </p>
           <p className="mt-5 max-w-[680px] text-[17px] leading-[1.6] text-grigio">
-            È sempre lo stesso mestiere: portare in azienda la tecnologia che
-            conviene, quando conviene. Prima il web, adesso l&apos;AI.
+            Dal 2019 lavoro come consulente indipendente. Prima il web, la SEO
+            e il marketing digitale. Oggi l&apos;AI. Il mestiere è rimasto lo
+            stesso: capire dove una tecnologia può produrre valore e portarla
+            nel lavoro quotidiano.
           </p>
           <p className="mt-6">
             <Link
@@ -138,10 +140,13 @@ export default function Home() {
             </h2>
           </div>
           <p className="mt-5 max-w-[620px] text-[17px] leading-[1.6] text-grigio">
-            Comincio guardando come lavorate, non da uno strumento da
-            vendere. Si sistema un lavoro alla volta, e ogni mese si guarda
-            una misura sola, decisa insieme. Quando andate avanti da soli, ho
-            finito.
+            Non parto dallo strumento. Parto dall&apos;azienda. Analizzo i
+            processi, individuo il lavoro che assorbe più tempo e scelgo la
+            soluzione adatta. Poi la porto dentro l&apos;operatività e verifico
+            che venga usata davvero.
+
+            L&apos;AI non si adotta con un annuncio al team. Si adotta quando
+            entra nel lavoro e produce un cambiamento verificabile.
           </p>
         </div>
       </section>
@@ -225,7 +230,7 @@ export default function Home() {
               href="/lavoro"
               className="font-sans text-[15px] font-semibold text-inchiostro underline decoration-bosco decoration-2 underline-offset-4 transition-colors hover:text-bosco"
             >
-              Cosa ho fatto per loro <span aria-hidden="true">→</span>
+              Vedi tutti i progetti <span aria-hidden="true">→</span>
             </Link>
           </p>
         </div>
@@ -238,18 +243,18 @@ export default function Home() {
           <div className="max-w-[640px]">
             <div className="flex items-center gap-3 font-mono text-[12px] uppercase tracking-[0.18em] font-medium text-carta">
               <span className="inline-block h-[2px] w-7 bg-carta" />
-              Lavora con me
+              Parliamo del tuo progetto
             </div>
             <p className="mt-5 text-sottotitolo text-carta/80">
-              Mezz&apos;ora al telefono sul tuo caso. Esci sapendo dove
-              l&apos;AI ti ripaga e dove no, anche se poi non lavoriamo
-              insieme.
+              Un confronto sul tuo caso per capire dove l&apos;AI può produrre
+              valore e dove invece non serve. Esci con una direzione più
+              chiara, anche se poi non lavoriamo insieme.
             </p>
             <Link
               href="/contatto"
               className="mt-8 inline-flex items-center gap-3 bg-carta px-6 py-3.5 font-sans text-[14px] font-semibold text-inchiostro transition-colors hover:bg-inchiostro hover:text-carta"
             >
-              Prenota una call <span aria-hidden="true">→</span>
+              Fissa un appuntamento <span aria-hidden="true">→</span>
             </Link>
           </div>
         </div>
