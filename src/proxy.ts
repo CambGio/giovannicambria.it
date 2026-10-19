@@ -3,9 +3,18 @@ import { ACCESS_COOKIE, sha256Hex } from "@/lib/access";
 
 const NOINDEX = "noindex, nofollow, noarchive, nosnippet";
 
+// Pubbliche anche col lucchetto: sono la home page e l'informativa che Google
+// chiede per verificare il brand dei progetti Cloud (2026-10-19). Al lancio
+// del curriculum devono restare agli stessi indirizzi.
+const PUBLIC_PATHS = ["/privacy", "/strumenti"];
+
 export async function proxy(req: NextRequest) {
   const { pathname } = req.nextUrl;
   const password = process.env.SITE_PASSWORD;
+
+  if (PUBLIC_PATHS.includes(pathname)) {
+    return NextResponse.next();
+  }
 
   if (pathname.startsWith("/lock")) {
     return password ? withNoindex(NextResponse.next()) : NextResponse.next();

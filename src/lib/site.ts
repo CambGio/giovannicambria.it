@@ -23,6 +23,9 @@ export const SITE_DESCRIPTION = `${TAGLINE} ${TAGLINE_SUB}`;
 
 /* Contatti e dati legali */
 export const CITY = "Milazzo";
+/* Indirizzo del titolare nell'informativa: la residenza, come su starbrain.it
+ * (Giovanni, 2026-10-06). La PEC nei testi pubblici non va. */
+export const ADDRESS = "Via Marinaio d'Italia 12, 98057 Milazzo (ME)";
 export const EMAIL = "studio@giovannicambria.it";
 export const PHONE_DISPLAY = "+39 328 446 0482";
 export const PHONE_TEL = "+393284460482";

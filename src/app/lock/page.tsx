@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Wordmark } from "@/components/site/Wordmark";
 import { TAGLINE, TAGLINE_SUB } from "@/lib/site";
 import { unlock } from "./actions";
@@ -71,6 +72,16 @@ export default async function LockPage({
 
         <p className="mt-12 font-mono text-[11px] uppercase tracking-[0.04em] text-grigio">
           studio@giovannicambria.it · Milazzo
+        </p>
+
+        <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.04em] text-grigio">
+          <Link href="/strumenti" className="hover:text-bosco">
+            Strumenti
+          </Link>
+          {" · "}
+          <Link href="/privacy" className="hover:text-bosco">
+            Privacy
+          </Link>
         </p>
       </div>
     </div>
